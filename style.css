@@ -360,6 +360,12 @@ img {
   font-size: clamp(1.6rem, 3vw, 2.25rem);
 }
 
+.zu-section-intro {
+  margin: 1rem 0 0;
+  max-width: 74ch;
+  color: var(--zu-text-muted);
+}
+
 .zu-about-card,
 .zu-contact-card,
 .zu-timeline-card,
