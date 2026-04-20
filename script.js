@@ -203,7 +203,7 @@
 
     zuProjectToggleButton.setAttribute("aria-expanded", String(zuExpanded));
     zuProjectToggleButton.textContent = zuExpanded
-      ? "Show Fewer Projects"
+      ? "Show Less Projects"
       : "Show More Projects";
   }
 
