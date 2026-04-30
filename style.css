@@ -103,6 +103,7 @@ img {
 }
 
 .zu-header-inner {
+  position: relative;
   min-height: 76px;
   display: flex;
   align-items: center;
@@ -1106,14 +1107,8 @@ img {
 
 @media (max-width: 820px) {
   .zu-header-inner {
-    flex-wrap: wrap;
-    padding: 0.65rem 0;
-  }
-
-  .zu-nav {
-    margin-left: 0;
-    order: 3;
-    width: 100%;
+    padding: 0.55rem 0;
+    min-height: 64px;
   }
 
   .zu-nav-toggle {
@@ -1121,25 +1116,38 @@ img {
   }
 
   .zu-nav-menu {
+    position: absolute;
+    top: calc(100% + 0.55rem);
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0.5rem;
     display: grid;
-    gap: 0.4rem;
-    margin-top: 0.6rem;
-    padding-top: 0.6rem;
-    border-top: 1px solid var(--zu-border);
+    gap: 0.25rem;
+    background: var(--zu-bg-surface);
+    border: 1px solid var(--zu-border);
+    border-radius: var(--zu-radius-md);
+    box-shadow: var(--zu-shadow-soft);
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height var(--zu-speed-base) ease, opacity var(--zu-speed-fast) ease;
+    pointer-events: none;
+    transition: max-height var(--zu-speed-base) ease, opacity var(--zu-speed-fast) ease,
+      transform var(--zu-speed-fast) ease;
+    transform: translateY(-4px);
   }
 
   .zu-nav.zu-nav-open .zu-nav-menu {
-    max-height: 420px;
+    max-height: 480px;
     opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 
   .zu-nav-link {
     width: 100%;
     justify-content: flex-start;
+    padding: 0.6rem 0.8rem;
   }
 
   .zu-nav.zu-nav-open .zu-nav-toggle-bar:nth-child(1) {
