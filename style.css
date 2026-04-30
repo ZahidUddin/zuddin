@@ -453,233 +453,6 @@ img {
   color: var(--zu-text-muted);
 }
 
-@media (max-width: 720px) {
-  .zu-edu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .zu-stats-row {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.6rem;
-  }
-
-  .zu-stat {
-    padding: 0.85rem 0.85rem;
-  }
-
-  .zu-stat-num {
-    font-size: 1.6rem;
-  }
-
-  .zu-stat-label {
-    font-size: 0.78rem;
-  }
-
-  .zu-hero-photo {
-    width: 168px;
-    height: 168px;
-  }
-
-  .zu-code-window-body {
-    font-size: 0.74rem;
-    padding: 0.85rem 0.9rem;
-  }
-}
-
-@media (max-width: 540px) {
-  .zu-container {
-    width: min(1120px, 94vw);
-  }
-
-  .zu-section {
-    padding: 3.6rem 0;
-    scroll-margin-top: 80px;
-  }
-
-  .zu-hero {
-    padding-top: 4.4rem;
-  }
-
-  .zu-hero-title {
-    font-size: clamp(1.85rem, 8vw, 2.4rem);
-  }
-
-  .zu-hero-intro {
-    font-size: 1rem;
-  }
-
-  .zu-hero-tagline {
-    font-size: 0.95rem;
-  }
-
-  .zu-hero-actions {
-    gap: 0.6rem;
-  }
-
-  .zu-hero-actions .zu-button {
-    flex: 1 1 auto;
-    justify-content: center;
-    padding: 0.66rem 1rem;
-  }
-
-  .zu-hero-card {
-    padding: 1.2rem;
-  }
-
-  .zu-hero-photo {
-    width: 156px;
-    height: 156px;
-    margin-bottom: 1.1rem;
-  }
-
-  .zu-section-heading h2 {
-    font-size: clamp(1.4rem, 5.5vw, 1.85rem);
-  }
-
-  .zu-stats-row {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.55rem;
-  }
-
-  .zu-stats-row > .zu-stat:nth-child(3) {
-    grid-column: 1 / -1;
-  }
-
-  .zu-stat-num {
-    font-size: 1.7rem;
-  }
-
-  .zu-timeline {
-    margin-top: 1.4rem;
-  }
-
-  .zu-timeline-item {
-    padding-left: 1.85rem;
-  }
-
-  .zu-timeline-card {
-    padding: 1.05rem 1.05rem 0.95rem;
-  }
-
-  .zu-timeline-card h3 {
-    font-size: 1.05rem;
-  }
-
-  .zu-project-card,
-  .zu-edu-card,
-  .zu-contact-card,
-  .zu-about-card {
-    padding: 1.1rem;
-  }
-
-  .zu-skill-group {
-    padding: 1rem 1.05rem;
-  }
-
-  .zu-skill-badge {
-    font-size: 0.78rem;
-  }
-
-  .zu-code-window-body {
-    font-size: 0.7rem;
-    padding: 0.8rem 0.85rem;
-    line-height: 1.55;
-  }
-
-  .zu-code-window-title {
-    font-size: 0.7rem;
-  }
-
-  .zu-header-inner {
-    min-height: 64px;
-  }
-
-  .zu-brand-text {
-    font-size: 0.95rem;
-  }
-
-  .zu-header .zu-theme-toggle .zu-theme-toggle-text {
-    display: none;
-  }
-
-  .zu-header .zu-theme-toggle {
-    padding: 0.4rem 0.55rem;
-  }
-
-  .zu-status-pill {
-    font-size: 0.72rem;
-    padding: 0.28rem 0.6rem;
-  }
-
-  .zu-contact-list li {
-    padding: 0.6rem 0.7rem;
-  }
-
-  .zu-footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.55rem;
-  }
-}
-
-@media (max-width: 380px) {
-  .zu-hero-photo {
-    width: 132px;
-    height: 132px;
-  }
-
-  .zu-hero-title {
-    font-size: clamp(1.65rem, 8.5vw, 2rem);
-  }
-
-  .zu-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .zu-hero-actions .zu-button {
-    width: 100%;
-  }
-
-  .zu-stats-row {
-    grid-template-columns: 1fr;
-  }
-
-  .zu-stats-row > .zu-stat:nth-child(3) {
-    grid-column: auto;
-  }
-
-  .zu-brand-mark {
-    width: 1.85rem;
-    height: 1.85rem;
-    font-size: 0.72rem;
-  }
-
-  .zu-section-heading h2 {
-    font-size: clamp(1.3rem, 6vw, 1.7rem);
-  }
-
-  .zu-code-window-body {
-    font-size: 0.66rem;
-  }
-}
-
-@media (max-height: 520px) and (orientation: landscape) {
-  .zu-hero {
-    padding-top: 4.4rem;
-    padding-bottom: 3rem;
-  }
-
-  .zu-section {
-    padding: 3.4rem 0;
-  }
-
-  .zu-hero-photo {
-    width: 144px;
-    height: 144px;
-  }
-}
-
 .zu-section-heading h2 {
   margin: 0.5rem 0 0;
   font-size: clamp(1.6rem, 3vw, 2.25rem);
@@ -1391,6 +1164,233 @@ img {
 
   .zu-hero {
     padding-top: 5.4rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .zu-edu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zu-stats-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  .zu-stat {
+    padding: 0.85rem 0.85rem;
+  }
+
+  .zu-stat-num {
+    font-size: 1.6rem;
+  }
+
+  .zu-stat-label {
+    font-size: 0.78rem;
+  }
+
+  .zu-hero-photo {
+    width: 168px;
+    height: 168px;
+  }
+
+  .zu-code-window-body {
+    font-size: 0.74rem;
+    padding: 0.85rem 0.9rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .zu-container {
+    width: min(1120px, 94vw);
+  }
+
+  .zu-section {
+    padding: 3.6rem 0;
+    scroll-margin-top: 80px;
+  }
+
+  .zu-hero {
+    padding-top: 4.4rem;
+  }
+
+  .zu-hero-title {
+    font-size: clamp(1.85rem, 8vw, 2.4rem);
+  }
+
+  .zu-hero-intro {
+    font-size: 1rem;
+  }
+
+  .zu-hero-tagline {
+    font-size: 0.95rem;
+  }
+
+  .zu-hero-actions {
+    gap: 0.6rem;
+  }
+
+  .zu-hero-actions .zu-button {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 0.66rem 1rem;
+  }
+
+  .zu-hero-card {
+    padding: 1.2rem;
+  }
+
+  .zu-hero-photo {
+    width: 156px;
+    height: 156px;
+    margin-bottom: 1.1rem;
+  }
+
+  .zu-section-heading h2 {
+    font-size: clamp(1.4rem, 5.5vw, 1.85rem);
+  }
+
+  .zu-stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem;
+  }
+
+  .zu-stats-row > .zu-stat:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .zu-stat-num {
+    font-size: 1.7rem;
+  }
+
+  .zu-timeline {
+    margin-top: 1.4rem;
+  }
+
+  .zu-timeline-item {
+    padding-left: 1.85rem;
+  }
+
+  .zu-timeline-card {
+    padding: 1.05rem 1.05rem 0.95rem;
+  }
+
+  .zu-timeline-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .zu-project-card,
+  .zu-edu-card,
+  .zu-contact-card,
+  .zu-about-card {
+    padding: 1.1rem;
+  }
+
+  .zu-skill-group {
+    padding: 1rem 1.05rem;
+  }
+
+  .zu-skill-badge {
+    font-size: 0.78rem;
+  }
+
+  .zu-code-window-body {
+    font-size: 0.7rem;
+    padding: 0.8rem 0.85rem;
+    line-height: 1.55;
+  }
+
+  .zu-code-window-title {
+    font-size: 0.7rem;
+  }
+
+  .zu-header-inner {
+    min-height: 64px;
+  }
+
+  .zu-brand-text {
+    font-size: 0.95rem;
+  }
+
+  .zu-header .zu-theme-toggle .zu-theme-toggle-text {
+    display: none;
+  }
+
+  .zu-header .zu-theme-toggle {
+    padding: 0.4rem 0.55rem;
+  }
+
+  .zu-status-pill {
+    font-size: 0.72rem;
+    padding: 0.28rem 0.6rem;
+  }
+
+  .zu-contact-list li {
+    padding: 0.6rem 0.7rem;
+  }
+
+  .zu-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .zu-hero-photo {
+    width: 132px;
+    height: 132px;
+  }
+
+  .zu-hero-title {
+    font-size: clamp(1.65rem, 8.5vw, 2rem);
+  }
+
+  .zu-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zu-hero-actions .zu-button {
+    width: 100%;
+  }
+
+  .zu-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .zu-stats-row > .zu-stat:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .zu-brand-mark {
+    width: 1.85rem;
+    height: 1.85rem;
+    font-size: 0.72rem;
+  }
+
+  .zu-section-heading h2 {
+    font-size: clamp(1.3rem, 6vw, 1.7rem);
+  }
+
+  .zu-code-window-body {
+    font-size: 0.66rem;
+  }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .zu-hero {
+    padding-top: 4.4rem;
+    padding-bottom: 3rem;
+  }
+
+  .zu-section {
+    padding: 3.4rem 0;
+  }
+
+  .zu-hero-photo {
+    width: 144px;
+    height: 144px;
   }
 }
 
