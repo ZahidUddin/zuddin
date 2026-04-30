@@ -105,33 +105,9 @@
       return;
     }
 
-    zuUpdateActiveNav(zuSections[0].id);
-
-    if (!("IntersectionObserver" in window)) {
-      window.addEventListener("scroll", zuHandleScroll, { passive: true });
-      window.addEventListener("resize", zuHandleScroll);
-      zuHandleScroll();
-      return;
-    }
-
-    const zuSectionObserver = new IntersectionObserver(
-      (zuEntries) => {
-        zuEntries.forEach((zuEntry) => {
-          if (zuEntry.isIntersecting) {
-            zuUpdateActiveNav(zuEntry.target.id);
-          }
-        });
-      },
-      {
-        root: null,
-        threshold: 0.45,
-        rootMargin: "-20% 0px -35% 0px",
-      }
-    );
-
-    zuSections.forEach((zuSection) => {
-      zuSectionObserver.observe(zuSection);
-    });
+    window.addEventListener("scroll", zuHandleScroll, { passive: true });
+    window.addEventListener("resize", zuHandleScroll);
+    zuHandleScroll();
   }
 
   function zuHandleScroll() {
@@ -140,7 +116,10 @@
     }
 
     zuScrollRafId = window.requestAnimationFrame(() => {
-      const zuOffset = window.scrollY + window.innerHeight * 0.36;
+      const zuViewportHeight = window.innerHeight;
+      const zuScrollY = window.scrollY;
+      const zuDocHeight = document.documentElement.scrollHeight;
+      const zuOffset = zuScrollY + zuViewportHeight * 0.36;
       let zuVisibleSectionId = zuSections[0] ? zuSections[0].id : "";
 
       zuSections.forEach((zuSection) => {
@@ -148,6 +127,13 @@
           zuVisibleSectionId = zuSection.id;
         }
       });
+
+      if (zuScrollY + zuViewportHeight >= zuDocHeight - 2) {
+        const zuLastSection = zuSections[zuSections.length - 1];
+        if (zuLastSection) {
+          zuVisibleSectionId = zuLastSection.id;
+        }
+      }
 
       if (zuVisibleSectionId) {
         zuUpdateActiveNav(zuVisibleSectionId);
