@@ -1,0 +1,24 @@
+Zahid Uddin
+Senior WordPress Developer and PHP Backend Engineer
+
+Email: zahidudd0.in@gmail.com
+Phone: +880 1684 747167
+Location: Mirpur-11, Dhaka, Bangladesh
+GitHub: https://github.com/ZahidUddin
+LinkedIn: https://www.linkedin.com/in/zahid-uddin-4267b816b/
+
+Summary
+Senior WordPress Developer and PHP backend engineer with 8+ years of experience building scalable WordPress platforms, custom themes, custom plugins, WooCommerce sites, API integrations, and performance-focused CMS systems.
+
+Core Skills
+PHP, OOP, MySQL, WordPress, Gutenberg, ACF, WooCommerce, REST APIs, JavaScript, React.js, Laravel, Redis, Cloudflare, Core Web Vitals, WP-CLI, Git.
+
+Experience
+Mediusware Ltd - Senior Software Engineer - March 2024 to Present
+BluBird Interactive Ltd - Software Engineer - April 2022 to March 2024
+Dynamicflow IT - Backend Developer (PHP / WordPress) - March 2020 to February 2022
+Northern University - Backend Developer - February 2018 to March 2020
+
+Education
+B.Sc. in Computer Science - Northern University Bangladesh
+Diploma in Computer Engineering - Ahsanullah Institute of Technical and Vocational Education and Training (AITVET)
