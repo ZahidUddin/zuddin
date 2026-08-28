@@ -1768,23 +1768,49 @@ h3 em {
 }
 
 /* --------------------------------------------------------------------------
-   Scroll Reveal Animation System
+   Blurry Smooth Scroll & Viewport In/Out System
    -------------------------------------------------------------------------- */
-[data-zu-reveal] {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s var(--ease-out-strong), transform 0.7s var(--ease-out-strong);
-  will-change: opacity, transform;
+[data-zu-reveal],
+.zu-section-header,
+.zu-cta-banner {
+  opacity: 0.12;
+  filter: blur(14px);
+  transform: translateY(28px) scale(0.985);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, filter, transform;
+  transform-origin: center top;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-[data-zu-reveal].zu-revealed {
+/* In Viewport: Sharp & Solid */
+[data-zu-reveal].zu-revealed,
+[data-zu-reveal].zu-in-view,
+.zu-section-header.zu-in-view,
+.zu-cta-banner.zu-in-view {
   opacity: 1;
-  transform: translateY(0);
+  filter: blur(0px);
+  transform: translateY(0) scale(1);
+}
+
+/* Out of Viewport (Scrolled Past): Smooth Blur Out */
+[data-zu-reveal].zu-out-view,
+.zu-section-header.zu-out-view,
+.zu-cta-banner.zu-out-view {
+  opacity: 0.18;
+  filter: blur(12px);
+  transform: translateY(-16px) scale(0.985);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-zu-reveal] {
+  [data-zu-reveal],
+  .zu-section-header,
+  .zu-cta-banner {
     opacity: 1 !important;
+    filter: none !important;
     transform: none !important;
     transition: none !important;
   }

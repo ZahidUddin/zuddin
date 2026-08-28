@@ -117,28 +117,47 @@
   }
 
   // --------------------------------------------------------------------------
-  // 4. Scroll Reveal Animations (Intersection Observer)
+  // 4. Blurry Smooth Scroll System (Viewport Blur-In & Blur-Out)
   // --------------------------------------------------------------------------
   function initScrollReveal() {
-    const revealItems = document.querySelectorAll("[data-zu-reveal]");
+    const revealItems = document.querySelectorAll(
+      "[data-zu-reveal], .zu-section-header, .zu-cta-banner, .zu-value-card, .zu-project-card, .zu-timeline-row"
+    );
     if (!revealItems.length) return;
 
     if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver(
-        (entries, obs) => {
+        (entries) => {
           entries.forEach((entry) => {
+            const rect = entry.boundingClientRect;
             if (entry.isIntersecting) {
               entry.target.classList.add("zu-revealed");
-              obs.unobserve(entry.target);
+              entry.target.classList.add("zu-in-view");
+              entry.target.classList.remove("zu-out-view");
+            } else {
+              entry.target.classList.remove("zu-in-view");
+              if (rect.top < 0) {
+                // Scrolled past upwards -> soft blur out
+                entry.target.classList.add("zu-out-view");
+              } else {
+                // Below viewport
+                entry.target.classList.remove("zu-out-view");
+              }
             }
           });
         },
-        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+        {
+          threshold: [0.06, 0.25],
+          rootMargin: "0px 0px -25px 0px",
+        }
       );
 
       revealItems.forEach((el) => observer.observe(el));
     } else {
-      revealItems.forEach((el) => el.classList.add("zu-revealed"));
+      revealItems.forEach((el) => {
+        el.classList.add("zu-revealed");
+        el.classList.add("zu-in-view");
+      });
     }
   }
 
