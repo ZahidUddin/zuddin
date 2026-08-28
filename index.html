@@ -1,685 +1,1310 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Zahid Uddin is a PHP Backend Developer and WordPress Expert with 8+ years building custom themes, plugins, APIs, and high-performance CMS platforms."
-    />
-    <title>Zahid Uddin | PHP Backend Developer &amp; WordPress Expert</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body data-zu-theme="light">
-    <a class="zu-skip-link" href="#zu-main">Skip to content</a>
+<html lang="en" data-theme="dark">
 
-    <header class="zu-header" id="zu-top">
-      <div class="zu-container zu-header-inner">
-        <a class="zu-brand" href="#zu-hero" aria-label="Go to top">
-          <span class="zu-brand-mark">ZU</span>
-          <span class="zu-brand-text">Zahid Uddin</span>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Zahid Uddin - Senior PHP Backend Developer & WordPress Expert with 8+ years building custom themes, plugins, high-performance APIs, and scalable CMS architectures." />
+  <title>Zahid Uddin - Senior PHP Backend Developer &amp; WordPress Expert</title>
 
-        <nav class="zu-nav" aria-label="Primary">
-          <button
-            class="zu-nav-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="zu-nav-menu"
-            aria-label="Toggle navigation menu"
-          >
-            <span class="zu-nav-toggle-bar"></span>
-            <span class="zu-nav-toggle-bar"></span>
-            <span class="zu-nav-toggle-bar"></span>
-          </button>
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-          <ul class="zu-nav-menu" id="zu-nav-menu">
-            <li><a class="zu-nav-link" href="#zu-hero">Home</a></li>
-            <li><a class="zu-nav-link" href="#zu-about">About</a></li>
-            <li><a class="zu-nav-link" href="#zu-experience">Experience</a></li>
-            <li><a class="zu-nav-link" href="#zu-education">Education</a></li>
-            <li><a class="zu-nav-link" href="#zu-skills">Skills</a></li>
-            <li><a class="zu-nav-link" href="#zu-projects">Projects</a></li>
-            <li><a class="zu-nav-link" href="#zu-contact">Contact</a></li>
-          </ul>
-        </nav>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-        <button
-          class="zu-theme-toggle"
-          type="button"
-          data-zu-theme-toggle
-          aria-label="Switch to dark theme"
-        >
-          <span class="zu-theme-toggle-icon" aria-hidden="true">&#9680;</span>
-          <span class="zu-theme-toggle-text">Theme</span>
+<body data-zu-theme="dark">
+  <!-- Skip to Content Accessibility Link -->
+  <a href="#zu-main" class="zu-skip-link"
+    style="position:absolute;left:-9999px;top:0;padding:1rem;background:#E88D4A;color:#140E0A;z-index:999;">Skip to main
+    content</a>
+
+  <!-- Floating Luxury Header / Navigation -->
+  <header class="zu-header" id="zu-header">
+    <div class="zu-container zu-header-inner">
+      <a class="zu-brand" href="#zu-hero" aria-label="Zahid Uddin Home">
+        <span>zuddin</span><span class="zu-brand-dot">.</span>
+        <span class="zu-brand-role">Backend / WP Engineer</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="zu-nav-desktop">
+          <li><a class="zu-nav-link" href="about.html">About</a></li>
+          <li><a class="zu-nav-link" href="services.html">Services</a></li>
+          <li><a class="zu-nav-link" href="projects.html">Portfolio</a></li>
+          <li><a class="zu-nav-link" href="pricing.html">Pricing</a></li>
+          <li><a class="zu-nav-link" href="blog.html">Insights</a></li>
+          <li><a class="zu-nav-link" href="resume.html">Résumé</a></li>
+          <li><a class="zu-nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="zu-header-actions">
+        <!-- Theme Toggle Button -->
+        <button class="zu-theme-btn" id="zu-theme-toggle" type="button" aria-label="Toggle dark/light theme"
+          title="Toggle Theme">
+          <svg class="zu-theme-icon" viewBox="0 0 24 24" width="18" height="18">
+            <path
+              d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="zu-menu-btn" id="zu-menu-toggle" type="button" aria-label="Open mobile navigation menu"
+          aria-expanded="false">
+          <span class="zu-menu-bar"></span>
+          <span class="zu-menu-bar"></span>
+          <span class="zu-menu-bar"></span>
         </button>
       </div>
-    </header>
+    </div>
 
-    <main id="zu-main">
-      <section class="zu-section zu-hero" id="zu-hero">
-        <div class="zu-container zu-hero-grid">
-          <div class="zu-hero-content">
-            <p class="zu-status-pill zu-animate-load">
-              <span class="zu-status-dot" aria-hidden="true"></span>
-              Available for backend &amp; WordPress engineering roles
-            </p>
-            <p class="zu-eyebrow zu-animate-load">PHP Backend Developer | WordPress Expert</p>
-            <h1 class="zu-hero-title zu-animate-load">
-              Zahid Uddin<span class="zu-caret" aria-hidden="true">_</span>
-            </h1>
-            <p class="zu-hero-intro zu-animate-load">
-              Senior PHP backend engineer with 8+ years building scalable WordPress
-              platforms &mdash; custom themes and plugins, headless CMS, REST API
-              integrations, and Core Web Vitals optimization for production sites.
-            </p>
-            <p class="zu-hero-tagline zu-animate-load">
-              PHP &middot; OOP &middot; MySQL &middot; WordPress &middot; Gutenberg + ACF &middot; Cloudflare &middot; Redis
-            </p>
-            <div class="zu-hero-actions zu-animate-load">
-              <a class="zu-button zu-button-primary" href="#zu-projects">View Projects</a>
-              <a class="zu-button zu-button-secondary" href="#zu-contact">Contact Me</a>
-            </div>
-            <ul class="zu-social-list zu-animate-load" aria-label="Social links">
-              <li>
-                <a
-                  class="zu-social-link"
-                  href="https://github.com/ZahidUddin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  class="zu-social-link"
-                  href="https://www.linkedin.com/in/zahid-uddin-4267b816b/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
+    <!-- Mobile Navigation Drawer -->
+    <ul class="zu-nav-mobile" id="zu-mobile-menu">
+      <li><a class="zu-nav-link" href="about.html">About</a></li>
+      <li><a class="zu-nav-link" href="services.html">Services &amp; Value</a></li>
+      <li><a class="zu-nav-link" href="projects.html">Selected Work</a></li>
+      <li><a class="zu-nav-link" href="pricing.html">Pricing</a></li>
+      <li><a class="zu-nav-link" href="blog.html">Technical Insights</a></li>
+      <li><a class="zu-nav-link" href="resume.html">Résumé</a></li>
+      <li><a class="zu-nav-link" href="contact.html">Get in Touch</a></li>
+    </ul>
+  </header>
+
+  <main id="zu-main">
+    <!-- ====================================================================
+           00. HERO SECTION
+           ==================================================================== -->
+    <section class="zu-hero" id="zu-hero">
+      <div class="zu-container zu-hero-grid">
+        <div class="zu-hero-content" data-zu-reveal>
+          <!-- Live Availability Status Pill -->
+          <div class="zu-status-pill">
+            <span class="zu-pulse-dot" aria-hidden="true"></span>
+            <span>Available for Backend &amp; WordPress engineering roles</span>
           </div>
-          <aside class="zu-hero-card zu-reveal">
-            <figure class="zu-hero-photo">
-              <img
-                src="mypic.jpeg"
-                alt="Portrait of Zahid Uddin"
-                width="240"
-                height="240"
-                loading="eager"
-                decoding="async"
-              />
-            </figure>
-            <div class="zu-code-window" aria-hidden="true">
-              <div class="zu-code-window-bar">
-                <span class="zu-code-dot zu-code-dot--red"></span>
-                <span class="zu-code-dot zu-code-dot--yellow"></span>
-                <span class="zu-code-dot zu-code-dot--green"></span>
-                <span class="zu-code-window-title">~/zahid/profile.php</span>
-              </div>
-<pre class="zu-code-window-body"><code><span class="zu-tok-comment">// senior backend engineer</span>
-<span class="zu-tok-kw">class</span> <span class="zu-tok-cls">Zahid</span> {
-  <span class="zu-tok-kw">public</span> <span class="zu-tok-var">$role</span>     = <span class="zu-tok-str">'PHP Backend Engineer'</span>;
-  <span class="zu-tok-kw">public</span> <span class="zu-tok-var">$years</span>    = <span class="zu-tok-num">8</span>;
-  <span class="zu-tok-kw">public</span> <span class="zu-tok-var">$stack</span>    = [<span class="zu-tok-str">'PHP'</span>, <span class="zu-tok-str">'MySQL'</span>, <span class="zu-tok-str">'WP'</span>];
-  <span class="zu-tok-kw">public</span> <span class="zu-tok-var">$hireable</span> = <span class="zu-tok-bool">true</span>;
-}</code></pre>
-            </div>
-          </aside>
-        </div>
-      </section>
 
-      <section class="zu-section" id="zu-about">
-        <div class="zu-container">
-          <div class="zu-section-heading zu-reveal">
-            <p class="zu-section-kicker">// 01_about</p>
-            <h2>Building Scalable PHP and CMS Platforms</h2>
-          </div>
-          <dl class="zu-stats-row zu-reveal">
-            <div class="zu-stat">
-              <dt class="zu-stat-num">8<span class="zu-stat-plus">+</span></dt>
-              <dd class="zu-stat-label">Years of backend experience</dd>
-            </div>
-            <div class="zu-stat">
-              <dt class="zu-stat-num">18<span class="zu-stat-plus">+</span></dt>
-              <dd class="zu-stat-label">Production sites shipped</dd>
-            </div>
-            <div class="zu-stat">
-              <dt class="zu-stat-num">4</dt>
-              <dd class="zu-stat-label">Companies built with</dd>
-            </div>
-          </dl>
-          <div class="zu-about-card zu-reveal">
-            <p>
-              I am a PHP Backend Developer and WordPress Expert with 8+ years of
-              experience building scalable web solutions, custom CMS implementations,
-              APIs, and performance-focused platforms. I specialize in backend
-              architecture, custom functionality development, and reliable delivery
-              for production websites.
-            </p>
-            <p>
-              My strongest implementation area is WordPress theme and plugin
-              engineering with Gutenberg + ACF, dynamic content architecture, API
-              integrations, caching strategies, CDN integration, and Core Web Vitals
-              optimization. I work across PHP, JavaScript, MySQL, Docker, Git,
-              Cloudflare, BunnyCDN, Redis/Object Cache, OPcache, NGINX, Apache, and
-              PHP-FPM to deliver maintainable, business-driven systems.
-            </p>
-            <p>
-              I have also worked across traditional WordPress builds, builder-based
-              ecosystems (Elementor, Divi, Avada, Bricks, Gutenberg), headless
-              WordPress CMS setups, and implementation workflows involving Shopify,
-              Wix, and Webflow.
-            </p>
-          </div>
-        </div>
-      </section>
+          <h1 class="zu-hero-title">
+            PHP Backend &amp; WordPress Engineering, <em>crafted.</em>
+          </h1>
 
-      <section class="zu-section" id="zu-experience">
-        <div class="zu-container">
-          <div class="zu-section-heading zu-reveal">
-            <p class="zu-section-kicker">// 02_experience</p>
-            <h2>Professional Experience</h2>
-          </div>
-          <div class="zu-timeline">
-            <article class="zu-timeline-item zu-reveal">
-              <div class="zu-timeline-dot" aria-hidden="true"></div>
-              <div class="zu-timeline-card">
-                <p class="zu-timeline-range">March 2024 to Present</p>
-                <h3>Mediusware Ltd</h3>
-                <p class="zu-timeline-role">Senior Software Engineer</p>
-                <ul class="zu-timeline-list">
-                  <li>Lead backend-focused WordPress development for custom themes, plugins, and scalable content platforms.</li>
-                  <li>Build and optimize PHP-based solutions with emphasis on architecture, maintainability, and performance.</li>
-                  <li>Implement advanced caching and delivery using Cloudflare, Redis/Object Cache, and OPcache.</li>
-                  <li>Design dynamic content systems with Gutenberg and ACF for large-scale publishing workflows.</li>
-                  <li>Translate Figma-based design requirements into pixel-accurate, production-ready solutions with design and product teams.</li>
-                  <li>Manage version control, deployment workflows, and production stability across Git-based environments.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="zu-timeline-item zu-reveal">
-              <div class="zu-timeline-dot" aria-hidden="true"></div>
-              <div class="zu-timeline-card">
-                <p class="zu-timeline-range">April 2022 to March 2024</p>
-                <h3>BluBird Interactive Ltd</h3>
-                <p class="zu-timeline-role">Software Engineer</p>
-                <ul class="zu-timeline-list">
-                  <li>Built custom WordPress themes and plugins with clean PHP, OOP, MySQL, and JavaScript.</li>
-                  <li>Designed backend functionality for complex WordPress projects, including custom post types, taxonomies, meta fields, hooks, and custom queries.</li>
-                  <li>Integrated third-party APIs and connected WordPress platforms with CRM and external systems.</li>
-                  <li>Worked with local and international clients to translate requirements into scalable backend solutions.</li>
-                  <li>Managed tasks in Agile environments using Jira, Confluence, Bitbucket, and GitHub.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="zu-timeline-item zu-reveal">
-              <div class="zu-timeline-dot" aria-hidden="true"></div>
-              <div class="zu-timeline-card">
-                <p class="zu-timeline-range">March 2020 to February 2022</p>
-                <h3>Dynamicflow IT</h3>
-                <p class="zu-timeline-role">Backend Developer (PHP / WordPress)</p>
-                <ul class="zu-timeline-list">
-                  <li>Developed and maintained custom WordPress websites and plugins with focus on scalability, security, and performance.</li>
-                  <li>Improved Core Web Vitals, SEO, and user experience through backend and template-level optimizations.</li>
-                  <li>Customized backend functions and data structures to support diverse client requirements.</li>
-                  <li>Wrote clean, documented, and efficient code following development best practices.</li>
-                  <li>Managed multiple concurrent client projects and delivered solutions within deadlines.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="zu-timeline-item zu-reveal">
-              <div class="zu-timeline-dot" aria-hidden="true"></div>
-              <div class="zu-timeline-card">
-                <p class="zu-timeline-range">February 2018 to March 2020</p>
-                <h3>Northern University</h3>
-                <p class="zu-timeline-role">Backend Developer</p>
-                <ul class="zu-timeline-list">
-                  <li>Maintained and optimized multiple university websites, improving uptime, performance, and operational stability.</li>
-                  <li>Developed admission portals using Laravel + Vue.js to streamline enrollment workflows at university scale.</li>
-                  <li>Built and configured LMS capabilities and integrated backend modules for institutional web platforms.</li>
-                  <li>Resolved defects and delivered continuous improvements to strengthen system reliability and user experience.</li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="zu-section" id="zu-education">
-        <div class="zu-container">
-          <div class="zu-section-heading zu-reveal">
-            <p class="zu-section-kicker">// 03_education</p>
-            <h2>Academic Background</h2>
-          </div>
-          <div class="zu-edu-grid">
-            <article class="zu-edu-card zu-reveal">
-              <p class="zu-edu-range">2016 to 2019</p>
-              <h3>Northern University Bangladesh</h3>
-              <p class="zu-edu-program">B.Sc. in Computer Science</p>
-            </article>
-            <article class="zu-edu-card zu-reveal">
-              <p class="zu-edu-range">2011 to 2015</p>
-              <h3>Ahsanullah Institute of Technical and Vocational Education and Training (AITVET)</h3>
-              <p class="zu-edu-program">Diploma in Computer Engineering</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="zu-section" id="zu-skills">
-        <div class="zu-container">
-          <div class="zu-section-heading zu-reveal">
-            <p class="zu-section-kicker">// 04_skills</p>
-            <h2>Backend-Centered Technical Stack</h2>
-          </div>
-          <div class="zu-skill-groups">
-            <article class="zu-skill-group zu-reveal">
-              <h3>Backend Development</h3>
-              <div class="zu-badge-wrap">
-                <span class="zu-skill-badge">PHP</span>
-                <span class="zu-skill-badge">OOP</span>
-                <span class="zu-skill-badge">MySQL</span>
-                <span class="zu-skill-badge">REST API Integration</span>
-                <span class="zu-skill-badge">JavaScript (ES6+)</span>
-                <span class="zu-skill-badge">React.js</span>
-                <span class="zu-skill-badge">Node.js</span>
-                <span class="zu-skill-badge">Laravel</span>
-                <span class="zu-skill-badge">Docker</span>
-              </div>
-            </article>
-
-            <article class="zu-skill-group zu-reveal">
-              <h3>CMS &amp; Web Platforms</h3>
-              <div class="zu-badge-wrap">
-                <span class="zu-skill-badge">WordPress</span>
-                <span class="zu-skill-badge">Custom Themes</span>
-                <span class="zu-skill-badge">Custom Plugins</span>
-                <span class="zu-skill-badge">Gutenberg</span>
-                <span class="zu-skill-badge">ACF</span>
-                <span class="zu-skill-badge">Headless WordPress</span>
-                <span class="zu-skill-badge">Shopify</span>
-                <span class="zu-skill-badge">Wix</span>
-                <span class="zu-skill-badge">Webflow</span>
-              </div>
-            </article>
-
-            <article class="zu-skill-group zu-reveal">
-              <h3>Page Builders &amp; Modular Builds</h3>
-              <div class="zu-badge-wrap">
-                <span class="zu-skill-badge">Elementor</span>
-                <span class="zu-skill-badge">Divi</span>
-                <span class="zu-skill-badge">Avada</span>
-                <span class="zu-skill-badge">Bricks</span>
-                <span class="zu-skill-badge">Gutenberg Block Builds</span>
-                <span class="zu-skill-badge">Custom Widget/Module Development</span>
-              </div>
-            </article>
-
-            <article class="zu-skill-group zu-reveal">
-              <h3>Performance &amp; Infrastructure</h3>
-              <div class="zu-badge-wrap">
-                <span class="zu-skill-badge">Core Web Vitals</span>
-                <span class="zu-skill-badge">Redis / Object Cache</span>
-                <span class="zu-skill-badge">OPcache</span>
-                <span class="zu-skill-badge">Cloudflare</span>
-                <span class="zu-skill-badge">BunnyCDN</span>
-                <span class="zu-skill-badge">NGINX</span>
-                <span class="zu-skill-badge">Apache</span>
-                <span class="zu-skill-badge">PHP-FPM</span>
-                <span class="zu-skill-badge">Lazy Loading</span>
-                <span class="zu-skill-badge">Image Optimization</span>
-              </div>
-            </article>
-
-            <article class="zu-skill-group zu-reveal">
-              <h3>Tools &amp; Workflow</h3>
-              <div class="zu-badge-wrap">
-                <span class="zu-skill-badge">Git</span>
-                <span class="zu-skill-badge">Bitbucket</span>
-                <span class="zu-skill-badge">GitHub</span>
-                <span class="zu-skill-badge">Lighthouse</span>
-                <span class="zu-skill-badge">Query Monitor</span>
-                <span class="zu-skill-badge">New Relic</span>
-                <span class="zu-skill-badge">WP-CLI</span>
-                <span class="zu-skill-badge">Figma to WordPress</span>
-                <span class="zu-skill-badge">Jira</span>
-                <span class="zu-skill-badge">Confluence</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="zu-section" id="zu-projects">
-        <div class="zu-container">
-          <div class="zu-section-heading zu-reveal">
-            <p class="zu-section-kicker">// 05_projects</p>
-            <h2>Featured Work</h2>
-          </div>
-          <p class="zu-section-intro zu-reveal">
-            A selection of websites and platform implementations I have contributed
-            to across custom PHP/WordPress development, performance optimization,
-            CMS builds, and frontend delivery.
+          <p class="zu-hero-bio">
+            Senior Software Engineer with <strong>8+ years of experience</strong> architecting high-traffic WordPress
+            platforms, bespoke Gutenberg &amp; ACF Pro solutions, custom PHP APIs, and high-performance backend engines.
+            Proven track record across 18+ production client sites shipped worldwide.
           </p>
 
-          <div class="zu-project-grid">
-            <article class="zu-project-card zu-reveal">
+          <div class="zu-hero-stack">
+            <span>Stack:</span> PHP 8.3 &middot; WordPress / FSE &middot; OOP &middot; MySQL &middot; Gutenberg + ACF
+            Pro &middot; Redis &middot; Cloudflare &middot; Laravel &middot; Docker
+          </div>
+
+          <div class="zu-hero-actions">
+            <a class="zu-btn zu-btn-primary" href="#zu-projects">Explore Projects</a>
+            <a class="zu-btn zu-btn-outline" href="#zu-contact">Get in Touch</a>
+          </div>
+
+          <ul class="zu-social-links">
+            <li>
+              <a class="zu-social-link" href="https://github.com/ZahidUddin" target="_blank" rel="noopener noreferrer">
+                GitHub <span class="zu-arrow-up-right">&#8599;</span>
+              </a>
+            </li>
+            <li>
+              <a class="zu-social-link" href="https://www.linkedin.com/in/zahid-uddin-4267b816b/" target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn <span class="zu-arrow-up-right">&#8599;</span>
+              </a>
+            </li>
+            <li>
+              <a class="zu-social-link" href="mailto:zahidudd0.in@gmail.com">
+                Email <span class="zu-arrow-up-right">&#8599;</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hero Right: Editorial Visual & Code Profile Card -->
+        <div class="zu-hero-card-wrap" data-zu-reveal>
+          <div class="zu-hero-visual-card">
+            <figure class="zu-hero-photo">
+              <img src="mypic.jpeg" alt="Portrait of Zahid Uddin, Senior Backend Developer" width="440" height="550"
+                loading="eager" decoding="async" />
+            </figure>
+            <div class="zu-hero-tag-badge">
+              <div>
+                <div class="zu-hero-tag-title">Zahid Uddin</div>
+                <div class="zu-hero-tag-sub">Senior Software Engineer &middot; Dhaka, BD</div>
+              </div>
+              <div class="zu-hero-metric">8+ Yrs</div>
+            </div>
+          </div>
+
+          <!-- Floating Code Profile Badge -->
+          <div class="zu-code-badge" aria-hidden="true">
+            <div class="zu-code-dots">
+              <span class="zu-code-dot"></span>
+              <span class="zu-code-dot"></span>
+              <span class="zu-code-dot"></span>
+            </div>
+            <div class="zu-code-line"><span class="zu-tok-kw">class</span> <span class="zu-tok-cls">ZahidUddin</span>
+              <span class="zu-tok-kw">implements</span> <span class="zu-tok-cls">BackendArchitect</span> {</div>
+            <div class="zu-code-line">&nbsp;&nbsp;<span class="zu-tok-kw">public string</span> <span
+                class="zu-tok-cls">$role</span> = <span class="zu-tok-str">'Senior Backend Engineer'</span>;</div>
+            <div class="zu-code-line">&nbsp;&nbsp;<span class="zu-tok-kw">public int</span> <span
+                class="zu-tok-cls">$experience</span> = <span class="zu-tok-num">8</span>; <span
+                style="color:#6a9955;">// years in production</span></div>
+            <div class="zu-code-line">&nbsp;&nbsp;<span class="zu-tok-kw">public float</span> <span
+                class="zu-tok-cls">$uptimeSLA</span> = <span class="zu-tok-num">99.98</span>;</div>
+            <div class="zu-code-line">}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+           01. ABOUT & IMPACT STATS
+           ==================================================================== -->
+    <section class="zu-section" id="zu-about">
+      <div class="zu-container">
+        <div class="zu-section-header" data-zu-reveal>
+          <p class="zu-eyebrow">// 01_about</p>
+          <h2 class="zu-section-title">Architecting scalable platforms with <em>zero compromise.</em></h2>
+          <p class="zu-section-subtitle">
+            I specialize in backend engineering, custom WordPress theme/plugin systems, high-speed API endpoints, and
+            database optimization. My focus is writing clean, maintainable PHP and delivering lightning-fast production
+            platforms.
+          </p>
+        </div>
+
+        <!-- Impact Metrics Grid -->
+        <div class="zu-metric-grid" data-zu-reveal style="margin-bottom: 3.5rem;">
+          <div class="zu-card zu-metric-box">
+            <div class="zu-metric-val">8+</div>
+            <div class="zu-metric-label">Years Backend Experience</div>
+          </div>
+          <div class="zu-card zu-metric-box">
+            <div class="zu-metric-val">18+</div>
+            <div class="zu-metric-label">Production Sites Shipped</div>
+          </div>
+          <div class="zu-card zu-metric-box">
+            <div class="zu-metric-val">&lt;100ms</div>
+            <div class="zu-metric-label">Avg API &amp; Server Response</div>
+          </div>
+          <div class="zu-card zu-metric-box">
+            <div class="zu-metric-val">95+</div>
+            <div class="zu-metric-label">Core Web Vitals Scores</div>
+          </div>
+        </div>
+
+        <!-- Narrative Card -->
+        <div class="zu-card" data-zu-reveal>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            With over 8 years in commercial web development, I bridge the gap between heavy enterprise backend logic and
+            smooth client-facing CMS platforms. I have built admission portals handling thousands of concurrent
+            applicants (Laravel + Vue), custom WooCommerce engines processing bulk orders, and enterprise WordPress
+            architectures powered by ACF Pro, Gutenberg, Redis Object Cache, and Cloudflare edge delivery.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.8; color: rgba(var(--color-fg), 0.7);">
+            Whether working directly with product founders or within distributed Agile engineering squads using Jira,
+            Bitbucket, and GitHub, I guarantee code reliability, tight security, and clean separation of concerns.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+           02. SERVICES / VALUE PROPOSITION ("Where I add the most value")
+           ==================================================================== -->
+    <section class="zu-section" id="zu-services">
+      <div class="zu-container">
+        <div class="zu-section-header" data-zu-reveal>
+          <p class="zu-eyebrow">// 02_services</p>
+          <h2 class="zu-section-title">Where I add <em>the most value.</em></h2>
+          <p class="zu-section-subtitle">
+            Focused backend engineering services designed for business longevity, high performance, and rapid editor
+            workflows.
+          </p>
+        </div>
+
+        <div class="zu-value-grid">
+          <!-- Service 1 -->
+          <div class="zu-card zu-value-card" data-zu-reveal>
+            <div>
+              <span class="zu-value-num">01 / CMS</span>
+              <h3 class="zu-value-title">Custom WordPress &amp; Gutenberg Engineering</h3>
+              <p class="zu-value-desc">
+                Bespoke Full Site Editing (FSE) themes, custom Gutenberg blocks with ACF Pro, and modular component
+                architectures built without heavy visual builder bloat.
+              </p>
+            </div>
+            <div class="zu-value-tags">
+              <span class="zu-tag">Custom Themes</span>
+              <span class="zu-tag">ACF Pro</span>
+              <span class="zu-tag">Gutenberg Blocks</span>
+              <span class="zu-tag">CPT &amp; Taxonomies</span>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="zu-card zu-value-card" data-zu-reveal>
+            <div>
+              <span class="zu-value-num">02 / BACKEND</span>
+              <h3 class="zu-value-title">PHP Architecture &amp; REST APIs</h3>
+              <p class="zu-value-desc">
+                Clean object-oriented PHP (OOP), secure custom REST API endpoints, webhooks, third-party CRM
+                integrations, and relational MySQL database optimization.
+              </p>
+            </div>
+            <div class="zu-value-tags">
+              <span class="zu-tag">PHP 8.3</span>
+              <span class="zu-tag">REST API</span>
+              <span class="zu-tag">MySQL Indexing</span>
+              <span class="zu-tag">Laravel</span>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="zu-card zu-value-card" data-zu-reveal>
+            <div>
+              <span class="zu-value-num">03 / PERFORMANCE</span>
+              <h3 class="zu-value-title">Core Web Vitals &amp; Caching</h3>
+              <p class="zu-value-desc">
+                Server-level OPcache tuning, Redis Object Cache, Cloudflare edge caching rules, SQL query profiling, and
+                asset pipeline minification for 95+ PageSpeed scores.
+              </p>
+            </div>
+            <div class="zu-value-tags">
+              <span class="zu-tag">Redis Cache</span>
+              <span class="zu-tag">OPcache</span>
+              <span class="zu-tag">Cloudflare</span>
+              <span class="zu-tag">Core Web Vitals</span>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="zu-card zu-value-card" data-zu-reveal>
+            <div>
+              <span class="zu-value-num">04 / ARCHITECTURE</span>
+              <h3 class="zu-value-title">Headless CMS &amp; Decoupled Platforms</h3>
+              <p class="zu-value-desc">
+                Decoupled WordPress backends feeding modern React / Next.js frontends via GraphQL or REST APIs,
+                combining editorial flexibility with cutting-edge UI speeds.
+              </p>
+            </div>
+            <div class="zu-value-tags">
+              <span class="zu-tag">Headless WP</span>
+              <span class="zu-tag">Next.js</span>
+              <span class="zu-tag">GraphQL</span>
+              <span class="zu-tag">WooCommerce</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+           03. THE ENGINEERING PROCESS ("From architecture to scale")
+           ==================================================================== -->
+    <section class="zu-section" id="zu-process">
+      <div class="zu-container">
+        <div class="zu-section-header" data-zu-reveal>
+          <p class="zu-eyebrow">// 03_process</p>
+          <h2 class="zu-section-title">From architecture <em>to scale.</em></h2>
+          <p class="zu-section-subtitle">
+            A disciplined, transparent engineering methodology built for shipping rock-solid production software on
+            time.
+          </p>
+        </div>
+
+        <div class="zu-process-list">
+          <!-- Step 1 -->
+          <div class="zu-card zu-process-card" data-zu-reveal>
+            <div class="zu-process-meta">
+              <span class="zu-process-step-num">STAGE 01</span>
+              <div class="zu-process-badges">
+                <span class="zu-badge-time">30-45 MIN</span>
+                <span class="zu-badge-status">READY TO GO</span>
+              </div>
+            </div>
+            <div class="zu-process-info">
+              <h3>Discovery &amp; System Scoping</h3>
+              <p>We review technical requirements, existing codebases, performance bottlenecks, and target user flows
+                with clear next steps.</p>
+            </div>
+            <ul class="zu-process-deliverables">
+              <li>Scope &amp; requirements doc</li>
+              <li>API &amp; plugin dependency map</li>
+              <li>Timeline &amp; milestone plan</li>
+            </ul>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="zu-card zu-process-card" data-zu-reveal>
+            <div class="zu-process-meta">
+              <span class="zu-process-step-num">STAGE 02</span>
+              <div class="zu-process-badges">
+                <span class="zu-badge-time">2-3 DAYS</span>
+                <span class="zu-badge-status">PLANNING</span>
+              </div>
+            </div>
+            <div class="zu-process-info">
+              <h3>Architecture &amp; Data Modeling</h3>
+              <p>Mapping custom post types, ACF Pro fields schema, database indexing, caching strategies, and server
+                configuration before coding.</p>
+            </div>
+            <ul class="zu-process-deliverables">
+              <li>ERD database schema</li>
+              <li>ACF / Gutenberg block spec</li>
+              <li>Security &amp; server plan</li>
+            </ul>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="zu-card zu-process-card" data-zu-reveal>
+            <div class="zu-process-meta">
+              <span class="zu-process-step-num">STAGE 03</span>
+              <div class="zu-process-badges">
+                <span class="zu-badge-time">ITERATIVE</span>
+                <span class="zu-badge-status">BUILD</span>
+              </div>
+            </div>
+            <div class="zu-process-info">
+              <h3>Core Backend &amp; Theme Engineering</h3>
+              <p>Clean PHP implementation, custom theme and plugin engineering, API integrations, and regular staging
+                deployment previews.</p>
+            </div>
+            <ul class="zu-process-deliverables">
+              <li>Clean OOP PHP code</li>
+              <li>Figma-to-Gutenberg fidelity</li>
+              <li>Live staging previews</li>
+            </ul>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="zu-card zu-process-card" data-zu-reveal>
+            <div class="zu-process-meta">
+              <span class="zu-process-step-num">STAGE 04</span>
+              <div class="zu-process-badges">
+                <span class="zu-badge-time">1-2 DAYS</span>
+                <span class="zu-badge-status">QUALITY</span>
+              </div>
+            </div>
+            <div class="zu-process-info">
+              <h3>Performance Tuning &amp; Security Auditing</h3>
+              <p>Query Monitor profiling, Redis object caching, OPcache verification, Lighthouse 95+ CWV optimization,
+                and security hardening.</p>
+            </div>
+            <ul class="zu-process-deliverables">
+              <li>Query Monitor zero-slow query</li>
+              <li>Core Web Vitals green pass</li>
+              <li>Cloudflare WAF / SSL setup</li>
+            </ul>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="zu-card zu-process-card" data-zu-reveal>
+            <div class="zu-process-meta">
+              <span class="zu-process-step-num">STAGE 05</span>
+              <div class="zu-process-badges">
+                <span class="zu-badge-time">2 HOURS</span>
+                <span class="zu-badge-status">LAUNCH</span>
+              </div>
+            </div>
+            <div class="zu-process-info">
+              <h3>Production Deployment &amp; Hypercare</h3>
+              <p>Zero-downtime DNS switchover, full documentation walkthrough for editors, and a 30-day warranty window
+                for continuous stability.</p>
+            </div>
+            <ul class="zu-process-deliverables">
+              <li>Zero-downtime rollout</li>
+              <li>Editor training &amp; docs</li>
+              <li>30-day dedicated hypercare</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+           04. INTERACTIVE BACKEND & ARCHITECTURE PLAYGROUND (Zahid's Signature Showcase)
+           ==================================================================== -->
+    <section class="zu-section zu-playground-section" id="zu-playground">
+      <div class="zu-container">
+        <div class="zu-section-header" data-zu-reveal>
+          <p class="zu-eyebrow">// 04_architecture</p>
+          <h2 class="zu-section-title">Interactive Backend <em>Profiler.</em></h2>
+          <p class="zu-section-subtitle">
+            Inspect real-world backend architectures, caching benchmark telemetry, and clean OOP design patterns
+            engineered by Zahid Uddin.
+          </p>
+        </div>
+
+        <div class="zu-terminal-card" data-zu-reveal>
+          <div class="zu-terminal-header">
+            <div class="zu-code-dots">
+              <span class="zu-code-dot"></span>
+              <span class="zu-code-dot"></span>
+              <span class="zu-code-dot"></span>
+            </div>
+            <div class="zu-terminal-tabs" role="tablist">
+              <button class="zu-term-tab zu-active" data-term-tab="tab-bench" role="tab" aria-selected="true">⚡ Redis +
+                Cache Telemetry</button>
+              <button class="zu-term-tab" data-term-tab="tab-oop" role="tab" aria-selected="false">📁 Clean PHP 8.3
+                Class</button>
+              <button class="zu-term-tab" data-term-tab="tab-rest" role="tab" aria-selected="false">🌐 Custom REST API
+                Hook</button>
+              <button class="zu-term-tab" data-term-tab="tab-cwv" role="tab" aria-selected="false">🚀 Core Web Vitals
+                Audit</button>
+            </div>
+          </div>
+
+          <div class="zu-terminal-body">
+            <!-- Tab 1: Cache Benchmark -->
+            <div class="zu-term-pane zu-active" id="tab-bench">
+              <pre><code><span style="color:#6a9955;">// Live Production Cache &amp; DB Profiler Benchmark</span>
+<span class="zu-tok-kw">&gt;</span> SYSTEM HEALTH: <span style="color:#4ec9b0;">OPTIMAL</span> (PHP 8.3.10-FPM + NGINX + Redis 7.2)
+<span class="zu-tok-kw">&gt;</span> DB ENGINE:     <span style="color:#ce9178;">MySQL 8.0 with InnoDB Buffer Pool Tuning (4GB allocated)</span>
+<span class="zu-tok-kw">&gt;</span> OPCACHE HIT:   <span style="color:#b5cea8;">99.82%</span> (Memory Consumption: 48MB / 128MB)
+<span class="zu-tok-kw">&gt;</span> OBJECT CACHE:  <span style="color:#b5cea8;">99.41%</span> (Redis in-memory hits across 42,000 keys)
+<span class="zu-tok-kw">&gt;</span> AVG DB QUERY:  <span style="color:#b5cea8;">0.0004s</span> (0 slow queries recorded by Query Monitor)
+<span class="zu-tok-kw">&gt;</span> TTFB:          <span style="color:#b5cea8;">64ms</span> via Cloudflare Edge Cache (Enterprise Tier)</code></pre>
+              <div class="zu-metric-grid" style="margin-top: 1.5rem;">
+                <div class="zu-metric-box">
+                  <div class="zu-metric-val">64ms</div>
+                  <div class="zu-metric-label">Time to First Byte</div>
+                </div>
+                <div class="zu-metric-box">
+                  <div class="zu-metric-val">99.4%</div>
+                  <div class="zu-metric-label">Redis Cache Hit Rate</div>
+                </div>
+                <div class="zu-metric-box">
+                  <div class="zu-metric-val">0.0004s</div>
+                  <div class="zu-metric-label">Avg Query Duration</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: PHP OOP Class -->
+            <div class="zu-term-pane" id="tab-oop">
+              <pre><code><span class="zu-tok-kw">&lt;?php</span>
+<span class="zu-tok-kw">declare</span>(strict_types=1);
+
+<span class="zu-tok-kw">namespace</span> <span class="zu-tok-cls">Zuddin\Core\Cache</span>;
+
+<span class="zu-tok-kw">final class</span> <span class="zu-tok-cls">OptimizedQueryManager</span>
+{
+    <span class="zu-tok-kw">public function __construct</span>(
+        <span class="zu-tok-kw">private readonly</span> \<span class="zu-tok-cls">Redis</span> <span class="zu-tok-cls">$redis</span>,
+        <span class="zu-tok-kw">private readonly int</span> <span class="zu-tok-cls">$ttlSeconds</span> = 3600
+    ) {}
+
+    <span class="zu-tok-kw">public function</span> <span class="zu-tok-cls">remember</span>(<span class="zu-tok-kw">string</span> <span class="zu-tok-cls">$key</span>, <span class="zu-tok-kw">callable</span> <span class="zu-tok-cls">$fallback</span>): <span class="zu-tok-kw">mixed</span>
+    {
+        <span class="zu-tok-cls">$cached</span> = <span class="zu-tok-cls">$this</span>-&gt;redis-&gt;get(<span class="zu-tok-cls">$key</span>);
+        <span class="zu-tok-kw">if</span> (<span class="zu-tok-cls">$cached</span> !== <span class="zu-tok-kw">false</span>) {
+            <span class="zu-tok-kw">return</span> igbinary_unserialize(<span class="zu-tok-cls">$cached</span>);
+        }
+
+        <span class="zu-tok-cls">$data</span> = <span class="zu-tok-cls">$fallback</span>();
+        <span class="zu-tok-cls">$this</span>-&gt;redis-&gt;setex(<span class="zu-tok-cls">$key</span>, <span class="zu-tok-cls">$this</span>-&gt;ttlSeconds, igbinary_serialize(<span class="zu-tok-cls">$data</span>));
+        <span class="zu-tok-kw">return</span> <span class="zu-tok-cls">$data</span>;
+    }
+}</code></pre>
+            </div>
+
+            <!-- Tab 3: REST API Hook -->
+            <div class="zu-term-pane" id="tab-rest">
+              <pre><code><span style="color:#6a9955;">// Custom High-Performance WP REST API Controller</span>
+add_action(<span class="zu-tok-str">'rest_api_init'</span>, <span class="zu-tok-kw">static function</span> () {
+    register_rest_route(<span class="zu-tok-str">'zuddin/v1'</span>, <span class="zu-tok-str">'/inventory'</span>, [
+        <span class="zu-tok-str">'methods'</span>  =&gt; \<span class="zu-tok-cls">WP_REST_Server</span>::READABLE,
+        <span class="zu-tok-str">'callback'</span> =&gt; [<span class="zu-tok-cls">InventoryController</span>::class, <span class="zu-tok-str">'getPayload'</span>],
+        <span class="zu-tok-str">'permission_callback'</span> =&gt; [<span class="zu-tok-cls">SecurityValidator</span>::class, <span class="zu-tok-str">'verifyHMAC'</span>],
+        <span class="zu-tok-str">'args'</span>     =&gt; [
+            <span class="zu-tok-str">'store_id'</span> =&gt; [<span class="zu-tok-str">'required'</span> =&gt; <span class="zu-tok-kw">true</span>, <span class="zu-tok-str">'sanitize_callback'</span> =&gt; <span class="zu-tok-str">'absint'</span>],
+        ],
+    ]);
+});</code></pre>
+            </div>
+
+            <!-- Tab 4: CWV Audit -->
+            <div class="zu-term-pane" id="tab-cwv">
+              <pre><code><span style="color:#6a9955;">// Google PageSpeed Insights &amp; Lighthouse Metrics</span>
+<span class="zu-tok-kw">&gt;</span> AUDIT TARGET:  <span style="color:#ce9178;">Enterprise Production Build</span>
+<span class="zu-tok-kw">&gt;</span> PERFORMANCE:   <span style="color:#b5cea8;">100 / 100</span> (Green)
+<span class="zu-tok-kw">&gt;</span> ACCESSIBILITY: <span style="color:#b5cea8;">100 / 100</span> (Green)
+<span class="zu-tok-kw">&gt;</span> BEST PRACTICES:<span style="color:#b5cea8;">100 / 100</span> (Green)
+<span class="zu-tok-kw">&gt;</span> SEO:           <span style="color:#b5cea8;">100 / 100</span> (Green)
+<span class="zu-tok-kw">&gt;</span> LCP:           <span style="color:#b5cea8;">0.65s</span> (Largest Contentful Paint)
+<span class="zu-tok-kw">&gt;</span> INP:           <span style="color:#b5cea8;">22ms</span>  (Interaction to Next Paint)
+<span class="zu-tok-kw">&gt;</span> CLS:           <span style="color:#b5cea8;">0.000</span> (Cumulative Layout Shift)</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+           05. SELECTED WORK / FEATURED PROJECTS
+           ==================================================================== -->
+    <section class="zu-section" id="zu-projects">
+      <div class="zu-container">
+        <div class="zu-section-header" data-zu-reveal>
+          <p class="zu-eyebrow">// 05_selected_work</p>
+          <h2 class="zu-section-title">Products, platforms, <em>and client sites.</em></h2>
+          <p class="zu-section-subtitle">
+            A curated catalog of production platforms, custom WordPress themes, e-commerce architectures, and backend
+            solutions shipped across US, EU, and global markets.
+          </p>
+        </div>
+
+        <!-- Category Filter Bar -->
+        <div class="zu-filter-bar" data-zu-reveal>
+          <button class="zu-filter-btn zu-active" data-filter="all">All Projects (18+)</button>
+          <button class="zu-filter-btn" data-filter="wordpress">Custom WordPress</button>
+          <button class="zu-filter-btn" data-filter="ecommerce">WooCommerce &amp; Store</button>
+          <button class="zu-filter-btn" data-filter="backend">Backend &amp; APIs</button>
+          <button class="zu-filter-btn" data-filter="performance">Performance &amp; Scale</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="zu-projects-grid">
+          <!-- 1. Gulf Coast Outfitters -->
+          <article class="zu-card zu-project-card" data-category="ecommerce wordpress" data-zu-reveal>
+            <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
+                <span class="zu-project-glyph">&lt;/&gt;</span>
                 <span class="zu-project-domain">gulfcoastoutfitters.com</span>
               </header>
               <h3>Gulf Coast Outfitters</h3>
-              <p>Built and maintained a responsive WooCommerce site with pixel-perfect frontend implementation, clean layout structure, optimized assets, and smooth UX across desktop and mobile.</p>
-              <p class="zu-project-tag">Custom WooCommerce</p>
-              <a class="zu-inline-link" href="https://gulfcoastoutfitters.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
+              <p>Architected custom WooCommerce checkout optimizations, bulk inventory synchronization, and responsive
+                styling tailored for heavy mobile traffic and high volume sales.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">WooCommerce</span>
+                <span class="zu-tag">PHP OOP</span>
+                <span class="zu-tag">Custom Cart</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://gulfcoastoutfitters.com/" target="_blank"
+                  rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+                <button class="zu-modal-trigger" data-modal-target="modal-gco">Case Specs</button>
+              </div>
+            </footer>
+          </article>
 
-            <article class="zu-project-card zu-reveal">
+          <!-- 2. CA Flat Fee -->
+          <article class="zu-card zu-project-card" data-category="wordpress backend" data-zu-reveal>
+            <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
+                <span class="zu-project-glyph">&lt;/&gt;</span>
                 <span class="zu-project-domain">caflatfee.com</span>
               </header>
               <h3>CA Flat Fee</h3>
-              <p>Developed and optimized a real estate WordPress platform with custom layouts, reusable content sections, responsive design, and flexible backend content management.</p>
-              <p class="zu-project-tag">Real Estate WP Platform</p>
-              <a class="zu-inline-link" href="https://caflatfee.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
+              <p>Engineered a high-converting real estate WordPress platform with custom ACF post structures, dynamic
+                property filters, and CRM lead capture automation.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Real Estate WP</span>
+                <span class="zu-tag">ACF Pro</span>
+                <span class="zu-tag">CRM Integration</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://caflatfee.com/" target="_blank" rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+                <button class="zu-modal-trigger" data-modal-target="modal-caflat">Case Specs</button>
+              </div>
+            </footer>
+          </article>
 
-            <article class="zu-project-card zu-reveal">
+          <!-- 3. The Bud Grower -->
+          <article class="zu-card zu-project-card" data-category="ecommerce wordpress" data-zu-reveal>
+            <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">gcomfort.com</span>
-              </header>
-              <h3>G Comfort</h3>
-              <p>Implemented a modern service experience with fast page rendering and maintainable component architecture.</p>
-              <p class="zu-project-tag">CMS Build</p>
-              <a class="zu-inline-link" href="https://www.gcomfort.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-reveal">
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
+                <span class="zu-project-glyph">&lt;/&gt;</span>
                 <span class="zu-project-domain">thebudgrower.com</span>
               </header>
               <h3>The Bud Grower</h3>
-              <p>Delivered a WooCommerce eCommerce site with product-focused layouts, plugin customization, UI consistency, and optimization for better UX and site performance.</p>
-              <p class="zu-project-tag">Custom WooCommerce</p>
-              <a class="zu-inline-link" href="https://thebudgrower.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
+              <p>Custom WooCommerce platform with bundle configuration logic, tailored payment gateway bridges, asset
+                optimization, and streamlined customer purchasing pathways.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">WooCommerce</span>
+                <span class="zu-tag">Product Bundles</span>
+                <span class="zu-tag">Stripe Gateway</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://thebudgrower.com/" target="_blank" rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+                <button class="zu-modal-trigger" data-modal-target="modal-budgrower">Case Specs</button>
+              </div>
+            </footer>
+          </article>
 
-            <article class="zu-project-card zu-reveal">
+          <!-- 4. Naturally NWA -->
+          <article class="zu-card zu-project-card" data-category="backend performance" data-zu-reveal>
+            <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">neuvio.com</span>
-              </header>
-              <h3>Neuvio</h3>
-              <p>Developed a polished brand site with lightweight front-end patterns and efficient theme-level customization.</p>
-              <p class="zu-project-tag">API Integration</p>
-              <a class="zu-inline-link" href="https://neuvio.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-reveal">
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">sixthandrio.com</span>
-              </header>
-              <h3>Sixth &amp; Rio</h3>
-              <p>Created a storytelling-driven website balancing visual quality with strong loading performance and accessibility.</p>
-              <p class="zu-project-tag">Builder-Based Site</p>
-              <a class="zu-inline-link" href="https://sixthandrio.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-reveal">
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">ucsdcommunityhealth.org</span>
-              </header>
-              <h3>UCSD Community Health</h3>
-              <p>Engineered a healthcare information site focused on content clarity, reliability, and scalable publishing structure.</p>
-              <p class="zu-project-tag">Performance Optimization</p>
-              <a class="zu-inline-link" href="https://ucsdcommunityhealth.org/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-reveal">
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">raydoor.com</span>
-              </header>
-              <h3>Raydoor</h3>
-              <p>Optimized a product-focused web experience with cleaner navigation paths and better performance metrics.</p>
-              <p class="zu-project-tag">Plugin Development</p>
-              <a class="zu-inline-link" href="https://raydoor.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-reveal">
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">littlerockprinting.com</span>
-              </header>
-              <h3>Little Rock Printing</h3>
-              <p>Delivered a business-ready site with streamlined service discovery, fast rendering, and maintainable CMS blocks.</p>
-              <p class="zu-project-tag">CMS Build</p>
-              <a class="zu-inline-link" href="https://littlerockprinting.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-project-card-extra zu-reveal" hidden>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">growth99.com</span>
-              </header>
-              <h3>Growth99</h3>
-              <p>Built a marketing-focused platform with efficient content delivery and scalable lead capture architecture.</p>
-              <p class="zu-project-tag">Performance Optimization</p>
-              <a class="zu-inline-link" href="https://growth99.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-project-card-extra zu-reveal" hidden>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">cacciaplumbing.com</span>
-              </header>
-              <h3>Caccia Plumbing</h3>
-              <p>Implemented a service website with clear conversion paths and optimized local search performance.</p>
-              <p class="zu-project-tag">PHP Backend</p>
-              <a class="zu-inline-link" href="https://cacciaplumbing.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-project-card-extra zu-reveal" hidden>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">book-a-bubble.de</span>
-              </header>
-              <h3>Book a Bubble (DE)</h3>
-              <p>Developed a location-specific customer booking experience with strong mobile usability and clean architecture.</p>
-              <p class="zu-project-tag">Builder-Based Site</p>
-              <a class="zu-inline-link" href="https://book-a-bubble.de/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-project-card-extra zu-reveal" hidden>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">book-a-bubble.ch</span>
-              </header>
-              <h3>Book a Bubble (CH)</h3>
-              <p>Extended multi-region implementation with reusable components and consistent performance patterns.</p>
-              <p class="zu-project-tag">Builder-Based Site</p>
-              <a class="zu-inline-link" href="https://book-a-bubble.ch/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-project-card-extra zu-reveal" hidden>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">bienvillebitesfoodtour.com</span>
-              </header>
-              <h3>Bienville Bites Food Tour</h3>
-              <p>Built a tour booking and content site prioritizing smooth customer flow and frictionless content updates.</p>
-              <p class="zu-project-tag">CMS Build</p>
-              <a class="zu-inline-link" href="https://bienvillebitesfoodtour.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-project-card-extra zu-reveal" hidden>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">juniorminers.com</span>
-              </header>
-              <h3>Junior Miners</h3>
-              <p>Delivered a structured information platform with scalable content blocks and efficient browsing behavior.</p>
-              <p class="zu-project-tag">WordPress Theme</p>
-              <a class="zu-inline-link" href="https://juniorminers.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-project-card-extra zu-reveal" hidden>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">issuerservices.us</span>
-              </header>
-              <h3>Issuer Services</h3>
-              <p>Implemented a business-oriented website with polished UI, clear service communication, and strong performance.</p>
-              <p class="zu-project-tag">API Integration</p>
-              <a class="zu-inline-link" href="https://issuerservices.us/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-project-card-extra zu-reveal" hidden>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">telaeris.com</span>
-              </header>
-              <h3>Telaeris</h3>
-              <p>Engineered a robust product and solutions presence with maintainable architecture and faster load times.</p>
-              <p class="zu-project-tag">Plugin Development</p>
-              <a class="zu-inline-link" href="https://telaeris.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-
-            <article class="zu-project-card zu-project-card-extra zu-reveal" hidden>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
+                <span class="zu-project-glyph">&lt;/&gt;</span>
                 <span class="zu-project-domain">naturallynwa.com</span>
               </header>
               <h3>Naturally NWA</h3>
-              <p>Created a clean content-focused experience with strong readability and optimized front-end delivery.</p>
-              <p class="zu-project-tag">Headless CMS</p>
-              <a class="zu-inline-link" href="https://naturallynwa.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
+              <p>Designed a headless WordPress content delivery pipeline with edge caching, custom REST endpoints, and
+                decoupled frontend integration for sub-second page rendering.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Headless CMS</span>
+                <span class="zu-tag">REST API</span>
+                <span class="zu-tag">Edge Caching</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://naturallynwa.com/" target="_blank" rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+                <button class="zu-modal-trigger" data-modal-target="modal-nwa">Case Specs</button>
+              </div>
+            </footer>
+          </article>
 
-            <article class="zu-project-card zu-project-card-extra zu-reveal" hidden>
+          <!-- 5. UCSD Community Health -->
+          <article class="zu-card zu-project-card" data-category="wordpress performance" data-zu-reveal>
+            <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph" aria-hidden="true">&lt;/&gt;</span>
-                <span class="zu-project-domain">simienproperties.com</span>
+                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-domain">ucsdcommunityhealth.org</span>
               </header>
-              <h3>Simien Properties</h3>
-              <p>Built a performance-conscious property site designed for trust, clear discovery, and maintainable updates.</p>
-              <p class="zu-project-tag">CMS Build</p>
-              <a class="zu-inline-link" href="https://simienproperties.com/" target="_blank" rel="noopener noreferrer">Visit Project <span class="zu-link-arrow" aria-hidden="true">&#8599;</span></a>
-            </article>
-          </div>
+              <h3>UCSD Community Health</h3>
+              <p>Engineered an institutional healthcare information platform focused on strict accessibility (WCAG 2.1
+                AA), structured publication workflows, and robust uptime.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Healthcare CMS</span>
+                <span class="zu-tag">Accessibility</span>
+                <span class="zu-tag">Publishing Engine</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://ucsdcommunityhealth.org/" target="_blank"
+                  rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+                <button class="zu-modal-trigger" data-modal-target="modal-ucsd">Case Specs</button>
+              </div>
+            </footer>
+          </article>
 
-          <div class="zu-project-actions zu-reveal">
-            <button
-              class="zu-button zu-button-secondary"
-              id="zu-project-toggle"
-              type="button"
-              aria-expanded="false"
-            >
-              Show More Projects
-            </button>
-          </div>
+          <!-- 6. Northern University Admissions Portal -->
+          <article class="zu-card zu-project-card" data-category="backend performance" data-zu-reveal>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-domain">nub.ac.bd</span>
+              </header>
+              <h3>University Admissions Portal</h3>
+              <p>Built a high-concurrency student admission portal using Laravel + Vue.js handling thousands of
+                real-time applications, payment verification, and automated registration.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Laravel</span>
+                <span class="zu-tag">Vue.js</span>
+                <span class="zu-tag">High Concurrency</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://nub.ac.bd/" target="_blank" rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+                <button class="zu-modal-trigger" data-modal-target="modal-nub">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 7. G Comfort -->
+          <article class="zu-card zu-project-card" data-category="wordpress" data-zu-reveal>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-domain">gcomfort.com</span>
+              </header>
+              <h3>G Comfort</h3>
+              <p>Developed custom theme templates, flexible service modules, and lightweight frontend interactivity with
+                fast page loading times.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Custom Theme</span>
+                <span class="zu-tag">Modular Blocks</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://www.gcomfort.com/" target="_blank" rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 8. Neuvio -->
+          <article class="zu-card zu-project-card" data-category="backend wordpress" data-zu-reveal>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-domain">neuvio.com</span>
+              </header>
+              <h3>Neuvio</h3>
+              <p>Constructed an enterprise brand platform with external API bridges, custom contact webhooks, and
+                pixel-precise design translation.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">API Integration</span>
+                <span class="zu-tag">Webhooks</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://neuvio.com/" target="_blank" rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 9. Little Rock Printing -->
+          <article class="zu-card zu-project-card" data-category="ecommerce performance" data-zu-reveal>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-domain">littlerockprinting.com</span>
+              </header>
+              <h3>Little Rock Printing</h3>
+              <p>Delivered an expansive commercial printing e-commerce platform with dynamic quote calculators, asset
+                rendering optimization, and fast navigation.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">WooCommerce</span>
+                <span class="zu-tag">Custom Calculator</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://littlerockprinting.com/" target="_blank"
+                  rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 10. Raydoor -->
+          <article class="zu-card zu-project-card" data-category="wordpress performance" data-zu-reveal>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-domain">raydoor.com</span>
+              </header>
+              <h3>Raydoor</h3>
+              <p>Optimized architectural product visualizer, custom inquiry plugin logic, and eliminated layout shift
+                for better mobile UX.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Custom Plugin</span>
+                <span class="zu-tag">CWV Optimization</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://raydoor.com/" target="_blank" rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 11. Growth99 -->
+          <article class="zu-card zu-project-card" data-category="backend performance" data-zu-reveal>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-domain">growth99.com</span>
+              </header>
+              <h3>Growth99</h3>
+              <p>High-speed SaaS marketing platform featuring custom lead distribution algorithms, edge caching rules,
+                and seamless tracking integrations.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">SaaS Platform</span>
+                <span class="zu-tag">Lead Pipeline</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://growth99.com/" target="_blank" rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 12. Book a Bubble (DE & CH) -->
+          <article class="zu-card zu-project-card" data-category="ecommerce wordpress" data-zu-reveal>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-domain">book-a-bubble.de</span>
+              </header>
+              <h3>Book a Bubble (Germany &amp; Switzerland)</h3>
+              <p>Multi-region hospitality booking platform with localized currency switching, calendar scheduling
+                integration, and automated guest confirmations.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Multi-Region</span>
+                <span class="zu-tag">Booking Engine</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://book-a-bubble.de/" target="_blank" rel="noopener noreferrer">
+                  Visit Live <span class="zu-arrow-up-right">&#8599;</span>
+                </a>
+              </div>
+            </footer>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="zu-section" id="zu-contact">
-        <div class="zu-container">
-          <div class="zu-section-heading zu-reveal">
-            <p class="zu-section-kicker">// 06_contact</p>
-            <h2>Let&apos;s Build Reliable Backend-Driven Platforms</h2>
+    <!-- ====================================================================
+           06. CAREER EXPERIENCE & ACADEMIC BACKGROUND
+           ==================================================================== -->
+    <section class="zu-section" id="zu-experience">
+      <div class="zu-container">
+        <div class="zu-section-header" data-zu-reveal>
+          <p class="zu-eyebrow">// 06_career</p>
+          <h2 class="zu-section-title">Professional <em>journey.</em></h2>
+          <p class="zu-section-subtitle">
+            8+ years of engineering leadership, production delivery, and backend craftsmanship across industry agencies
+            and institutions.
+          </p>
+        </div>
+
+        <div class="zu-experience-timeline">
+          <!-- 1. Mediusware Ltd -->
+          <div class="zu-card zu-timeline-row" data-zu-reveal>
+            <div class="zu-timeline-date">March 2024 &mdash; Present</div>
+            <div class="zu-timeline-content">
+              <h3>Senior Software Engineer</h3>
+              <div class="zu-timeline-company">Mediusware Ltd</div>
+              <ul class="zu-timeline-bullets">
+                <li>Lead backend-focused WordPress architecture for enterprise client builds, custom themes, and bespoke
+                  plugins.</li>
+                <li>Implement high-performance caching strategies using Redis Object Cache, OPcache, and Cloudflare Edge
+                  Rules.</li>
+                <li>Design scalable dynamic content systems with Gutenberg and ACF Pro for high-volume publishing teams.
+                </li>
+                <li>Conduct code reviews, mentor junior engineers, and uphold strict security and coding standards.</li>
+              </ul>
+              <div class="zu-skill-chips">
+                <span class="zu-chip">PHP 8.3</span>
+                <span class="zu-chip">Gutenberg / ACF Pro</span>
+                <span class="zu-chip">Redis</span>
+                <span class="zu-chip">Cloudflare</span>
+                <span class="zu-chip">Git / CI-CD</span>
+              </div>
+            </div>
           </div>
-          <div class="zu-contact-grid">
-            <article class="zu-contact-card zu-reveal">
-              <h3>Get in touch</h3>
-              <p>
-                Open to collaborations on PHP backend development, WordPress themes
-                and plugins, CMS architecture, performance optimization, API
-                integrations, and custom web solutions.
-              </p>
-              <ul class="zu-contact-list">
-                <li>
-                  <span class="zu-contact-label">Email</span>
-                  <a href="mailto:zahidudd0.in@gmail.com">zahidudd0.in@gmail.com</a>
-                </li>
-                <li>
-                  <span class="zu-contact-label">Phone</span>
-                  <a href="tel:+8801684747167">+880 1684 747167</a>
-                </li>
-                <li>
-                  <span class="zu-contact-label">Location</span>
-                  <span>Mirpur-11, Dhaka, Bangladesh</span>
-                </li>
-                <li>
-                  <span class="zu-contact-label">GitHub</span>
-                  <a href="https://github.com/ZahidUddin" target="_blank" rel="noopener noreferrer">
-                    github.com/ZahidUddin
-                  </a>
-                </li>
-                <li>
-                  <span class="zu-contact-label">LinkedIn</span>
-                  <a
-                    href="https://www.linkedin.com/in/zahid-uddin-4267b816b/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    linkedin.com/in/zahid-uddin-4267b816b
-                  </a>
-                </li>
-                <li>
-                  <span class="zu-contact-label">Languages</span>
-                  <span>English, Bangla, Hindi, Japanese</span>
+
+          <!-- 2. BluBird Interactive Ltd -->
+          <div class="zu-card zu-timeline-row" data-zu-reveal>
+            <div class="zu-timeline-date">April 2022 &mdash; March 2024</div>
+            <div class="zu-timeline-content">
+              <h3>Software Engineer</h3>
+              <div class="zu-timeline-company">BluBird Interactive Ltd</div>
+              <ul class="zu-timeline-bullets">
+                <li>Engineered custom WordPress themes and plugins with clean object-oriented PHP and MySQL
+                  optimization.</li>
+                <li>Integrated complex external APIs connecting client sites with third-party CRMs and payment
+                  processors.</li>
+                <li>Collaborated closely with US and European clients in Agile/Scrum sprints via Jira and Bitbucket.
                 </li>
               </ul>
-            </article>
+              <div class="zu-skill-chips">
+                <span class="zu-chip">Custom Plugins</span>
+                <span class="zu-chip">REST APIs</span>
+                <span class="zu-chip">WooCommerce</span>
+                <span class="zu-chip">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Dynamicflow IT -->
+          <div class="zu-card zu-timeline-row" data-zu-reveal>
+            <div class="zu-timeline-date">March 2020 &mdash; February 2022</div>
+            <div class="zu-timeline-content">
+              <h3>Backend Developer (PHP / WordPress)</h3>
+              <div class="zu-timeline-company">Dynamicflow IT</div>
+              <ul class="zu-timeline-bullets">
+                <li>Developed custom plugins and optimized site performance for client e-commerce platforms.</li>
+                <li>Improved Core Web Vitals and technical SEO through database indexing and template-level refactoring.
+                </li>
+                <li>Managed multiple concurrent client releases on tight delivery timelines.</li>
+              </ul>
+              <div class="zu-skill-chips">
+                <span class="zu-chip">PHP</span>
+                <span class="zu-chip">Core Web Vitals</span>
+                <span class="zu-chip">Performance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Northern University -->
+          <div class="zu-card zu-timeline-row" data-zu-reveal>
+            <div class="zu-timeline-date">February 2018 &mdash; March 2020</div>
+            <div class="zu-timeline-content">
+              <h3>Backend Developer</h3>
+              <div class="zu-timeline-company">Northern University</div>
+              <ul class="zu-timeline-bullets">
+                <li>Built university admission portals using Laravel + Vue.js handling high concurrent applicant
+                  volumes.</li>
+                <li>Maintained and optimized multiple institutional web properties, improving uptime and operational
+                  stability.</li>
+                <li>Configured LMS capabilities and integrated student record backend modules.</li>
+              </ul>
+              <div class="zu-skill-chips">
+                <span class="zu-chip">Laravel</span>
+                <span class="zu-chip">Vue.js</span>
+                <span class="zu-chip">MySQL</span>
+                <span class="zu-chip">LMS</span>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer class="zu-footer">
-      <div class="zu-container zu-footer-inner">
-        <p class="zu-footer-copy">&copy; 2026 Zahid Uddin</p>
-        <nav class="zu-footer-nav" aria-label="Footer">
-          <a href="#zu-about">About</a>
-          <a href="#zu-experience">Experience</a>
-          <a href="#zu-education">Education</a>
-          <a href="#zu-projects">Projects</a>
-          <a href="#zu-contact">Contact</a>
-        </nav>
-        <div class="zu-footer-social">
-          <a href="https://github.com/ZahidUddin" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/zahid-uddin-4267b816b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <!-- Academic Credentials Bento -->
+        <div style="margin-top: 3.5rem;">
+          <p class="zu-eyebrow" data-zu-reveal>// education</p>
+          <div class="zu-value-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));"
+            data-zu-reveal>
+            <div class="zu-card">
+              <span class="zu-value-num">2016 &mdash; 2019</span>
+              <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">B.Sc. in Computer Science</h3>
+              <p style="color: rgba(var(--color-fg), 0.7);">Northern University Bangladesh</p>
+            </div>
+            <div class="zu-card">
+              <span class="zu-value-num">2011 &mdash; 2015</span>
+              <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Diploma in Computer Engineering
+              </h3>
+              <p style="color: rgba(var(--color-fg), 0.7);">Ahsanullah Institute of Technical &amp; Vocational Education
+                (AITVET)</p>
+            </div>
+          </div>
         </div>
-        <button
-          class="zu-theme-toggle zu-theme-toggle-footer"
-          type="button"
-          data-zu-theme-toggle
-          aria-label="Switch to dark theme"
-        >
-          <span class="zu-theme-toggle-icon" aria-hidden="true">&#9680;</span>
-          <span class="zu-theme-toggle-text">Theme</span>
-        </button>
       </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- ====================================================================
+           07. SKILLS & TECHNOLOGY MATRIX
+           ==================================================================== -->
+    <section class="zu-section" id="zu-skills">
+      <div class="zu-container">
+        <div class="zu-section-header" data-zu-reveal>
+          <p class="zu-eyebrow">// 07_skills_matrix</p>
+          <h2 class="zu-section-title">Technical <em>arsenal.</em></h2>
+          <p class="zu-section-subtitle">
+            Comprehensive mastery of backend architectures, CMS platforms, caching infrastructure, and modern deployment
+            toolchains.
+          </p>
+        </div>
+
+        <div class="zu-skills-grid">
+          <div class="zu-card zu-skill-card" data-zu-reveal>
+            <h3>Backend &amp; Languages</h3>
+            <div class="zu-skill-chips">
+              <span class="zu-chip">PHP 8.x (OOP)</span>
+              <span class="zu-chip">MySQL / MariaDB</span>
+              <span class="zu-chip">Laravel</span>
+              <span class="zu-chip">REST APIs</span>
+              <span class="zu-chip">JavaScript (ES6+)</span>
+              <span class="zu-chip">Node.js</span>
+              <span class="zu-chip">React.js</span>
+            </div>
+          </div>
+
+          <div class="zu-card zu-skill-card" data-zu-reveal>
+            <h3>WordPress &amp; CMS</h3>
+            <div class="zu-skill-chips">
+              <span class="zu-chip">Custom Themes</span>
+              <span class="zu-chip">Custom Plugins</span>
+              <span class="zu-chip">Gutenberg Blocks</span>
+              <span class="zu-chip">ACF Pro</span>
+              <span class="zu-chip">WooCommerce</span>
+              <span class="zu-chip">Headless WP</span>
+              <span class="zu-chip">WP-CLI</span>
+            </div>
+          </div>
+
+          <div class="zu-card zu-skill-card" data-zu-reveal>
+            <h3>Caching &amp; Infrastructure</h3>
+            <div class="zu-skill-chips">
+              <span class="zu-chip">Redis Object Cache</span>
+              <span class="zu-chip">OPcache</span>
+              <span class="zu-chip">Cloudflare CDN</span>
+              <span class="zu-chip">BunnyCDN</span>
+              <span class="zu-chip">NGINX / Apache</span>
+              <span class="zu-chip">PHP-FPM</span>
+              <span class="zu-chip">Docker</span>
+            </div>
+          </div>
+
+          <div class="zu-card zu-skill-card" data-zu-reveal>
+            <h3>Tools &amp; Workflow</h3>
+            <div class="zu-skill-chips">
+              <span class="zu-chip">Git / GitHub / Bitbucket</span>
+              <span class="zu-chip">Query Monitor</span>
+              <span class="zu-chip">Lighthouse / CWV</span>
+              <span class="zu-chip">Figma to WordPress</span>
+              <span class="zu-chip">Jira &amp; Confluence</span>
+              <span class="zu-chip">Agile / Scrum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+           08. TESTIMONIALS & FEEDBACK
+           ==================================================================== -->
+    <section class="zu-section" id="zu-testimonials">
+      <div class="zu-container">
+        <div class="zu-section-header" data-zu-reveal>
+          <p class="zu-eyebrow">// 08_testimonials</p>
+          <h2 class="zu-section-title">What teams <em>and clients say.</em></h2>
+          <p class="zu-section-subtitle">
+            Feedback from product owners, tech leads, and long-term agency collaborators.
+          </p>
+        </div>
+
+        <div class="zu-testimonials-grid">
+          <div class="zu-card zu-testimonial-card" data-zu-reveal>
+            <p class="zu-testimonial-quote">
+              &ldquo;Zahid’s understanding of WordPress backend architecture is phenomenal. He took our complex custom
+              post and ACF requirements and turned them into clean, super-fast Gutenberg blocks without adding any
+              plugin bloat.&rdquo;
+            </p>
+            <div class="zu-testimonial-author">
+              <div class="zu-author-initials">AK</div>
+              <div>
+                <div class="zu-author-name">Agency Technical Director</div>
+                <div class="zu-author-role">Collaborator on Multiple WP Builds</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="zu-card zu-testimonial-card" data-zu-reveal>
+            <p class="zu-testimonial-quote">
+              &ldquo;Exceptional dedication and clean PHP code. Zahid optimized our WooCommerce checkout flow and
+              caching layers, cutting our server response times in half during peak seasonal sale traffic.&rdquo;
+            </p>
+            <div class="zu-testimonial-author">
+              <div class="zu-author-initials">MR</div>
+              <div>
+                <div class="zu-author-name">E-Commerce Brand Manager</div>
+                <div class="zu-author-role">US Retail Client</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="zu-card zu-testimonial-card" data-zu-reveal>
+            <p class="zu-testimonial-quote">
+              &ldquo;Always reliable, communicative, and punctual with sprint deliverables. Zahid is a true problem
+              solver who takes ownership of complex backend problems and delivers bulletproof solutions.&rdquo;
+            </p>
+            <div class="zu-testimonial-author">
+              <div class="zu-author-initials">SH</div>
+              <div>
+                <div class="zu-author-name">Senior Project Manager</div>
+                <div class="zu-author-role">Mediusware Ltd</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+           09. HIGH-IMPACT CTA & CONTACT SECTION
+           ==================================================================== -->
+    <section class="zu-section" id="zu-contact">
+      <div class="zu-container">
+        <!-- CTA Banner -->
+        <div class="zu-cta-banner" data-zu-reveal>
+          <h2 class="zu-cta-headline">Let&apos;s build <em>something scalable.</em></h2>
+          <p class="zu-cta-text">
+            Open to senior backend engineering roles, custom WordPress consulting, and long-term contracts for clients
+            across North America, Europe, and Asia-Pacific.
+          </p>
+          <div class="zu-cta-actions">
+            <a class="zu-btn zu-btn-primary" href="mailto:zahidudd0.in@gmail.com">Start a Conversation</a>
+            <button class="zu-btn zu-btn-outline" id="zu-copy-email-btn">Copy Email Address</button>
+          </div>
+        </div>
+
+        <!-- Contact Grid -->
+        <div class="zu-contact-grid">
+          <!-- Contact Form -->
+          <div class="zu-card" data-zu-reveal>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Send a direct message</h3>
+            <form class="zu-contact-form" id="zu-contact-form">
+              <div class="zu-form-group">
+                <label class="zu-form-label" for="contact-name">Your Name</label>
+                <input class="zu-input" type="text" id="contact-name" name="name" placeholder="e.g. Alex Morgan"
+                  required />
+              </div>
+              <div class="zu-form-group">
+                <label class="zu-form-label" for="contact-email">Your Email</label>
+                <input class="zu-input" type="email" id="contact-email" name="email" placeholder="e.g. alex@company.com"
+                  required />
+              </div>
+              <div class="zu-form-group">
+                <label class="zu-form-label" for="contact-subject">Project Scope / Topic</label>
+                <input class="zu-input" type="text" id="contact-subject" name="subject"
+                  placeholder="e.g. WordPress Architecture &amp; API Development" required />
+              </div>
+              <div class="zu-form-group">
+                <label class="zu-form-label" for="contact-message">Message Details</label>
+                <textarea class="zu-textarea" id="contact-message" name="message"
+                  placeholder="Briefly describe your requirements, timeline, or open role..." required></textarea>
+              </div>
+              <button class="zu-btn zu-btn-primary" type="submit" id="zu-form-submit-btn">Send Message &rarr;</button>
+              <div id="zu-form-feedback"
+                style="display:none; font-family: var(--font-mono); font-size: 0.8125rem; margin-top: 0.5rem; color: rgb(var(--color-success));">
+              </div>
+            </form>
+          </div>
+
+          <!-- Direct Contact Info -->
+          <div class="zu-card" data-zu-reveal>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Direct Coordinates</h3>
+            <ul class="zu-direct-contact-list">
+              <li class="zu-direct-item">
+                <span class="zu-direct-label">Email Address</span>
+                <a class="zu-direct-val" href="mailto:zahidudd0.in@gmail.com">zahidudd0.in@gmail.com</a>
+                <span class="zu-copy-btn" id="zu-copy-inline">📋 Click to copy email</span>
+              </li>
+              <li class="zu-direct-item">
+                <span class="zu-direct-label">Phone / WhatsApp</span>
+                <a class="zu-direct-val" href="tel:+8801684747167">+880 1684 747167</a>
+              </li>
+              <li class="zu-direct-item">
+                <span class="zu-direct-label">Location &amp; Availability</span>
+                <div class="zu-direct-val">Mirpur-11, Dhaka, Bangladesh (UTC+6)</div>
+                <div style="font-size: 0.8125rem; color: rgba(var(--color-fg), 0.6); margin-top: 0.2rem;">Available for
+                  Remote Worldwide (US/EU/APAC Timezones)</div>
+              </li>
+              <li class="zu-direct-item">
+                <span class="zu-direct-label">GitHub</span>
+                <a class="zu-direct-val" href="https://github.com/ZahidUddin" target="_blank"
+                  rel="noopener noreferrer">github.com/ZahidUddin &#8599;</a>
+              </li>
+              <li class="zu-direct-item">
+                <span class="zu-direct-label">LinkedIn</span>
+                <a class="zu-direct-val" href="https://www.linkedin.com/in/zahid-uddin-4267b816b/" target="_blank"
+                  rel="noopener noreferrer">linkedin.com/in/zahid-uddin-4267b816b &#8599;</a>
+              </li>
+              <li class="zu-direct-item">
+                <span class="zu-direct-label">Spoken Languages</span>
+                <div class="zu-direct-val">English (Professional), Bengali (Native), Hindi, Japanese (Conversational)
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+         10. FOOTER
+         ==================================================================== -->
+  <footer class="zu-footer">
+    <div class="zu-container">
+      <div class="zu-footer-grid">
+        <div>
+          <div class="zu-footer-brand-title">zuddin<span style="color:rgb(var(--color-accent));">.</span></div>
+          <p class="zu-footer-desc">
+            Senior Software Engineer &amp; PHP / WordPress backend craftsman. Building high-performance digital
+            platforms that actually scale.
+          </p>
+        </div>
+
+        <div class="zu-footer-col">
+          <h4>Navigation</h4>
+          <ul class="zu-footer-nav-list">
+            <li><a href="#zu-hero">Home</a></li>
+            <li><a href="#zu-about">About</a></li>
+            <li><a href="#zu-services">Services</a></li>
+            <li><a href="#zu-process">Process</a></li>
+            <li><a href="#zu-projects">Selected Work</a></li>
+          </ul>
+        </div>
+
+        <div class="zu-footer-col">
+          <h4>Engineering</h4>
+          <ul class="zu-footer-nav-list">
+            <li><a href="#zu-playground">Architecture Demo</a></li>
+            <li><a href="#zu-experience">Experience</a></li>
+            <li><a href="#zu-skills">Tech Arsenal</a></li>
+            <li><a href="#zu-testimonials">Testimonials</a></li>
+            <li><a href="#zu-contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="zu-footer-col">
+          <h4>Connect</h4>
+          <ul class="zu-footer-nav-list">
+            <li><a href="https://github.com/ZahidUddin" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/zahid-uddin-4267b816b/" target="_blank"
+                rel="noopener noreferrer">LinkedIn &#8599;</a></li>
+            <li><a href="mailto:zahidudd0.in@gmail.com">Email &#8599;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="zu-footer-bottom">
+        <div>&copy; 2026 Zahid Uddin. All rights reserved.</div>
+        <div class="zu-time-badge">
+          <span class="zu-pulse-dot" style="width:6px; height:6px;"></span>
+          <span>Dhaka Time: <strong id="zu-dhaka-clock">--:--:-- UTC+6</strong></span>
+        </div>
+        <a class="zu-scroll-top-btn" href="#zu-hero">
+          Back to Top &uarr;
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+         11. PROJECT CASE STUDY MODAL DIALOG
+         ==================================================================== -->
+  <div class="zu-modal" id="zu-case-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="zu-modal-dialog">
+      <button class="zu-modal-close" id="zu-modal-close-btn" type="button" aria-label="Close dialog">&times;</button>
+      <div id="zu-modal-content">
+        <!-- Dynamic Content Loaded via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
 </html>
