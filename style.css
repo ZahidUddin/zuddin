@@ -77,6 +77,32 @@ body[data-zu-theme="dark"] {
   --mesh-opacity: 0.08;
 }
 
+/* Theme-Aware Profile Photo Swap */
+.zu-photo-dark,
+.zu-photo-light {
+  transition: opacity 0.4s var(--ease-out-strong);
+}
+
+/* Light theme (default): show light photo, hide dark */
+.zu-photo-dark {
+  display: none;
+}
+
+.zu-photo-light {
+  display: block;
+}
+
+/* Dark theme: show dark photo, hide light */
+:root[data-theme="dark"] .zu-photo-dark,
+[data-zu-theme="dark"] .zu-photo-dark {
+  display: block;
+}
+
+:root[data-theme="dark"] .zu-photo-light,
+[data-zu-theme="dark"] .zu-photo-light {
+  display: none;
+}
+
 /* --------------------------------------------------------------------------
    Reset & Global Typography
    -------------------------------------------------------------------------- */
@@ -338,23 +364,6 @@ h3 em {
   font-size: 0.75rem;
 }
 
-/* Status Pill */
-.zu-status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.4rem 1rem;
-  border-radius: 9999px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  background-color: rgba(var(--color-fg), 0.05);
-  border: 1px solid var(--color-border);
-  color: rgb(var(--color-fg));
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
 
 .zu-pulse-dot {
   width: 8px;
@@ -430,7 +439,55 @@ h3 em {
 }
 
 .zu-brand-dot {
+  display: inline-block;
   color: rgb(var(--color-accent));
+  transform-origin: 50% 85%;
+  animation: zu-dot-bounce 2.6s infinite cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+@keyframes zu-dot-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1, 1);
+  }
+  6% {
+    transform: translateY(0) scale(1.18, 0.82);
+  }
+  16% {
+    transform: translateY(-9px) scale(0.92, 1.15);
+  }
+  24% {
+    transform: translateY(-11px) scale(0.96, 1.04);
+  }
+  32% {
+    transform: translateY(-2px) scale(0.98, 1.08);
+  }
+  38% {
+    transform: translateY(0) scale(1.22, 0.78);
+  }
+  46% {
+    transform: translateY(-4px) scale(0.95, 1.05);
+  }
+  53% {
+    transform: translateY(0) scale(1.08, 0.92);
+  }
+  60% {
+    transform: translateY(0) scale(1, 1);
+  }
+}
+
+.zu-brand:hover .zu-brand-dot {
+  animation: zu-dot-hover 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) infinite alternate;
+  filter: drop-shadow(0 0 6px rgba(var(--color-accent), 0.7));
+}
+
+@keyframes zu-dot-hover {
+  0% {
+    transform: translateY(0) scale(1.1, 0.9);
+  }
+  100% {
+    transform: translateY(-8px) scale(0.95, 1.1);
+  }
 }
 
 .zu-brand-role {
@@ -651,7 +708,7 @@ h3 em {
 
 @media (min-width: 1024px) {
   .zu-hero-title {
-    font-size: 5.25rem;
+    font-size: 4rem;
   }
 }
 
@@ -1806,6 +1863,7 @@ h3 em {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   [data-zu-reveal],
   .zu-section-header,
   .zu-cta-banner {
@@ -1813,5 +1871,9 @@ h3 em {
     filter: none !important;
     transform: none !important;
     transition: none !important;
+  }
+
+  .zu-brand-dot {
+    animation: none !important;
   }
 }

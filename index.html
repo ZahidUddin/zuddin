@@ -13,6 +13,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+  <!-- Favicon (Animated Bouncing Dot Monogram) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -28,7 +31,7 @@
     <div class="zu-container zu-header-inner">
       <a class="zu-brand" href="#zu-hero" aria-label="Zahid Uddin Home">
         <span>zuddin</span><span class="zu-brand-dot">.</span>
-        <span class="zu-brand-role">Backend / WP Engineer</span>
+        <span class="zu-brand-role">WP Engineer</span>
       </a>
 
       <!-- Desktop Navigation Links -->
@@ -83,18 +86,13 @@
     <section class="zu-hero" id="zu-hero">
       <div class="zu-container zu-hero-grid">
         <div class="zu-hero-content" data-zu-reveal>
-          <!-- Live Availability Status Pill -->
-          <div class="zu-status-pill">
-            <span class="zu-pulse-dot" aria-hidden="true"></span>
-            <span>Available for Backend &amp; WordPress engineering roles</span>
-          </div>
 
           <h1 class="zu-hero-title">
             PHP Backend &amp; WordPress Engineering, <em>crafted.</em>
           </h1>
 
           <p class="zu-hero-bio">
-            Senior Software Engineer with <strong>8+ years of experience</strong> architecting high-traffic WordPress
+            Software Engineer with <strong>8+ years of experience</strong> architecting high-traffic WordPress
             platforms, bespoke Gutenberg &amp; ACF Pro solutions, custom PHP APIs, and high-performance backend engines.
             Proven track record across 18+ production client sites shipped worldwide.
           </p>
@@ -133,13 +131,15 @@
         <div class="zu-hero-card-wrap" data-zu-reveal>
           <div class="zu-hero-visual-card">
             <figure class="zu-hero-photo">
-              <img src="mypic.jpeg" alt="Portrait of Zahid Uddin, Senior Backend Developer" width="440" height="550"
-                loading="eager" decoding="async" />
+              <img src="profile-dark.avif" alt="Portrait of Zahid Uddin, Software Engineer" width="440" height="550"
+                loading="eager" decoding="async" class="zu-photo-dark" />
+              <img src="profile-light.avif" alt="Portrait of Zahid Uddin, Software Engineer" width="440" height="550"
+                loading="eager" decoding="async" class="zu-photo-light" />
             </figure>
             <div class="zu-hero-tag-badge">
               <div>
                 <div class="zu-hero-tag-title">Zahid Uddin</div>
-                <div class="zu-hero-tag-sub">Senior Software Engineer &middot; Dhaka, BD</div>
+                <div class="zu-hero-tag-sub">Software Engineer &middot; Dhaka, BD</div>
               </div>
               <div class="zu-hero-metric">8+ Yrs</div>
             </div>
@@ -153,9 +153,10 @@
               <span class="zu-code-dot"></span>
             </div>
             <div class="zu-code-line"><span class="zu-tok-kw">class</span> <span class="zu-tok-cls">ZahidUddin</span>
-              <span class="zu-tok-kw">implements</span> <span class="zu-tok-cls">BackendArchitect</span> {</div>
+              <span class="zu-tok-kw">implements</span> <span class="zu-tok-cls">BackendArchitect</span> {
+            </div>
             <div class="zu-code-line">&nbsp;&nbsp;<span class="zu-tok-kw">public string</span> <span
-                class="zu-tok-cls">$role</span> = <span class="zu-tok-str">'Senior Backend Engineer'</span>;</div>
+                class="zu-tok-cls">$role</span> = <span class="zu-tok-str">'Software Engineer'</span>;</div>
             <div class="zu-code-line">&nbsp;&nbsp;<span class="zu-tok-kw">public int</span> <span
                 class="zu-tok-cls">$experience</span> = <span class="zu-tok-num">8</span>; <span
                 style="color:#6a9955;">// years in production</span></div>
@@ -212,7 +213,8 @@
           </p>
           <p style="font-size: 1.05rem; line-height: 1.8; color: rgba(var(--color-fg), 0.7);">
             Whether working directly with product founders or within distributed Agile engineering squads using Jira,
-            Bitbucket, and GitHub, I guarantee code reliability, tight security, and clean separation of concerns.
+            ClickUp, Bitbucket, and GitHub, I guarantee code reliability, tight security, and clean separation of
+            concerns.
           </p>
         </div>
       </div>
@@ -900,7 +902,7 @@ add_action(<span class="zu-tok-str">'rest_api_init'</span>, <span class="zu-tok-
           <div class="zu-card zu-timeline-row" data-zu-reveal>
             <div class="zu-timeline-date">March 2024 &mdash; Present</div>
             <div class="zu-timeline-content">
-              <h3>Senior Software Engineer</h3>
+              <h3>Software Engineer</h3>
               <div class="zu-timeline-company">Mediusware Ltd</div>
               <ul class="zu-timeline-bullets">
                 <li>Lead backend-focused WordPress architecture for enterprise client builds, custom themes, and bespoke
@@ -1239,7 +1241,7 @@ add_action(<span class="zu-tok-str">'rest_api_init'</span>, <span class="zu-tok-
         <div>
           <div class="zu-footer-brand-title">zuddin<span style="color:rgb(var(--color-accent));">.</span></div>
           <p class="zu-footer-desc">
-            Senior Software Engineer &amp; PHP / WordPress backend craftsman. Building high-performance digital
+            Software Engineer &amp; PHP / WordPress backend craftsman. Building high-performance digital
             platforms that actually scale.
           </p>
         </div>

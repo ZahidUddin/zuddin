@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style>
+      :root {
+        --zu-fav-bg: #140E0A;
+        --zu-fav-fg: #DAC5A7;
+        --zu-fav-border: rgba(232, 141, 74, 0.35);
+        --zu-fav-accent: #E88D4A;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --zu-fav-bg: #F6F1E9;
+          --zu-fav-fg: #140E0A;
+          --zu-fav-border: rgba(180, 82, 36, 0.25);
+          --zu-fav-accent: #B45224;
+        }
+      }
+
+      .zu-fav-bg-rect {
+        fill: var(--zu-fav-bg);
+      }
+      .zu-fav-border-rect {
+        fill: none;
+        stroke: var(--zu-fav-border);
+        stroke-width: 2;
+      }
+      .zu-fav-letter {
+        fill: var(--zu-fav-fg);
+      }
+      .zu-fav-dot {
+        fill: var(--zu-fav-accent);
+        transform-origin: 47px 44px;
+        animation: zu-fav-bounce 2.6s infinite cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      @keyframes zu-fav-bounce {
+        0%, 100% {
+          transform: translateY(0) scale(1, 1);
+        }
+        6% {
+          transform: translateY(0) scale(1.22, 0.78);
+        }
+        16% {
+          transform: translateY(-13px) scale(0.9, 1.15);
+        }
+        24% {
+          transform: translateY(-15px) scale(0.95, 1.05);
+        }
+        32% {
+          transform: translateY(-2px) scale(0.98, 1.08);
+        }
+        38% {
+          transform: translateY(0) scale(1.26, 0.74);
+        }
+        46% {
+          transform: translateY(-5px) scale(0.95, 1.06);
+        }
+        53% {
+          transform: translateY(0) scale(1.08, 0.92);
+        }
+        60% {
+          transform: translateY(0) scale(1, 1);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .zu-fav-dot {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect class="zu-fav-bg-rect" width="64" height="64" rx="16" />
+  <rect class="zu-fav-border-rect" x="1" y="1" width="62" height="62" rx="15" />
+
+  <!-- Geometric Modern Monogram 'z' (Vector Path for 100% font independence) -->
+  <path class="zu-fav-letter" d="M 14 20 H 38 V 26.5 L 23.5 40.5 H 38 V 47 H 14 V 40.5 L 28.5 26.5 H 14 Z" />
+
+  <!-- Signature Bouncing Orange Dot -->
+  <circle class="zu-fav-dot" cx="47" cy="43.5" r="5" />
+</svg>

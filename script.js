@@ -382,31 +382,70 @@
 
     if (!form || !feedback || !submitBtn) return;
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const name = (document.getElementById("contact-name") || {}).value || "Client";
-      const email = (document.getElementById("contact-email") || {}).value || "";
-      const subject = (document.getElementById("contact-subject") || {}).value || "Project Inquiry";
-      const message = (document.getElementById("contact-message") || {}).value || "";
 
-      submitBtn.textContent = "Sending...";
-      submitBtn.disabled = true;
+      const name = (document.getElementById("contact-name") || {}).value?.trim() || "Client";
+      const email = (document.getElementById("contact-email") || {}).value?.trim() || "";
+      const subject = (document.getElementById("contact-subject") || {}).value?.trim() || "Project Inquiry";
+      const message = (document.getElementById("contact-message") || {}).value?.trim() || "";
 
-      // Prepare mailto link as fallback
-      const mailtoUrl = `mailto:zahidudd0.in@gmail.com?subject=${encodeURIComponent(subject + " - from " + name)}&body=${encodeURIComponent(message + "\n\nContact: " + email)}`;
-
-      setTimeout(() => {
+      if (!name || !email || !message) {
         feedback.style.display = "block";
-        feedback.innerHTML = `✓ Thank you, ${name}! Generating your email draft...`;
-        window.location.href = mailtoUrl;
-        submitBtn.textContent = "Message Prepared!";
-        setTimeout(() => {
+        feedback.style.color = "#EF4444";
+        feedback.textContent = "Please fill in all required fields.";
+        return;
+      }
+
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.textContent = "Sending to Zahid...";
+      submitBtn.disabled = true;
+      feedback.style.display = "none";
+
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, subject, message })
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.success) {
+          // Success! Delivered directly to Gmail via Resend
+          feedback.style.display = "block";
+          feedback.style.color = "rgb(var(--color-success))";
+          feedback.innerHTML = `✓ Thank you, <strong>${name}</strong>! Your message has been sent directly to Zahid's Gmail inbox. You'll receive a reply shortly.`;
           form.reset();
-          submitBtn.textContent = "Send Message →";
-          submitBtn.disabled = false;
-          feedback.style.display = "none";
-        }, 5000);
-      }, 600);
+
+          setTimeout(() => {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          }, 4000);
+        } else if (res.status === 404) {
+          // Local environment fallback (e.g. running on local XAMPP without Vercel CLI)
+          const mailtoUrl = `mailto:zahidudd0.in@gmail.com?subject=${encodeURIComponent(subject + " - from " + name)}&body=${encodeURIComponent(message + "\n\nFrom: " + name + " <" + email + ">")}`;
+          feedback.style.display = "block";
+          feedback.style.color = "#E88D4A";
+          feedback.innerHTML = `Notice: Vercel serverless /api/contact runs when deployed to Vercel. Preparing email draft...`;
+          window.location.href = mailtoUrl;
+
+          setTimeout(() => {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+            form.reset();
+          }, 3000);
+        } else {
+          // API error
+          throw new Error(data.error || "Failed to send message. Please try again.");
+        }
+      } catch (err) {
+        feedback.style.display = "block";
+        feedback.style.color = "#EF4444";
+        feedback.textContent = `✕ ${err.message || "An error occurred. Please email directly at zahidudd0.in@gmail.com"}`;
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      }
     });
   }
 
@@ -439,6 +478,98 @@
   }
 
   // --------------------------------------------------------------------------
+  // 10. Live Tab Favicon Bouncing Dot Animation
+  // --------------------------------------------------------------------------
+  function initFaviconAnimation() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const faviconLink = document.querySelector("link[rel*='icon']");
+    if (!faviconLink) return;
+
+    const canvas = document.createElement("canvas");
+    canvas.width = 32;
+    canvas.height = 32;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let frame = 0;
+    const totalFrames = 26;
+    let timerId = null;
+
+    const bounceOffsets = [
+      0, 0, -2, -5, -8, -10, -9, -7, -4, -1, 0, 0, -2, -4, -3, -1, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0
+    ];
+
+    function drawFavicon(offsetIndex) {
+      const isDark = (document.documentElement.getAttribute("data-theme") || "dark") === "dark";
+      const bgColor = isDark ? "#140E0A" : "#F6F1E9";
+      const fgColor = isDark ? "#DAC5A7" : "#140E0A";
+      const accentColor = isDark ? "#E88D4A" : "#B45224";
+
+      ctx.clearRect(0, 0, 32, 32);
+
+      // Squircle Background
+      ctx.fillStyle = bgColor;
+      if (typeof ctx.roundRect === "function") {
+        ctx.beginPath();
+        ctx.roundRect(1, 1, 30, 30, 8);
+        ctx.fill();
+        ctx.strokeStyle = isDark ? "rgba(232, 141, 74, 0.35)" : "rgba(180, 82, 36, 0.25)";
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      } else {
+        ctx.fillRect(1, 1, 30, 30);
+      }
+
+      // Monogram 'z'
+      ctx.fillStyle = fgColor;
+      ctx.font = "bold 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+      ctx.textBaseline = "middle";
+      ctx.textAlign = "left";
+      ctx.fillText("z", 6, 17);
+
+      // Bouncing Orange Dot
+      const yOffset = bounceOffsets[offsetIndex % bounceOffsets.length] || 0;
+      ctx.fillStyle = accentColor;
+      ctx.beginPath();
+      ctx.arc(23, 22 + yOffset, 2.7, 0, Math.PI * 2);
+      ctx.fill();
+
+      faviconLink.href = canvas.toDataURL("image/png");
+    }
+
+    function step() {
+      if (document.hidden) return;
+      drawFavicon(frame);
+      frame = (frame + 1) % totalFrames;
+    }
+
+    function start() {
+      if (!timerId) {
+        timerId = setInterval(step, 100);
+      }
+    }
+
+    function stop() {
+      if (timerId) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+    }
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        stop();
+      } else {
+        start();
+      }
+    });
+
+    start();
+  }
+
+  // --------------------------------------------------------------------------
   // Bootstrapping
   // --------------------------------------------------------------------------
   document.addEventListener("DOMContentLoaded", () => {
@@ -451,6 +582,7 @@
     initEmailCopy();
     initContactForm();
     initDhakaClock();
+    initFaviconAnimation();
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();

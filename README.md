@@ -1,6 +1,6 @@
 # Zahid Uddin - Portfolio & Production Platform
 
-> Senior Software Engineer &middot; PHP Backend Developer & WordPress Expert with 8+ years of commercial software engineering experience.
+> Software Engineer &middot; PHP Backend Developer & WordPress Expert with 8+ years of commercial software engineering experience.
 
 ---
 
