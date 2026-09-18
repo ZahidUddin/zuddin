@@ -179,7 +179,8 @@
 
         projectCards.forEach((card) => {
           const cardCategories = (card.getAttribute("data-category") || "").split(" ");
-          if (selectedFilter === "all" || cardCategories.includes(selectedFilter)) {
+          const cardPlatform = card.getAttribute("data-platform") || "";
+          if (selectedFilter === "all" || cardCategories.includes(selectedFilter) || cardPlatform === selectedFilter) {
             card.classList.remove("zu-hidden");
           } else {
             card.classList.add("zu-hidden");
@@ -354,17 +355,34 @@
   // 8. 1-Click Copy Email Feature
   // --------------------------------------------------------------------------
   function initEmailCopy() {
-    const copyBtns = [document.getElementById("zu-copy-email-btn"), document.getElementById("zu-copy-inline")].filter(Boolean);
     const emailToCopy = "zahidudd0.in@gmail.com";
+    const textCopyBtn = document.getElementById("zu-copy-email-btn");
+    const iconCopyBtns = document.querySelectorAll(".zu-copy-inline-btn, #zu-copy-inline");
 
-    copyBtns.forEach((btn) => {
+    if (textCopyBtn) {
+      textCopyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(emailToCopy).then(() => {
+          const originalText = textCopyBtn.textContent;
+          textCopyBtn.textContent = "✓ Copied to clipboard!";
+          setTimeout(() => {
+            textCopyBtn.textContent = originalText;
+          }, 2500);
+        }).catch(() => {
+          window.location.href = `mailto:${emailToCopy}`;
+        });
+      });
+    }
+
+    iconCopyBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         navigator.clipboard.writeText(emailToCopy).then(() => {
-          const originalText = btn.textContent;
-          btn.textContent = "✓ Copied to clipboard!";
+          btn.classList.add("zu-copied");
+          const originalTooltip = btn.getAttribute("data-zu-tooltip") || "Copy email";
+          btn.setAttribute("data-zu-tooltip", "Copied!");
           setTimeout(() => {
-            btn.textContent = originalText;
-          }, 2500);
+            btn.classList.remove("zu-copied");
+            btn.setAttribute("data-zu-tooltip", originalTooltip);
+          }, 2000);
         }).catch(() => {
           window.location.href = `mailto:${emailToCopy}`;
         });

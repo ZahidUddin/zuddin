@@ -5,17 +5,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Curriculum Vitae / Résumé - Zahid Uddin. Senior PHP Backend Developer & WordPress Expert with 8+ years of commercial software engineering experience." />
-  <title>Curriculum Vitae / Résumé - Zahid Uddin | Senior Backend Engineer</title>
+    content="Curriculum Vitae / Résumé - Zahid Uddin. Senior Software Engineer (Lead) · PHP Backend &amp; WordPress Architecture with 8+ years of commercial software engineering experience." />
+  <title>Curriculum Vitae / Résumé - Zahid Uddin | Senior Software Engineer (Lead)</title>
 
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    @media print {
+    /* --------------------------------------------------------------------------
+       LaTeX Document Render Styles (1:1 Jake Gutierrez / sb2nov TeX Layout)
+       -------------------------------------------------------------------------- */
+    .zu-latex-paper {
+      background: #ffffff !important;
+      color: #000000 !important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      border-radius: 2px;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3.5rem 3.75rem;
+      font-family: "Computer Modern Roman", "CMU Serif", "EB Garamond", "Times New Roman", Georgia, serif;
+      line-height: 1.42;
+      font-size: 11pt;
+      position: relative;
+    }
 
+    .zu-latex-paper a {
+      color: #191970 !important; /* LaTeX MidnightBlue */
+      text-decoration: none;
+    }
+
+    .zu-latex-paper a:hover {
+      text-decoration: underline;
+    }
+
+    .zu-latex-sec-header {
+      margin-top: 1.15rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .zu-latex-sec-title {
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0;
+      padding-bottom: 2px;
+      color: #000000 !important;
+    }
+
+    .zu-latex-rule {
+      height: 1px;
+      background: #000000;
+      width: 100%;
+      margin: 2px 0 7px 0;
+    }
+
+    .zu-latex-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 0.15rem;
+    }
+
+    .zu-latex-table td {
+      padding: 0;
+      vertical-align: top;
+      color: #000000 !important;
+    }
+
+    .zu-latex-bullets {
+      margin: 0.2rem 0 0.45rem 1.25rem;
+      padding: 0;
+      list-style-type: disc;
+    }
+
+    .zu-latex-bullets li {
+      font-size: 0.915rem;
+      line-height: 1.4;
+      margin-bottom: 3px;
+      color: #000000 !important;
+    }
+
+    .zu-latex-bullets li::marker {
+      font-size: 0.75em;
+      color: #000000;
+    }
+
+    @media (max-width: 768px) {
+      .zu-latex-paper {
+        padding: 1.75rem 1.25rem;
+        font-size: 10pt;
+      }
+      .zu-latex-table td {
+        font-size: 0.9rem !important;
+      }
+      .zu-latex-bullets li {
+        font-size: 0.875rem !important;
+      }
+    }
+
+    @media print {
       .zu-header,
       .zu-footer,
       .zu-print-hide {
@@ -27,23 +120,26 @@
         color: #000000 !important;
       }
 
-      .zu-card {
+      #zu-main {
+        padding-top: 0 !important;
+      }
+
+      .zu-section {
+        padding: 0 !important;
+      }
+
+      .zu-container {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+
+      .zu-latex-paper {
         box-shadow: none !important;
-        border: 1px solid #ddd !important;
-        background: #fff !important;
-        color: #000 !important;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4 {
-        color: #000 !important;
-      }
-
-      a {
-        color: #000 !important;
-        text-decoration: underline !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        font-size: 10.5pt !important;
       }
     }
   </style>
@@ -55,7 +151,7 @@
     <div class="zu-container zu-header-inner">
       <a class="zu-brand" href="index.html" aria-label="Zahid Uddin Home">
         <span>zuddin</span><span class="zu-brand-dot">.</span>
-        <span class="zu-brand-role">Backend / WP Engineer</span>
+        <span class="zu-brand-role">WP &amp; Shopify Engineer</span>
       </a>
 
       <nav aria-label="Main Navigation">
@@ -64,6 +160,8 @@
           <li><a class="zu-nav-link" href="about.html">About</a></li>
           <li><a class="zu-nav-link" href="services.html">Services</a></li>
           <li><a class="zu-nav-link" href="projects.html">Portfolio</a></li>
+          <li><a class="zu-nav-link" href="pricing.html">Pricing</a></li>
+          <li><a class="zu-nav-link" href="blog.html">Insights</a></li>
           <li><a class="zu-nav-link zu-active" href="resume.html">Résumé</a></li>
           <li><a class="zu-nav-link" href="contact.html">Contact</a></li>
         </ul>
@@ -92,219 +190,263 @@
       <li><a class="zu-nav-link" href="about.html">About</a></li>
       <li><a class="zu-nav-link" href="services.html">Services</a></li>
       <li><a class="zu-nav-link" href="projects.html">Portfolio</a></li>
+      <li><a class="zu-nav-link" href="pricing.html">Pricing</a></li>
+      <li><a class="zu-nav-link" href="blog.html">Insights</a></li>
       <li><a class="zu-nav-link zu-active" href="resume.html">Résumé</a></li>
       <li><a class="zu-nav-link" href="contact.html">Contact</a></li>
     </ul>
   </header>
 
-  <main id="zu-main" style="padding-top: 7rem;">
+  <main id="zu-main" style="padding-top: 6.5rem;">
     <section class="zu-section" style="padding-bottom: 4rem;">
       <div class="zu-container" style="max-width: 960px;">
-        <!-- Action Bar -->
+        <!-- Top Actions Bar -->
         <div class="zu-print-hide"
-          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;"
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;"
           data-zu-reveal>
           <p class="zu-eyebrow" style="margin-bottom: 0;">// curriculum vitae</p>
-          <div style="display: flex; gap: 1rem;">
-            <button class="zu-btn zu-btn-primary zu-btn-sm" onclick="window.print()">🖨️ Print / Save as PDF</button>
-            <a class="zu-btn zu-btn-outline zu-btn-sm" href="mailto:zahidudd0.in@gmail.com">Contact Directly</a>
+          <div style="display: flex; gap: 0.65rem; flex-wrap: wrap;">
+            <a class="zu-btn zu-btn-primary zu-btn-sm" href="Resume_Zahid.pdf" download="Resume_Zahid.pdf">
+              📥 Download PDF
+            </a>
+            <button class="zu-btn zu-btn-outline zu-btn-sm" onclick="window.print()">
+              🖨️ Print / Save as PDF
+            </button>
+            <a class="zu-btn zu-btn-outline zu-btn-sm" href="https://calendly.com/zahiduddin/30min" target="_blank" rel="noopener noreferrer">
+              Book 30-Min Call &#8599;
+            </a>
           </div>
         </div>
 
-        <!-- Main Resume Document Card -->
-        <article class="zu-card" style="padding: 3rem 2.5rem;" data-zu-reveal>
-          <!-- Resume Header -->
-          <div
-            style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--color-border); padding-bottom: 2rem; margin-bottom: 2rem; flex-wrap: wrap; gap: 1.5rem;">
-            <div>
-              <h1 style="font-size: 2.75rem; font-weight: 700; margin-bottom: 0.25rem;">Zahid Uddin</h1>
-              <p
-                style="font-family: var(--font-heading); font-size: 1.25rem; color: rgb(var(--color-accent)); font-weight: 500;">
-                Software Engineer &middot; PHP Backend &amp; WordPress Specialist
-              </p>
-              <p
-                style="font-family: var(--font-mono); font-size: 0.8125rem; color: rgba(var(--color-fg), 0.6); margin-top: 0.5rem;">
-                Mirpur-11, Dhaka, Bangladesh &middot; Open to Worldwide Remote (US / EU / APAC)
-              </p>
+        <!-- View 1: Authentic Rendered LaTeX Document -->
+        <div id="latex-render-view" data-zu-reveal>
+          <article class="zu-latex-paper">
+            <!-- LaTeX Centered Header -->
+            <div style="text-align: center; margin-bottom: 1.15rem;">
+              <h1 style="font-family: inherit; font-size: 2.35rem; font-weight: 700; margin: 0 0 0.35rem 0; letter-spacing: 0.04em; text-transform: uppercase; color: #000000;">
+                Zahid Uddin
+              </h1>
+              <div style="font-size: 0.95rem; color: #000000; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                <a href="https://linkedin.com/in/zahid-uddin" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.25rem;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#0077B5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  Linkedin
+                </a>
+                <span style="color: #666;">|</span>
+                <a href="https://zahiduddin.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.25rem;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#191970" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  Portfolio
+                </a>
+                <span style="color: #666;">|</span>
+                <a href="mailto:zahidudd0.in@gmail.com" style="display: inline-flex; align-items: center; gap: 0.25rem;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#191970"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l9.518 7.713 9.518-7.713v11.817h-19.036z"/></svg>
+                  zahidudd0.in@gmail.com
+                </a>
+                <span style="color: #666;">|</span>
+                <a href="tel:+8801684747167" style="display: inline-flex; align-items: center; gap: 0.25rem;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#191970" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                  +880 1684 747167
+                </a>
+              </div>
             </div>
-            <div style="text-align: right; font-family: var(--font-mono); font-size: 0.8125rem; line-height: 1.8;">
-              <div><a href="mailto:zahidudd0.in@gmail.com"
-                  style="color: rgb(var(--color-accent));">zahidudd0.in@gmail.com</a></div>
-              <div><a href="tel:+8801684747167">+880 1684 747167</a></div>
-              <div><a href="https://github.com/ZahidUddin" target="_blank"
-                  rel="noopener noreferrer">github.com/ZahidUddin &#8599;</a></div>
-              <div><a href="https://www.linkedin.com/in/zahid-uddin-4267b816b/" target="_blank"
-                  rel="noopener noreferrer">linkedin.com/in/zahid-uddin-4267b816b &#8599;</a></div>
-            </div>
-          </div>
 
-          <!-- Professional Summary -->
-          <section style="margin-bottom: 2.5rem;">
-            <h2
-              style="font-family: var(--font-mono); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgb(var(--color-accent)); margin-bottom: 0.75rem;">
-              // Professional Summary
-            </h2>
-            <p style="font-size: 0.95rem; line-height: 1.8; color: rgba(var(--color-fg), 0.85);">
-              Senior Backend Engineer with 8+ years of commercial experience designing, building, and optimizing
-              scalable PHP and WordPress platforms. Proven expertise in custom Full Site Editing (FSE) themes, custom
-              Gutenberg blocks with ACF Pro, REST API architectures, Redis object caching, and database performance
-              tuning. Successfully delivered 18+ client platforms across the United States, Europe, and Asia.
+            <!-- Summary Section -->
+            <div class="zu-latex-sec-header">
+              <h2 class="zu-latex-sec-title">Summary</h2>
+              <div class="zu-latex-rule"></div>
+            </div>
+            <p style="font-family: inherit; font-size: 0.915rem; line-height: 1.45; text-align: justify; color: #000000; margin: 0 0 0.85rem 0;">
+              Backend-focused PHP developer with 8+ years of experience delivering custom web applications, WordPress platforms, API integrations, and performance improvements. Proven track record of successfully shipping and maintaining over 35 live production platforms for global enterprise and agency clients. Strong background in building custom plugins, scalable content architectures, WooCommerce solutions, and backend systems using PHP, MySQL, and modern deployment workflows. Highly experienced in translating Figma designs into responsive WordPress builds, developing custom React-driven Gutenberg layouts, and weaponizing server infrastructure (Cloudflare, Redis/Object Cache, OPcache, NGINX) to secure top-tier Core Web Vitals. Highly autonomous senior engineer, fully equipped for 100% remote work and specifically structured to work synchronous US-based hours.
             </p>
-          </section>
 
-          <!-- Technical Skills Matrix -->
-          <section style="margin-bottom: 2.5rem;">
-            <h2
-              style="font-family: var(--font-mono); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgb(var(--color-accent)); margin-bottom: 0.75rem;">
-              // Technical Expertise
-            </h2>
-            <div
-              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; font-size: 0.875rem;">
-              <div>
-                <strong style="color: rgb(var(--color-fg)); display: block; margin-bottom: 0.25rem;">Backend &amp;
-                  Languages:</strong>
-                <span style="color: rgba(var(--color-fg), 0.7);">PHP 8.x (OOP), MySQL, MariaDB, Laravel, REST APIs,
-                  JavaScript (ES6+), Node.js</span>
-              </div>
-              <div>
-                <strong style="color: rgb(var(--color-fg)); display: block; margin-bottom: 0.25rem;">WordPress &amp;
-                  CMS:</strong>
-                <span style="color: rgba(var(--color-fg), 0.7);">Custom Themes, Custom Plugins, Gutenberg, ACF Pro,
-                  WooCommerce, Headless WP, WP-CLI</span>
-              </div>
-              <div>
-                <strong style="color: rgb(var(--color-fg)); display: block; margin-bottom: 0.25rem;">Caching &amp;
-                  Infrastructure:</strong>
-                <span style="color: rgba(var(--color-fg), 0.7);">Redis Object Cache, OPcache, Cloudflare CDN, BunnyCDN,
-                  NGINX, Apache, Docker</span>
-              </div>
-              <div>
-                <strong style="color: rgb(var(--color-fg)); display: block; margin-bottom: 0.25rem;">Tools &amp;
-                  Workflows:</strong>
-                <span style="color: rgba(var(--color-fg), 0.7);">Git, GitHub, Bitbucket, Query Monitor, Lighthouse
-                  (CWV), Jira, Agile / Scrum</span>
-              </div>
+            <!-- Experience Section -->
+            <div class="zu-latex-sec-header">
+              <h2 class="zu-latex-sec-title">Experience</h2>
+              <div class="zu-latex-rule"></div>
             </div>
-          </section>
 
-          <!-- Work Experience -->
-          <section style="margin-bottom: 2.5rem;">
-            <h2
-              style="font-family: var(--font-mono); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgb(var(--color-accent)); margin-bottom: 1.25rem;">
-              // Work Experience
-            </h2>
-
-            <!-- Job 1 -->
-            <div style="margin-bottom: 2rem;">
-              <div
-                style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.25rem;">
-                <h3 style="font-size: 1.15rem; font-weight: 600;">Software Engineer &mdash; Mediusware Ltd</h3>
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgb(var(--color-accent));">March
-                  2024 &mdash; Present</span>
-              </div>
-              <p
-                style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(var(--color-fg), 0.5); margin-bottom: 0.75rem;">
-                Dhaka, Bangladesh (Hybrid / Global Projects)</p>
-              <ul class="zu-timeline-bullets" style="font-size: 0.875rem;">
-                <li>Lead backend-focused WordPress architecture for enterprise client builds, custom themes, and bespoke
-                  plugins.</li>
-                <li>Implemented high-performance caching layers using Redis Object Cache and Cloudflare Edge Rules,
-                  cutting response times below 100ms.</li>
-                <li>Designed dynamic content systems with Gutenberg and ACF Pro for large-scale publishing workflows.
-                </li>
-                <li>Translate Figma design requirements into pixel-accurate, accessible, and performant solutions.</li>
+            <!-- Job 1: Mediusware Ltd -->
+            <div style="margin-bottom: 0.65rem;">
+              <table class="zu-latex-table">
+                <tr>
+                  <td style="font-weight: 700; font-size: 0.95rem;">Senior Software Engineer (Lead)</td>
+                  <td style="text-align: right; font-size: 0.95rem; white-space: nowrap;">Mar 2024 &ndash; Present</td>
+                </tr>
+                <tr>
+                  <td style="font-style: italic; font-size: 0.885rem;">Mediusware Ltd</td>
+                  <td style="text-align: right; font-style: italic; font-size: 0.885rem; white-space: nowrap;">Bangladesh</td>
+                </tr>
+              </table>
+              <ul class="zu-latex-bullets">
+                <li>Lead backend-focused WordPress development for custom themes, plugins, and scalable content platforms, serving as the primary technical anchor for high-traffic environments.</li>
+                <li>Secured top-tier Core Web Vitals and eliminated database bottlenecks by implementing advanced server-level caching hierarchies (Cloudflare, Redis/Object Cache, OPcache, and NGINX).</li>
+                <li>Engineered dynamic, decoupled content systems using React-driven Gutenberg blocks and ACF to support large-scale, flexible publishing workflows.</li>
+                <li>Managed zero-downtime CI/CD deployment pipelines and maintained absolute production stability across Git-based Linux and Docker environments.</li>
+                <li>Integrated AI-assisted development workflows (Copilot/Claude/Cursor) to automate boilerplate code generation, expedite debugging of complex hook interactions, and write comprehensive PHPUnit test suites, achieving a 3x velocity multiplier.</li>
               </ul>
             </div>
 
-            <!-- Job 2 -->
-            <div style="margin-bottom: 2rem;">
-              <div
-                style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.25rem;">
-                <h3 style="font-size: 1.15rem; font-weight: 600;">Software Engineer &mdash; BluBird Interactive Ltd</h3>
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgb(var(--color-accent));">April
-                  2022 &mdash; March 2024</span>
-              </div>
-              <p
-                style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(var(--color-fg), 0.5); margin-bottom: 0.75rem;">
-                Dhaka, Bangladesh</p>
-              <ul class="zu-timeline-bullets" style="font-size: 0.875rem;">
-                <li>Built custom WordPress themes and plugins with clean OOP PHP, MySQL, and JavaScript.</li>
-                <li>Designed custom post types, taxonomies, meta fields, custom WP_Query pipelines, and action hooks.
-                </li>
-                <li>Integrated third-party APIs connecting WordPress platforms with CRM, ERP, and payment systems.</li>
-                <li>Collaborated in Agile sprints using Jira, Bitbucket, Confluence, and GitHub.</li>
+            <!-- Job 2: BluBird Interactive Ltd -->
+            <div style="margin-bottom: 0.65rem;">
+              <table class="zu-latex-table">
+                <tr>
+                  <td style="font-weight: 700; font-size: 0.95rem;">Software Engineer (WordPress)</td>
+                  <td style="text-align: right; font-size: 0.95rem; white-space: nowrap;">Apr 2022 &ndash; Feb 2024</td>
+                </tr>
+                <tr>
+                  <td style="font-style: italic; font-size: 0.885rem;">BluBird Interactive Ltd</td>
+                  <td style="text-align: right; font-style: italic; font-size: 0.885rem; white-space: nowrap;">Bangladesh</td>
+                </tr>
+              </table>
+              <ul class="zu-latex-bullets">
+                <li>Built custom WordPress themes and plugins from scratch utilizing clean OOP PHP, MySQL, and modern JavaScript (ES6+).</li>
+                <li>Architected complex backend functionality using the WordPress Hook system (Actions/Filters), custom post types, taxonomies, and optimized custom WP Queries.</li>
+                <li>Engineered secure, asynchronous third-party REST API integrations to seamlessly connect WordPress ecosystems with external CRMs (Salesforce, HubSpot) and payment gateways.</li>
+                <li>Managed sprint tasks and collaborative code reviews in Agile environments utilizing Git, Jira, and structured staging/production environments.</li>
               </ul>
             </div>
 
-            <!-- Job 3 -->
-            <div style="margin-bottom: 2rem;">
-              <div
-                style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.25rem;">
-                <h3 style="font-size: 1.15rem; font-weight: 600;">Backend Developer &mdash; Dynamicflow IT</h3>
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgb(var(--color-accent));">March
-                  2020 &mdash; February 2022</span>
-              </div>
-              <p
-                style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(var(--color-fg), 0.5); margin-bottom: 0.75rem;">
-                Dhaka, Bangladesh</p>
-              <ul class="zu-timeline-bullets" style="font-size: 0.875rem;">
-                <li>Developed and maintained custom WordPress e-commerce websites with focus on scalability and
-                  security.</li>
-                <li>Improved Core Web Vitals, SEO, and UX through backend and template optimizations.</li>
-                <li>Managed concurrent client delivery pipelines within tight deadlines.</li>
+            <!-- Job 3: Dynamicflow IT -->
+            <div style="margin-bottom: 0.65rem;">
+              <table class="zu-latex-table">
+                <tr>
+                  <td style="font-weight: 700; font-size: 0.95rem;">Backend Developer (PHP / WordPress)</td>
+                  <td style="text-align: right; font-size: 0.95rem; white-space: nowrap;">Mar 2020 &ndash; Mar 2022</td>
+                </tr>
+                <tr>
+                  <td style="font-style: italic; font-size: 0.885rem;">Dynamicflow IT</td>
+                  <td style="text-align: right; font-style: italic; font-size: 0.885rem; white-space: nowrap;">Bangladesh</td>
+                </tr>
+              </table>
+              <ul class="zu-latex-bullets">
+                <li>Developed and maintained custom WordPress websites and plugins with focus on scalability, security, and performance.</li>
+                <li>Improved Core Web Vitals, SEO, and user experience through backend and template-level optimizations.</li>
+                <li>Diagnosed and resolved critical database bloat by writing custom SQL queries to purge legacy revision data and enforcing strict revision limits, which permanently restored visual editor functionality and reduced query overhead.</li>
               </ul>
             </div>
 
-            <!-- Job 4 -->
-            <div style="margin-bottom: 1.5rem;">
-              <div
-                style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.25rem;">
-                <h3 style="font-size: 1.15rem; font-weight: 600;">Backend Developer &mdash; Northern University</h3>
-                <span
-                  style="font-family: var(--font-mono); font-size: 0.75rem; color: rgb(var(--color-accent));">February
-                  2018 &mdash; March 2020</span>
-              </div>
-              <p
-                style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(var(--color-fg), 0.5); margin-bottom: 0.75rem;">
-                Dhaka, Bangladesh</p>
-              <ul class="zu-timeline-bullets" style="font-size: 0.875rem;">
-                <li>Built university admission portals using Laravel + Vue.js to streamline high-volume seasonal
-                  enrollment.</li>
-                <li>Maintained and optimized university web platforms, ensuring high uptime and database reliability.
-                </li>
-                <li>Configured LMS capabilities and integrated student record backend modules.</li>
+            <!-- Job 4: Northern University -->
+            <div style="margin-bottom: 0.65rem;">
+              <table class="zu-latex-table">
+                <tr>
+                  <td style="font-weight: 700; font-size: 0.95rem;">Backend Developer</td>
+                  <td style="text-align: right; font-size: 0.95rem; white-space: nowrap;">Feb 2018 &ndash; Feb 2020</td>
+                </tr>
+                <tr>
+                  <td style="font-style: italic; font-size: 0.885rem;">Northern University</td>
+                  <td style="text-align: right; font-style: italic; font-size: 0.885rem; white-space: nowrap;">Bangladesh</td>
+                </tr>
+              </table>
+              <ul class="zu-latex-bullets">
+                <li>Maintained and optimized multiple university web platforms for performance and uptime.</li>
+                <li>Developed admission portals using Laravel and Vue.js to improve enrollment workflows.</li>
+                <li>Translated high-fidelity design mockups into a responsive, pixel-perfect frontend using HTML5, CSS3, and JavaScript to deliver an intuitive, user-friendly experience.</li>
               </ul>
             </div>
-          </section>
 
-          <!-- Education -->
-          <section>
-            <h2
-              style="font-family: var(--font-mono); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgb(var(--color-accent)); margin-bottom: 1rem;">
-              // Education &amp; Academic Credentials
-            </h2>
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-                <div>
-                  <h3 style="font-size: 1.05rem; font-weight: 600;">Bachelor of Science in Computer Science</h3>
-                  <p style="font-size: 0.875rem; color: rgba(var(--color-fg), 0.7);">Northern University Bangladesh</p>
-                </div>
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgb(var(--color-accent));">2016
-                  &mdash; 2019</span>
+            <!-- Projects Section -->
+            <div class="zu-latex-sec-header">
+              <h2 class="zu-latex-sec-title">Projects</h2>
+              <div class="zu-latex-rule"></div>
+            </div>
+
+            <!-- Project 1: Gulf Coast Outfitters -->
+            <div style="margin-bottom: 0.65rem;">
+              <div style="font-size: 0.95rem; color: #000000; margin-bottom: 0.2rem;">
+                <strong style="font-weight: 700;"><a href="https://gulfcoastoutfitters.com/" target="_blank" rel="noopener noreferrer" style="color: #000000 !important; text-decoration: none;">Gulf Coast Outfitters</a></strong>
+                <span style="font-style: normal; margin: 0 4px;">|</span>
+                <span style="font-style: italic;">WordPress, WooCommerce, PHP, MySQL, Meta Ads API, Microsoft Clarity</span>
               </div>
+              <ul class="zu-latex-bullets">
+                <li>Architected a high-scale, multi-vendor data synchronization engine for a WooCommerce platform managing over 40,000+ products.</li>
+                <li>Utilized core hooks to asynchronously ingest massive external API payloads and update inventory in real-time without locking the database.</li>
+              </ul>
+            </div>
 
-              <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-                <div>
-                  <h3 style="font-size: 1.05rem; font-weight: 600;">Diploma in Computer Engineering</h3>
-                  <p style="font-size: 0.875rem; color: rgba(var(--color-fg), 0.7);">Ahsanullah Institute of Technical
-                    &amp; Vocational Education (AITVET)</p>
-                </div>
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgb(var(--color-accent));">2011
-                  &mdash; 2015</span>
+            <!-- Project 2: Sixth & Rio -->
+            <div style="margin-bottom: 0.65rem;">
+              <div style="font-size: 0.95rem; color: #000000; margin-bottom: 0.2rem;">
+                <strong style="font-weight: 700;"><a href="https://sixthandrio.com/" target="_blank" rel="noopener noreferrer" style="color: #000000 !important; text-decoration: none;">Sixth &amp; Rio</a></strong>
+                <span style="font-style: normal; margin: 0 4px;">|</span>
+                <span style="font-style: italic;">WordPress, OOP PHP, ACF Pro, GSAP, REST API</span>
+              </div>
+              <ul class="zu-latex-bullets">
+                <li>Built a bespoke, decoupled-style WordPress architecture utilizing Object-Oriented PHP and Advanced Custom Fields (ACF Pro) to manage dynamic property data and pricing tiers.</li>
+                <li>Engineered Custom Post Types (CPTs) and complex taxonomies to cleanly organize and display residence models, galleries, and building amenities.</li>
+                <li>Developed customized, secure inquiry forms that capture buyer preferences and route them directly via API to the sales team's CRM (Salesforce/HubSpot) and mailing lists.</li>
+              </ul>
+            </div>
+
+            <!-- Project 3: The Bud Grower -->
+            <div style="margin-bottom: 0.65rem;">
+              <div style="font-size: 0.95rem; color: #000000; margin-bottom: 0.2rem;">
+                <strong style="font-weight: 700;"><a href="https://thebudgrower.com/" target="_blank" rel="noopener noreferrer" style="color: #000000 !important; text-decoration: none;">The Bud Grower</a></strong>
+                <span style="font-style: normal; margin: 0 4px;">|</span>
+                <span style="font-style: italic;">WordPress, WooCommerce, PHP, JavaScript, Payment Gateway APIs</span>
+              </div>
+              <ul class="zu-latex-bullets">
+                <li>Architected a scalable WooCommerce storefront optimized for a diverse product catalog, including tiered bundle kits, grow tents, and high-end LED lighting systems.</li>
+                <li>Configured dynamic product variations and bundles that allow customers to purchase complete setups in a single, user-friendly interface.</li>
+                <li>Integrated secure checkout functionalities featuring multiple payment gateways alongside Buy Now, Pay Later (BNPL) financing solutions to drive conversions on high-ticket equipment.</li>
+              </ul>
+            </div>
+
+            <!-- Education Section -->
+            <div class="zu-latex-sec-header">
+              <h2 class="zu-latex-sec-title">Education</h2>
+              <div class="zu-latex-rule"></div>
+            </div>
+
+            <div style="margin-bottom: 0.55rem;">
+              <table class="zu-latex-table">
+                <tr>
+                  <td style="font-weight: 700; font-size: 0.95rem;">Northern University Bangladesh</td>
+                  <td style="text-align: right; font-size: 0.95rem; white-space: nowrap;">Dhaka, Bangladesh</td>
+                </tr>
+                <tr>
+                  <td style="font-style: italic; font-size: 0.885rem;">Bachelor of Science in Computer Science</td>
+                  <td style="text-align: right; font-style: italic; font-size: 0.885rem; white-space: nowrap;">2016 &ndash; 2019</td>
+                </tr>
+              </table>
+            </div>
+
+            <div style="margin-bottom: 0.55rem;">
+              <table class="zu-latex-table">
+                <tr>
+                  <td style="font-weight: 700; font-size: 0.95rem;">Ahsanullah Institute of Technical and Vocational Education and Training</td>
+                  <td style="text-align: right; font-size: 0.95rem; white-space: nowrap;">Dhaka, Bangladesh</td>
+                </tr>
+                <tr>
+                  <td style="font-style: italic; font-size: 0.885rem;">Diploma in Computer Engineering</td>
+                  <td style="text-align: right; font-style: italic; font-size: 0.885rem; white-space: nowrap;">2011 &ndash; 2015</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- Technical Skills Section -->
+            <div class="zu-latex-sec-header">
+              <h2 class="zu-latex-sec-title">Technical Skills</h2>
+              <div class="zu-latex-rule"></div>
+            </div>
+
+            <div style="font-size: 0.915rem; line-height: 1.52; color: #000000;">
+              <div style="margin-bottom: 3px;">
+                <strong style="font-weight: 700;">WordPress Architecture:</strong> Custom Theme &amp; Plugin Development, React-Driven Gutenberg Blocks, ACF, WP Query, Hooks/Filters, REST API, WooCommerce
+              </div>
+              <div style="margin-bottom: 3px;">
+                <strong style="font-weight: 700;">Backend &amp; Infrastructure:</strong> PHP 8.x, OOP, MySQL, Laravel, Bash/Shell Scripting, WP-CLI, SSH, Salesforce &amp; HubSpot API Integrations
+              </div>
+              <div style="margin-bottom: 3px;">
+                <strong style="font-weight: 700;">Frontend &amp; UI Execution:</strong> JavaScript (ES6+), React.js, Tailwind CSS, HTML5/CSS3, Sass
+              </div>
+              <div style="margin-bottom: 3px;">
+                <strong style="font-weight: 700;">Performance &amp; DevOps:</strong> Linux, Docker, Git/GitHub, CI/CD Pipelines, Core Web Vitals, Cloudflare, Redis/Object Cache, OPcache, NGINX, WordPress VIP, WP Engine, Pantheon
+              </div>
+              <div style="margin-bottom: 3px;">
+                <strong style="font-weight: 700;">AI-Augmented Engineering:</strong> GitHub Copilot, Claude 3.5, ChatGPT (Rapid boilerplate generation, automated PHPUnit tests, complex stack-trace debugging)
               </div>
             </div>
-          </section>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
   </main>

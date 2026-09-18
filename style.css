@@ -447,30 +447,40 @@ h3 em {
 }
 
 @keyframes zu-dot-bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(1, 1);
   }
+
   6% {
     transform: translateY(0) scale(1.18, 0.82);
   }
+
   16% {
     transform: translateY(-9px) scale(0.92, 1.15);
   }
+
   24% {
     transform: translateY(-11px) scale(0.96, 1.04);
   }
+
   32% {
     transform: translateY(-2px) scale(0.98, 1.08);
   }
+
   38% {
     transform: translateY(0) scale(1.22, 0.78);
   }
+
   46% {
     transform: translateY(-4px) scale(0.95, 1.05);
   }
+
   53% {
     transform: translateY(0) scale(1.08, 0.92);
   }
+
   60% {
     transform: translateY(0) scale(1, 1);
   }
@@ -485,6 +495,7 @@ h3 em {
   0% {
     transform: translateY(0) scale(1.1, 0.9);
   }
+
   100% {
     transform: translateY(-8px) scale(0.95, 1.1);
   }
@@ -515,8 +526,20 @@ h3 em {
   .zu-nav-desktop {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.25rem;
     list-style: none;
+  }
+}
+
+@media (min-width: 1040px) {
+  .zu-nav-desktop {
+    gap: 1.65rem;
+  }
+}
+
+@media (min-width: 1220px) {
+  .zu-nav-desktop {
+    gap: 2rem;
   }
 }
 
@@ -720,19 +743,154 @@ h3 em {
   margin-bottom: 1.75rem;
 }
 
-.zu-hero-stack {
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  color: rgba(var(--color-fg), 0.55);
-  margin-bottom: 2.25rem;
+.zu-hero-stack-wrap {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 2.25rem;
 }
 
-.zu-hero-stack span {
+.zu-hero-stack-label {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
   color: rgb(var(--color-accent));
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.zu-hero-stack-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.zu-stack-badge {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--color-fg), 0.035);
+  border: 1px solid var(--color-border-subtle);
+  color: rgba(var(--color-fg), 0.65);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.22s ease,
+    background 0.22s ease,
+    color 0.22s ease,
+    box-shadow 0.22s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.zu-stack-badge:focus-visible {
+  border-color: rgb(var(--color-accent));
+  box-shadow: 0 0 0 2px rgba(var(--color-accent), 0.3);
+}
+
+.zu-stack-badge:hover {
+  transform: translateY(-3px);
+  background: rgba(var(--color-fg), 0.08);
+  border-color: rgba(var(--color-fg), 0.2);
+}
+
+.zu-stack-svg {
+  width: 19px;
+  height: 19px;
+  display: block;
+  transition: color 0.2s ease, filter 0.2s ease;
+}
+
+/* Brand-specific hover lighting */
+.zu-stack-badge:hover .zu-icon-php {
+  color: #8892BF;
+  filter: drop-shadow(0 0 6px rgba(136, 146, 191, 0.6));
+}
+
+.zu-stack-badge:hover .zu-icon-wordpress {
+  color: #3858E9;
+  filter: drop-shadow(0 0 6px rgba(56, 88, 233, 0.6));
+}
+
+.zu-stack-badge:hover .zu-icon-shopify {
+  color: #95BF47;
+  filter: drop-shadow(0 0 6px rgba(149, 191, 71, 0.6));
+}
+
+.zu-stack-badge:hover .zu-icon-woocommerce {
+  color: #96588A;
+  filter: drop-shadow(0 0 6px rgba(150, 88, 138, 0.6));
+}
+
+.zu-stack-badge:hover .zu-icon-laravel {
+  color: #FF2D20;
+  filter: drop-shadow(0 0 6px rgba(255, 45, 32, 0.6));
+}
+
+.zu-stack-badge:hover .zu-icon-mysql {
+  color: #00758F;
+  filter: drop-shadow(0 0 6px rgba(0, 117, 143, 0.6));
+}
+
+.zu-stack-badge:hover .zu-icon-redis {
+  color: #DC382D;
+  filter: drop-shadow(0 0 6px rgba(220, 56, 45, 0.6));
+}
+
+.zu-stack-badge:hover .zu-icon-cloudflare {
+  color: #F38020;
+  filter: drop-shadow(0 0 6px rgba(243, 128, 32, 0.6));
+}
+
+.zu-stack-badge:hover .zu-icon-docker {
+  color: #2496ED;
+  filter: drop-shadow(0 0 6px rgba(36, 150, 237, 0.6));
+}
+
+.zu-stack-badge:hover .zu-icon-react {
+  color: #61DAFB;
+  filter: drop-shadow(0 0 6px rgba(97, 218, 251, 0.6));
+}
+
+/* Floating Tooltip */
+.zu-stack-badge::after {
+  content: attr(data-zu-tooltip);
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #191410;
+  color: #f7eee7;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 30;
+}
+
+[data-theme="light"] .zu-stack-badge::after {
+  background: #231C18;
+  color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.zu-stack-badge:hover::after,
+.zu-stack-badge:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .zu-hero-actions {
@@ -745,8 +903,116 @@ h3 em {
 .zu-social-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.75rem;
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.zu-social-btn {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--color-fg), 0.035);
+  border: 1px solid var(--color-border-subtle);
+  color: rgba(var(--color-fg), 0.7);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.22s ease,
+    background 0.22s ease,
+    color 0.22s ease,
+    box-shadow 0.22s ease;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.zu-social-btn:focus-visible {
+  border-color: rgb(var(--color-accent));
+  box-shadow: 0 0 0 2px rgba(var(--color-accent), 0.3);
+}
+
+.zu-social-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(var(--color-fg), 0.08);
+}
+
+.zu-social-svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  transition: color 0.2s ease, filter 0.2s ease;
+}
+
+/* Brand-specific hover lighting */
+.zu-social-btn:hover .zu-social-github {
+  color: #ffffff;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+}
+
+.zu-social-btn:hover:has(.zu-social-github) {
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.zu-social-btn:hover .zu-social-linkedin {
+  color: #0A66C2;
+  filter: drop-shadow(0 0 6px rgba(10, 102, 194, 0.6));
+}
+
+.zu-social-btn:hover:has(.zu-social-linkedin) {
+  border-color: rgba(10, 102, 194, 0.4);
+  box-shadow: 0 6px 18px rgba(10, 102, 194, 0.25);
+}
+
+.zu-social-btn:hover .zu-social-email {
+  color: rgb(var(--color-accent));
+  filter: drop-shadow(0 0 6px rgba(var(--color-accent), 0.6));
+}
+
+.zu-social-btn:hover:has(.zu-social-email) {
+  border-color: rgba(var(--color-accent), 0.4);
+  box-shadow: 0 6px 18px rgba(var(--color-accent), 0.25);
+}
+
+/* Floating Tooltip */
+.zu-social-btn::after {
+  content: attr(data-zu-tooltip);
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #191410;
+  color: #f7eee7;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 30;
+}
+
+[data-theme="light"] .zu-social-btn::after {
+  background: #231C18;
+  color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.zu-social-btn:hover::after,
+.zu-social-btn:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .zu-social-link {
@@ -1262,6 +1528,74 @@ h3 em {
   border-radius: 2px;
 }
 
+/* Platform Glyphs */
+.zu-glyph-shopify {
+  color: #99E344;
+  background-color: rgba(149, 191, 71, 0.12);
+  border: 1px solid rgba(149, 191, 71, 0.25);
+  font-weight: 500;
+}
+
+.zu-glyph-wordpress {
+  color: #6C8DFF;
+  background-color: rgba(56, 88, 233, 0.12);
+  border: 1px solid rgba(56, 88, 233, 0.25);
+  font-weight: 500;
+}
+
+.zu-glyph-woocommerce {
+  color: #E598D6;
+  background-color: rgba(150, 88, 138, 0.12);
+  border: 1px solid rgba(177, 114, 166, 0.25);
+  font-weight: 500;
+}
+
+.zu-glyph-headless {
+  color: #38E1FF;
+  background-color: rgba(0, 210, 255, 0.12);
+  border: 1px solid rgba(0, 210, 255, 0.25);
+  font-weight: 500;
+}
+
+.zu-glyph-fintech {
+  color: #F7B731;
+  background-color: rgba(243, 156, 18, 0.12);
+  border: 1px solid rgba(243, 156, 18, 0.25);
+  font-weight: 500;
+}
+
+.zu-glyph-php {
+  color: #A6B1E1;
+  background-color: rgba(136, 146, 191, 0.12);
+  border: 1px solid rgba(136, 146, 191, 0.25);
+  font-weight: 500;
+}
+
+/* Platform Hover Card Accents */
+.zu-project-card[data-platform="shopify"]:hover {
+  border-color: rgba(149, 191, 71, 0.45);
+}
+
+.zu-project-card[data-platform="wordpress"]:hover {
+  border-color: rgba(56, 88, 233, 0.45);
+}
+
+.zu-project-card[data-platform="woocommerce"]:hover {
+  border-color: rgba(177, 114, 166, 0.45);
+}
+
+.zu-project-card[data-platform="headless"]:hover {
+  border-color: rgba(0, 210, 255, 0.45);
+}
+
+.zu-project-card[data-platform="fintech"]:hover {
+  border-color: rgba(243, 156, 18, 0.45);
+}
+
+.zu-project-card[data-platform="php"]:hover {
+  border-color: rgba(136, 146, 191, 0.45);
+}
+
 .zu-project-domain {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
@@ -1320,6 +1654,66 @@ h3 em {
 
 .zu-modal-trigger:hover {
   color: rgb(var(--color-accent));
+}
+
+/* --------------------------------------------------------------------------
+   Site Preview Scroll-on-Hover
+   -------------------------------------------------------------------------- */
+.zu-preview-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin: -2rem -2rem 1.5rem -2rem;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(135deg,
+      rgb(var(--color-bg-softer)),
+      rgba(var(--color-accent), 0.08));
+}
+
+.zu-preview-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to top, rgb(var(--color-bg-soft)), transparent);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.4s var(--ease-out-strong);
+}
+
+.zu-project-card:hover .zu-preview-wrap::after {
+  opacity: 0;
+}
+
+.zu-preview-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.zu-project-card:hover .zu-preview-img {
+  transform: translateY(calc(-100% + 200px));
+}
+
+.zu-preview-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zu-preview-fallback::before {
+  content: "\2039/\203A";
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  color: rgba(var(--color-fg), 0.15);
+  letter-spacing: 0.25em;
 }
 
 /* --------------------------------------------------------------------------
@@ -1649,6 +2043,105 @@ h3 em {
   font-size: 1.05rem;
   font-weight: 500;
   color: rgb(var(--color-fg));
+}
+
+.zu-direct-email-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.zu-copy-inline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border-radius: 5px;
+  background: rgba(var(--color-fg), 0.05);
+  border: 1px solid var(--color-border-subtle);
+  color: rgba(var(--color-fg), 0.6);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    color 0.18s ease;
+  outline: none;
+}
+
+.zu-copy-inline-btn:hover {
+  background-color: rgba(var(--color-accent), 0.14);
+  border-color: rgba(var(--color-accent), 0.45);
+  color: rgb(var(--color-accent));
+  transform: translateY(-1px);
+}
+
+.zu-copy-inline-btn:active {
+  transform: translateY(0) scale(0.92);
+}
+
+.zu-copy-inline-btn .zu-copy-icon {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+.zu-copy-inline-btn .zu-copy-icon-copied {
+  display: none;
+}
+
+.zu-copy-inline-btn.zu-copied {
+  background-color: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #10B981;
+}
+
+.zu-copy-inline-btn.zu-copied .zu-copy-icon-default {
+  display: none;
+}
+
+.zu-copy-inline-btn.zu-copied .zu-copy-icon-copied {
+  display: block;
+}
+
+/* Floating Tooltip for Copy Button */
+.zu-copy-inline-btn::after {
+  content: attr(data-zu-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #191410;
+  color: #f7eee7;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.16s ease, transform 0.16s ease;
+  z-index: 30;
+}
+
+.zu-copy-inline-btn:hover::after,
+.zu-copy-inline-btn:focus-visible::after,
+.zu-copy-inline-btn.zu-copied::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+[data-theme="light"] .zu-copy-inline-btn::after {
+  background: #231C18;
+  color: #ffffff;
 }
 
 .zu-copy-btn {

@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Selected Work & Production Portfolio - Zahid Uddin. 18+ shipped web platforms, custom WordPress themes, WooCommerce stores, and backend architectures." />
-  <title>Portfolio &amp; Selected Work - Zahid Uddin | PHP &amp; WordPress Expert</title>
+    content="Selected Work & Production Portfolio - Zahid Uddin. 35+ shipped web platforms, custom WordPress themes, bespoke Shopify stores, WooCommerce, and backend architectures." />
+  <title>Portfolio &amp; Selected Work - Zahid Uddin | WordPress, Shopify &amp; PHP Expert</title>
 
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +21,7 @@
     <div class="zu-container zu-header-inner">
       <a class="zu-brand" href="index.html" aria-label="Zahid Uddin Home">
         <span>zuddin</span><span class="zu-brand-dot">.</span>
-        <span class="zu-brand-role">Backend / WP Engineer</span>
+        <span class="zu-brand-role">WP &amp; Shopify Engineer</span>
       </a>
 
       <nav aria-label="Main Navigation">
@@ -30,6 +30,8 @@
           <li><a class="zu-nav-link" href="about.html">About</a></li>
           <li><a class="zu-nav-link" href="services.html">Services</a></li>
           <li><a class="zu-nav-link zu-active" href="projects.html">Portfolio</a></li>
+          <li><a class="zu-nav-link" href="pricing.html">Pricing</a></li>
+          <li><a class="zu-nav-link" href="blog.html">Insights</a></li>
           <li><a class="zu-nav-link" href="resume.html">Résumé</a></li>
           <li><a class="zu-nav-link" href="contact.html">Contact</a></li>
         </ul>
@@ -58,6 +60,8 @@
       <li><a class="zu-nav-link" href="about.html">About</a></li>
       <li><a class="zu-nav-link" href="services.html">Services</a></li>
       <li><a class="zu-nav-link zu-active" href="projects.html">Portfolio</a></li>
+      <li><a class="zu-nav-link" href="pricing.html">Pricing</a></li>
+      <li><a class="zu-nav-link" href="blog.html">Insights</a></li>
       <li><a class="zu-nav-link" href="resume.html">Résumé</a></li>
       <li><a class="zu-nav-link" href="contact.html">Contact</a></li>
     </ul>
@@ -71,107 +75,279 @@
           <p class="zu-eyebrow">// 03_portfolio &amp; work</p>
           <h1 class="zu-section-title">Products, platforms, <em>and client sites.</em></h1>
           <p class="zu-section-subtitle">
-            A comprehensive archive of 18+ commercial projects, custom WordPress themes, WooCommerce stores, and backend
-            architectures shipped over 8+ years.
+            A curated selection of 16 commercial projects - custom WordPress themes, bespoke Shopify stores,
+            WooCommerce,
+            FinTech platforms, and backend architectures shipped over 8+ years.
           </p>
         </div>
 
         <!-- Category Filter Bar -->
         <div class="zu-filter-bar" data-zu-reveal>
-          <button class="zu-filter-btn zu-active" data-filter="all">All Projects (18+)</button>
+          <button class="zu-filter-btn zu-active" data-filter="all">All Projects (16)</button>
           <button class="zu-filter-btn" data-filter="wordpress">Custom WordPress</button>
-          <button class="zu-filter-btn" data-filter="ecommerce">WooCommerce &amp; Store</button>
+          <button class="zu-filter-btn" data-filter="ecommerce">Shopify &amp; WooCommerce</button>
           <button class="zu-filter-btn" data-filter="backend">Backend &amp; APIs</button>
           <button class="zu-filter-btn" data-filter="performance">Performance &amp; Scale</button>
         </div>
 
-        <!-- All 18+ Projects Grid -->
+        <!-- 16-Project Curated Grid -->
         <div class="zu-projects-grid">
-          <!-- 1. Gulf Coast Outfitters -->
-          <article class="zu-card zu-project-card" data-category="ecommerce wordpress" data-zu-reveal>
+          <!-- 1. Envoc -->
+          <article class="zu-card zu-project-card" data-category="performance" data-platform="headless" data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/envoc.avif" alt="Envoc site preview" class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
             <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">gulfcoastoutfitters.com</span>
+                <span class="zu-project-glyph zu-glyph-headless">Headless CMS</span>
+                <span class="zu-project-domain">envoc.com</span>
               </header>
-              <h3>Gulf Coast Outfitters</h3>
-              <p>Architected custom WooCommerce checkout optimizations, bulk inventory synchronization, and responsive
-                styling tailored for heavy mobile traffic and high volume sales.</p>
+              <h3>Envoc</h3>
+              <p>Award-winning digital agency platform with component-based design systems, headless CMS architecture,
+                and strict performance budget compliance achieving sub-second global rendering.</p>
               <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">WooCommerce</span>
-                <span class="zu-tag">PHP OOP</span>
-                <span class="zu-tag">Custom Cart</span>
+                <span class="zu-tag">Headless Architecture</span>
+                <span class="zu-tag">Component Design</span>
+                <span class="zu-tag">Performance Budget</span>
               </div>
             </div>
             <footer class="zu-project-foot">
               <div class="zu-project-links">
-                <a class="zu-link-item" href="https://gulfcoastoutfitters.com/" target="_blank"
+                <a class="zu-link-item" href="https://envoc.com/" target="_blank" rel="noopener noreferrer">Visit Live
+                  <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-envoc">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 2. Little Rock Printing -->
+          <article class="zu-card zu-project-card" data-category="ecommerce backend" data-platform="woocommerce"
+            data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/littlerockprinting.avif" alt="Little Rock Printing site preview" class="zu-preview-img"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph zu-glyph-woocommerce">WooCommerce</span>
+                <span class="zu-project-domain">littlerockprinting.com</span>
+              </header>
+              <h3>Little Rock Printing</h3>
+              <p>Expansive commercial printing e-commerce platform with dynamic parametric quote calculators, real-time
+                price matrix computation, and custom file upload proofing pipeline.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">WooCommerce</span>
+                <span class="zu-tag">Dynamic Quoting</span>
+                <span class="zu-tag">Custom Calculator</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://littlerockprinting.com/" target="_blank"
                   rel="noopener noreferrer">Visit Live <span class="zu-arrow-up-right">&#8599;</span></a>
-                <button class="zu-modal-trigger" data-modal-target="modal-gco">Case Specs</button>
+                <button class="zu-modal-trigger" data-modal-target="modal-littlerock">Case Specs</button>
               </div>
             </footer>
           </article>
 
-          <!-- 2. CA Flat Fee -->
-          <article class="zu-card zu-project-card" data-category="wordpress backend" data-zu-reveal>
+          <!-- 3. Sixth & Rio -->
+          <article class="zu-card zu-project-card" data-category="wordpress performance" data-platform="wordpress"
+            data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/sixthandrio.avif" alt="Sixth & Rio site preview" class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
             <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">caflatfee.com</span>
+                <span class="zu-project-glyph zu-glyph-wordpress">WordPress</span>
+                <span class="zu-project-domain">sixthandrio.com</span>
               </header>
-              <h3>CA Flat Fee</h3>
-              <p>Engineered a high-converting real estate WordPress platform with custom ACF post structures, dynamic
-                property filters, and CRM lead capture automation.</p>
+              <h3>Sixth &amp; Rio</h3>
+              <p>High-end luxury condominium storytelling site with bespoke editorial layouts, interactive floor-plan
+                explorers, and responsive media optimization without performance degradation.</p>
               <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">Real Estate WP</span>
+                <span class="zu-tag">Luxury Real Estate</span>
                 <span class="zu-tag">ACF Pro</span>
-                <span class="zu-tag">CRM Integration</span>
+                <span class="zu-tag">Visual Storytelling</span>
               </div>
             </div>
             <footer class="zu-project-foot">
               <div class="zu-project-links">
-                <a class="zu-link-item" href="https://caflatfee.com/" target="_blank" rel="noopener noreferrer">Visit
+                <a class="zu-link-item" href="https://sixthandrio.com/" target="_blank" rel="noopener noreferrer">Visit
                   Live <span class="zu-arrow-up-right">&#8599;</span></a>
-                <button class="zu-modal-trigger" data-modal-target="modal-caflat">Case Specs</button>
+                <button class="zu-modal-trigger" data-modal-target="modal-sixthandrio">Case Specs</button>
               </div>
             </footer>
           </article>
 
-          <!-- 3. The Bud Grower -->
-          <article class="zu-card zu-project-card" data-category="ecommerce wordpress" data-zu-reveal>
+          <!-- 4. Summit Federal Credit Union -->
+          <article class="zu-card zu-project-card" data-category="backend performance" data-platform="fintech"
+            data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/summitfcu.avif" alt="Summit Federal Credit Union site preview" class="zu-preview-img"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
             <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">thebudgrower.com</span>
+                <span class="zu-project-glyph zu-glyph-fintech">FinTech CMS</span>
+                <span class="zu-project-domain">summitfcu.org</span>
               </header>
-              <h3>The Bud Grower</h3>
-              <p>Custom WooCommerce platform with bundle configuration logic, tailored payment gateway bridges, asset
-                optimization, and streamlined customer purchasing pathways.</p>
+              <h3>Summit Federal Credit Union</h3>
+              <p>Enterprise $1B+ banking platform with ADA-compliant accessibility (WCAG 2.1 AA), interactive loan
+                calculators, dynamic rate tables, and secure online banking gateway.</p>
               <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">WooCommerce</span>
-                <span class="zu-tag">Product Bundles</span>
-                <span class="zu-tag">Stripe Gateway</span>
+                <span class="zu-tag">FinTech</span>
+                <span class="zu-tag">WCAG AA</span>
+                <span class="zu-tag">Loan Calculator</span>
               </div>
             </div>
             <footer class="zu-project-foot">
               <div class="zu-project-links">
-                <a class="zu-link-item" href="https://thebudgrower.com/" target="_blank" rel="noopener noreferrer">Visit
-                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
-                <button class="zu-modal-trigger" data-modal-target="modal-budgrower">Case Specs</button>
+                <a class="zu-link-item" href="https://www.summitfcu.org/" target="_blank"
+                  rel="noopener noreferrer">Visit Live <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-summitfcu">Case Specs</button>
               </div>
             </footer>
           </article>
 
-          <!-- 4. Naturally NWA -->
-          <article class="zu-card zu-project-card" data-category="backend performance" data-zu-reveal>
+          <!-- 5. Raydoor -->
+          <article class="zu-card zu-project-card" data-category="wordpress performance" data-platform="wordpress"
+            data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/raydoor.avif" alt="Raydoor site preview" class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
             <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-glyph zu-glyph-wordpress">WordPress</span>
+                <span class="zu-project-domain">raydoor.com</span>
+              </header>
+              <h3>Raydoor</h3>
+              <p>Architectural sliding door system with custom product visualizer, spec generator, and Core Web Vitals
+                remediation achieving zero cumulative layout shift.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Product Visualizer</span>
+                <span class="zu-tag">Custom Plugin</span>
+                <span class="zu-tag">CWV Optimization</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://raydoor.com/" target="_blank" rel="noopener noreferrer">Visit Live
+                  <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-raydoor">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 6. Andover State Bank -->
+          <article class="zu-card zu-project-card" data-category="backend" data-platform="fintech" data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/goasb.avif" alt="Andover State Bank site preview" class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph zu-glyph-fintech">Banking CMS</span>
+                <span class="zu-project-domain">goasb.com</span>
+              </header>
+              <h3>Andover State Bank</h3>
+              <p>Commercial banking web platform with secure authentication handoff, financial product calculators,
+                branch locator with geocoding, and strict compliance architecture.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Secure Banking</span>
+                <span class="zu-tag">Loan Tools</span>
+                <span class="zu-tag">FinTech CMS</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://goasb.com/" target="_blank" rel="noopener noreferrer">Visit Live
+                  <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-goasb">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 7. Tower 56 NYC -->
+          <article class="zu-card zu-project-card" data-category="wordpress" data-platform="wordpress" data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/tower56nyc.avif" alt="Tower 56 NYC site preview" class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph zu-glyph-wordpress">WordPress</span>
+                <span class="zu-project-domain">tower56nyc.com</span>
+              </header>
+              <h3>Tower 56 NYC</h3>
+              <p>Prestigious Manhattan Midtown office leasing presentation with interactive stacking plans, floor
+                availability visualization, and architectural SVG overlays.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Commercial Realty</span>
+                <span class="zu-tag">Interactive Plans</span>
+                <span class="zu-tag">SVG Overlay</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://tower56nyc.com/" target="_blank" rel="noopener noreferrer">Visit
+                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-tower56">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 8. Book a Bubble (Germany & Switzerland) -->
+          <article class="zu-card zu-project-card" data-category="ecommerce backend" data-platform="woocommerce"
+            data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/book-a-bubble.avif" alt="Book a Bubble (Germany & Switzerland) site preview"
+                class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph zu-glyph-woocommerce">WooCommerce</span>
+                <span class="zu-project-domain">book-a-bubble.de</span>
+              </header>
+              <h3>Book a Bubble (Germany &amp; Switzerland)</h3>
+              <p>Multi-region European glamping hospitality platform with calendar-based reservation engine, localized
+                currency switching (EUR/CHF), and automated guest confirmation workflows.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Multi-Region</span>
+                <span class="zu-tag">Booking Engine</span>
+                <span class="zu-tag">Multi-Currency</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://book-a-bubble.de/" target="_blank" rel="noopener noreferrer">Visit
+                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-bookabubble">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 9. Naturally NWA -->
+          <article class="zu-card zu-project-card" data-category="performance backend" data-platform="headless"
+            data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/naturallynwa.avif" alt="Naturally NWA site preview" class="zu-preview-img"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph zu-glyph-headless">Headless WP</span>
                 <span class="zu-project-domain">naturallynwa.com</span>
               </header>
               <h3>Naturally NWA</h3>
-              <p>Designed a headless WordPress content delivery pipeline with edge caching, custom REST endpoints, and
-                decoupled frontend integration for sub-second page rendering.</p>
+              <p>Decoupled headless WordPress content delivery pipeline with custom REST endpoints, Cloudflare edge
+                caching, and sub-second page rendering across the directory.</p>
               <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
                 <span class="zu-tag">Headless CMS</span>
                 <span class="zu-tag">REST API</span>
@@ -187,16 +363,172 @@
             </footer>
           </article>
 
-          <!-- 5. UCSD Community Health -->
-          <article class="zu-card zu-project-card" data-category="wordpress performance" data-zu-reveal>
+          <!-- 10. The Bud Grower -->
+          <article class="zu-card zu-project-card" data-category="ecommerce" data-platform="woocommerce" data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/thebudgrower.avif" alt="The Bud Grower site preview" class="zu-preview-img"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
             <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-glyph zu-glyph-woocommerce">WooCommerce</span>
+                <span class="zu-project-domain">thebudgrower.com</span>
+              </header>
+              <h3>The Bud Grower</h3>
+              <p>Specialized horticulture WooCommerce platform with custom bundle configuration logic, Stripe &amp;
+                PayPal gateway bridges, and server-side OPcache tuning for high-volume sales.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">WooCommerce</span>
+                <span class="zu-tag">Product Bundles</span>
+                <span class="zu-tag">Stripe Gateway</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://thebudgrower.com/" target="_blank" rel="noopener noreferrer">Visit
+                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-budgrower">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 11. Modern Lights -->
+          <article class="zu-card zu-project-card" data-category="ecommerce" data-platform="shopify" data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/modernlights.avif" alt="Modern Lights site preview" class="zu-preview-img"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph zu-glyph-shopify">Shopify</span>
+                <span class="zu-project-domain">modernlights.com</span>
+              </header>
+              <h3>Modern Lights</h3>
+              <p>High-ticket luxury lighting D2C Shopify store demonstrating cross-platform versatility with custom
+                Liquid templates, curated collection layouts, and premium visual merchandising.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Shopify Liquid</span>
+                <span class="zu-tag">High-AOV</span>
+                <span class="zu-tag">Luxury D2C</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://modernlights.com/" target="_blank" rel="noopener noreferrer">Visit
+                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-modernlights">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 12. CA Flat Fee -->
+          <article class="zu-card zu-project-card" data-category="backend wordpress" data-platform="wordpress"
+            data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="projects/caflatfee.avif" alt="CA Flat Fee site preview" class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph zu-glyph-wordpress">WordPress</span>
+                <span class="zu-project-domain">caflatfee.com</span>
+              </header>
+              <h3>CA Flat Fee</h3>
+              <p>High-converting real estate brokerage platform with dynamic commission savings calculator, custom ACF
+                Pro content blocks, and bidirectional CRM lead capture automation.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Real Estate WP</span>
+                <span class="zu-tag">ACF Pro</span>
+                <span class="zu-tag">CRM Integration</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://caflatfee.com/" target="_blank" rel="noopener noreferrer">Visit
+                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-caflat">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 13. SEMCO Utility Onboarding -->
+          <article class="zu-card zu-project-card" data-category="backend" data-platform="php" data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="https://image.thum.io/get/width/600/crop/1200/noanimate/https://semco-signup.com/"
+                alt="SEMCO Utility Onboarding site preview" class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph zu-glyph-php">Custom PHP</span>
+                <span class="zu-project-domain">semco-signup.com</span>
+              </header>
+              <h3>SEMCO Utility Onboarding</h3>
+              <p>Energy utility customer onboarding web application with multi-step form validation, secure API
+                handoffs, and custom PHP backend logic for account provisioning.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Custom PHP</span>
+                <span class="zu-tag">Multi-Step Form</span>
+                <span class="zu-tag">Onboarding API</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://semco-signup.com/" target="_blank" rel="noopener noreferrer">Visit
+                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-semco">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 14. Lemonade Day -->
+          <article class="zu-card zu-project-card" data-category="wordpress" data-platform="wordpress" data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="https://image.thum.io/get/width/600/crop/1200/noanimate/https://lemonadeday.org/"
+                alt="Lemonade Day site preview" class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph zu-glyph-wordpress">WordPress</span>
+                <span class="zu-project-domain">lemonadeday.org</span>
+              </header>
+              <h3>Lemonade Day</h3>
+              <p>Nationally recognized youth entrepreneurship foundation platform with multi-chapter city locator,
+                participant registration portals, and curriculum content gating.</p>
+              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
+                <span class="zu-tag">Non-Profit</span>
+                <span class="zu-tag">Chapter Locator</span>
+                <span class="zu-tag">Multi-Portal</span>
+              </div>
+            </div>
+            <footer class="zu-project-foot">
+              <div class="zu-project-links">
+                <a class="zu-link-item" href="https://lemonadeday.org/" target="_blank" rel="noopener noreferrer">Visit
+                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-lemonadeday">Case Specs</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 15. UCSD Community Health -->
+          <article class="zu-card zu-project-card" data-category="performance wordpress" data-platform="wordpress"
+            data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="https://image.thum.io/get/width/600/crop/1200/noanimate/https://ucsdcommunityhealth.org/"
+                alt="UCSD Community Health site preview" class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
+            </div>
+            <div>
+              <header class="zu-project-head">
+                <span class="zu-project-glyph zu-glyph-wordpress">WordPress</span>
                 <span class="zu-project-domain">ucsdcommunityhealth.org</span>
               </header>
               <h3>UCSD Community Health</h3>
-              <p>Engineered an institutional healthcare information platform focused on strict accessibility (WCAG 2.1
-                AA), structured publication workflows, and robust uptime.</p>
+              <p>Institutional healthcare information platform with strict WCAG 2.1 AA accessibility, structured
+                publication workflows, multi-department taxonomy, and robust uptime architecture.</p>
               <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
                 <span class="zu-tag">Healthcare CMS</span>
                 <span class="zu-tag">Accessibility</span>
@@ -212,341 +544,47 @@
             </footer>
           </article>
 
-          <!-- 6. Northern University Admissions Portal -->
-          <article class="zu-card zu-project-card" data-category="backend performance" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">nub.ac.bd</span>
-              </header>
-              <h3>University Admissions Portal</h3>
-              <p>Built a high-concurrency student admission portal using Laravel + Vue.js handling thousands of
-                real-time applications, payment verification, and automated registration.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">Laravel</span>
-                <span class="zu-tag">Vue.js</span>
-                <span class="zu-tag">High Concurrency</span>
-              </div>
+          <!-- 16. Growth99 -->
+          <article class="zu-card zu-project-card" data-category="performance backend" data-platform="wordpress"
+            data-zu-reveal>
+            <div class="zu-preview-wrap">
+              <img src="https://image.thum.io/get/width/600/crop/1200/noanimate/https://growth99.com/"
+                alt="Growth99 site preview" class="zu-preview-img" loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('zu-preview-fallback');">
             </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://nub.ac.bd/" target="_blank" rel="noopener noreferrer">Visit Live
-                  <span class="zu-arrow-up-right">&#8599;</span></a>
-                <button class="zu-modal-trigger" data-modal-target="modal-nub">Case Specs</button>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 7. G Comfort -->
-          <article class="zu-card zu-project-card" data-category="wordpress" data-zu-reveal>
             <div>
               <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">gcomfort.com</span>
-              </header>
-              <h3>G Comfort</h3>
-              <p>Developed custom theme templates, flexible service modules, and lightweight frontend interactivity with
-                fast page loading times.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">Custom Theme</span>
-                <span class="zu-tag">Modular Blocks</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://www.gcomfort.com/" target="_blank" rel="noopener noreferrer">Visit
-                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 8. Neuvio -->
-          <article class="zu-card zu-project-card" data-category="backend wordpress" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">neuvio.com</span>
-              </header>
-              <h3>Neuvio</h3>
-              <p>Constructed an enterprise brand platform with external API bridges, custom contact webhooks, and
-                pixel-precise design translation.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">API Integration</span>
-                <span class="zu-tag">Webhooks</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://neuvio.com/" target="_blank" rel="noopener noreferrer">Visit Live
-                  <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 9. Little Rock Printing -->
-          <article class="zu-card zu-project-card" data-category="ecommerce performance" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">littlerockprinting.com</span>
-              </header>
-              <h3>Little Rock Printing</h3>
-              <p>Delivered an expansive commercial printing e-commerce platform with dynamic quote calculators, asset
-                rendering optimization, and fast navigation.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">WooCommerce</span>
-                <span class="zu-tag">Custom Calculator</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://littlerockprinting.com/" target="_blank"
-                  rel="noopener noreferrer">Visit Live <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 10. Raydoor -->
-          <article class="zu-card zu-project-card" data-category="wordpress performance" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">raydoor.com</span>
-              </header>
-              <h3>Raydoor</h3>
-              <p>Optimized architectural product visualizer, custom inquiry plugin logic, and eliminated layout shift
-                for better mobile UX.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">Custom Plugin</span>
-                <span class="zu-tag">CWV Optimization</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://raydoor.com/" target="_blank" rel="noopener noreferrer">Visit Live
-                  <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 11. Growth99 -->
-          <article class="zu-card zu-project-card" data-category="backend performance" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
+                <span class="zu-project-glyph zu-glyph-wordpress">WordPress</span>
                 <span class="zu-project-domain">growth99.com</span>
               </header>
               <h3>Growth99</h3>
-              <p>High-speed SaaS marketing platform featuring custom lead distribution algorithms, edge caching rules,
-                and seamless tracking integrations.</p>
+              <p>High-speed MedSpa SaaS marketing platform with custom lead distribution algorithms, marketing
+                automation webhooks, and conversion architecture optimization.</p>
               <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
                 <span class="zu-tag">SaaS Platform</span>
                 <span class="zu-tag">Lead Pipeline</span>
+                <span class="zu-tag">Marketing Automation</span>
               </div>
             </div>
             <footer class="zu-project-foot">
               <div class="zu-project-links">
                 <a class="zu-link-item" href="https://growth99.com/" target="_blank" rel="noopener noreferrer">Visit
                   Live <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 12. Book a Bubble (DE & CH) -->
-          <article class="zu-card zu-project-card" data-category="ecommerce wordpress" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">book-a-bubble.de</span>
-              </header>
-              <h3>Book a Bubble (Germany &amp; Switzerland)</h3>
-              <p>Multi-region hospitality booking platform with localized currency switching, calendar scheduling
-                integration, and automated guest confirmations.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">Multi-Region</span>
-                <span class="zu-tag">Booking Engine</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://book-a-bubble.de/" target="_blank" rel="noopener noreferrer">Visit
-                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 13. Sixth & Rio -->
-          <article class="zu-card zu-project-card" data-category="wordpress performance" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">sixthandrio.com</span>
-              </header>
-              <h3>Sixth &amp; Rio</h3>
-              <p>Created an editorial luxury real estate storytelling site balancing rich visuals with lightweight DOM
-                structure and accessibility.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">Real Estate</span>
-                <span class="zu-tag">Visual Storytelling</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://sixthandrio.com/" target="_blank" rel="noopener noreferrer">Visit
-                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 14. Caccia Plumbing -->
-          <article class="zu-card zu-project-card" data-category="backend wordpress" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">cacciaplumbing.com</span>
-              </header>
-              <h3>Caccia Plumbing</h3>
-              <p>Service dispatch website featuring clear conversion pathways, local SEO schema, and fast PHP template
-                rendering.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">PHP Backend</span>
-                <span class="zu-tag">Local SEO Schema</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://cacciaplumbing.com/" target="_blank"
-                  rel="noopener noreferrer">Visit Live <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 15. Bienville Bites Food Tour -->
-          <article class="zu-card zu-project-card" data-category="ecommerce wordpress" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">bienvillebitesfoodtour.com</span>
-              </header>
-              <h3>Bienville Bites Food Tour</h3>
-              <p>Built a booking and content platform prioritizing smooth ticket checkout flow and effortless editorial
-                updates.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">CMS Build</span>
-                <span class="zu-tag">Ticket Booking</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://bienvillebitesfoodtour.com/" target="_blank"
-                  rel="noopener noreferrer">Visit Live <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 16. Junior Miners -->
-          <article class="zu-card zu-project-card" data-category="wordpress" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">juniorminers.com</span>
-              </header>
-              <h3>Junior Miners</h3>
-              <p>Information portal with scalable content categories, stock tickers, and lightweight responsive
-                templates.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">WordPress Theme</span>
-                <span class="zu-tag">Content Blocks</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://juniorminers.com/" target="_blank" rel="noopener noreferrer">Visit
-                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 17. Issuer Services -->
-          <article class="zu-card zu-project-card" data-category="backend wordpress" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">issuerservices.us</span>
-              </header>
-              <h3>Issuer Services</h3>
-              <p>Commercial financial services presence with secure document download gateways and API data sync.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">API Integration</span>
-                <span class="zu-tag">Document Gate</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://issuerservices.us/" target="_blank"
-                  rel="noopener noreferrer">Visit Live <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 18. Telaeris -->
-          <article class="zu-card zu-project-card" data-category="wordpress performance" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">telaeris.com</span>
-              </header>
-              <h3>Telaeris</h3>
-              <p>Enterprise physical security solutions web architecture with custom product catalog filtering and fast
-                load times.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">Product Catalog</span>
-                <span class="zu-tag">Plugin Dev</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://telaeris.com/" target="_blank" rel="noopener noreferrer">Visit
-                  Live <span class="zu-arrow-up-right">&#8599;</span></a>
-              </div>
-            </footer>
-          </article>
-
-          <!-- 19. Simien Properties -->
-          <article class="zu-card zu-project-card" data-category="wordpress performance" data-zu-reveal>
-            <div>
-              <header class="zu-project-head">
-                <span class="zu-project-glyph">&lt;/&gt;</span>
-                <span class="zu-project-domain">simienproperties.com</span>
-              </header>
-              <h3>Simien Properties</h3>
-              <p>Performance-conscious property site designed for high client trust, fast MLS search, and maintainable
-                updates.</p>
-              <div class="zu-value-tags" style="margin-bottom: 1.25rem;">
-                <span class="zu-tag">Real Estate</span>
-                <span class="zu-tag">Search UX</span>
-              </div>
-            </div>
-            <footer class="zu-project-foot">
-              <div class="zu-project-links">
-                <a class="zu-link-item" href="https://simienproperties.com/" target="_blank"
-                  rel="noopener noreferrer">Visit Live <span class="zu-arrow-up-right">&#8599;</span></a>
+                <button class="zu-modal-trigger" data-modal-target="modal-growth99">Case Specs</button>
               </div>
             </footer>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="zu-section">
-      <div class="zu-container">
-        <div class="zu-cta-banner" data-zu-reveal>
-          <h2 class="zu-cta-headline">Ready to build your <em>next platform?</em></h2>
-          <p class="zu-cta-text">Let&apos;s discuss architecture, timelines, and technical requirements.</p>
+        <!-- CTA Banner -->
+        <div class="zu-cta-banner" style="margin-top: 4.5rem;" data-zu-reveal>
+          <h2 class="zu-cta-headline">Have a project in <em>mind?</em></h2>
+          <p class="zu-cta-text">
+            Whether you need a bespoke WordPress architecture, custom Shopify Liquid store, or high-performance backend, let&apos;s talk.
+          </p>
           <div class="zu-cta-actions">
-            <a class="zu-btn zu-btn-primary" href="contact.html">Get in Touch</a>
-            <a class="zu-btn zu-btn-outline" href="resume.html">View Résumé</a>
+            <a class="zu-btn zu-btn-primary" href="https://calendly.com/zahiduddin/30min" target="_blank" rel="noopener noreferrer">Schedule 30-Min Call &#8599;</a>
+            <a class="zu-btn zu-btn-outline" href="contact.html">Send a Message</a>
           </div>
         </div>
       </div>
@@ -576,13 +614,16 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="projects.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Insights</a></li>
             <li><a href="resume.html">Résumé</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="zu-footer-col">
           <h4>Work Categories</h4>
           <ul class="zu-footer-nav-list">
-            <li><a href="projects.html">All Projects (18+)</a></li>
+            <li><a href="projects.html">All Projects (16)</a></li>
             <li><a href="projects.html">WooCommerce Stores</a></li>
             <li><a href="projects.html">Gutenberg &amp; ACF</a></li>
             <li><a href="projects.html">Laravel &amp; APIs</a></li>
@@ -591,6 +632,7 @@
         <div class="zu-footer-col">
           <h4>Connect</h4>
           <ul class="zu-footer-nav-list">
+            <li><a href="https://calendly.com/zahiduddin/30min" target="_blank" rel="noopener noreferrer">Book a Call &#8599;</a></li>
             <li><a href="https://github.com/ZahidUddin" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a>
             </li>
             <li><a href="https://www.linkedin.com/in/zahid-uddin-4267b816b/" target="_blank"
