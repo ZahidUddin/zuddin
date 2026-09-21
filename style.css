@@ -3,9 +3,6 @@
    Inspired by modern editorial craft (Satoshi + Chillax + Zodiak)
    ========================================================================== */
 
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&f[]=chillax@300,400,500,600&f[]=zodiak@400,401,600,601&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap");
-
 /* --------------------------------------------------------------------------
    CSS Custom Properties & Color System
    -------------------------------------------------------------------------- */
@@ -22,36 +19,7 @@
   --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
   --transition-smooth: all 0.3s var(--ease-out-strong);
 
-  /* Light Theme Palette (Warm Champagne / Editorial Cream) */
-  --color-bg: 246, 241, 233;
-  /* #F6F1E9 */
-  --color-bg-soft: 238, 230, 215;
-  /* #EEE6D7 */
-  --color-bg-softer: 230, 219, 199;
-  /* #E6DBC7 */
-  --color-fg: 20, 14, 10;
-  /* #140E0A */
-  --color-ink: 246, 241, 233;
-  /* Contrast text for dark buttons */
-  --color-accent: 180, 82, 36;
-  /* #B45224 Warm Terracotta */
-  --color-accent-hover: 205, 95, 45;
-  --color-border: rgba(20, 14, 10, 0.12);
-  --color-border-subtle: rgba(20, 14, 10, 0.06);
-  --color-success: 16, 185, 129;
-  /* Emerald */
-  --color-tag-bg: rgba(20, 14, 10, 0.05);
-
-  --shadow-card: 0 20px 45px -20px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(20, 14, 10, 0.08);
-  --shadow-card-hover: 0 28px 60px -22px rgba(180, 82, 36, 0.2), 0 0 0 1px rgba(180, 82, 36, 0.35);
-  --shadow-glow: 0 0 35px 4px rgba(180, 82, 36, 0.25);
-  --mesh-opacity: 0.04;
-}
-
-/* Dark Theme (Default Luxury Noir) */
-:root[data-theme="dark"],
-[data-zu-theme="dark"],
-body[data-zu-theme="dark"] {
+  /* Dark Theme Palette (Default Luxury Noir) */
   --color-bg: 14, 14, 14;
   /* #0E0E0E */
   --color-bg-soft: 22, 20, 18;
@@ -77,30 +45,59 @@ body[data-zu-theme="dark"] {
   --mesh-opacity: 0.08;
 }
 
+/* Light Theme Palette (Warm Champagne / Editorial Cream) */
+:root[data-theme="light"],
+[data-zu-theme="light"],
+body[data-zu-theme="light"] {
+  --color-bg: 246, 241, 233;
+  /* #F6F1E9 */
+  --color-bg-soft: 238, 230, 215;
+  /* #EEE6D7 */
+  --color-bg-softer: 230, 219, 199;
+  /* #E6DBC7 */
+  --color-fg: 20, 14, 10;
+  /* #140E0A */
+  --color-ink: 246, 241, 233;
+  /* Contrast text for dark buttons */
+  --color-accent: 180, 82, 36;
+  /* #B45224 Warm Terracotta */
+  --color-accent-hover: 205, 95, 45;
+  --color-border: rgba(20, 14, 10, 0.12);
+  --color-border-subtle: rgba(20, 14, 10, 0.06);
+  --color-success: 16, 185, 129;
+  /* Emerald */
+  --color-tag-bg: rgba(20, 14, 10, 0.05);
+
+  --shadow-card: 0 20px 45px -20px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(20, 14, 10, 0.08);
+  --shadow-card-hover: 0 28px 60px -22px rgba(180, 82, 36, 0.2), 0 0 0 1px rgba(180, 82, 36, 0.35);
+  --shadow-glow: 0 0 35px 4px rgba(180, 82, 36, 0.25);
+  --mesh-opacity: 0.04;
+}
+
 /* Theme-Aware Profile Photo Swap */
 .zu-photo-dark,
 .zu-photo-light {
   transition: opacity 0.4s var(--ease-out-strong);
 }
 
-/* Light theme (default): show light photo, hide dark */
+/* Dark theme (default): show dark photo, hide light */
 .zu-photo-dark {
-  display: none;
+  display: block;
 }
 
 .zu-photo-light {
-  display: block;
-}
-
-/* Dark theme: show dark photo, hide light */
-:root[data-theme="dark"] .zu-photo-dark,
-[data-zu-theme="dark"] .zu-photo-dark {
-  display: block;
-}
-
-:root[data-theme="dark"] .zu-photo-light,
-[data-zu-theme="dark"] .zu-photo-light {
   display: none;
+}
+
+/* Light theme: show light photo, hide dark */
+:root[data-theme="light"] .zu-photo-dark,
+[data-zu-theme="light"] .zu-photo-dark {
+  display: none;
+}
+
+:root[data-theme="light"] .zu-photo-light,
+[data-zu-theme="light"] .zu-photo-light {
+  display: block;
 }
 
 /* --------------------------------------------------------------------------
@@ -117,6 +114,7 @@ body[data-zu-theme="dark"] {
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  background-color: #0E0E0E;
   background-color: rgb(var(--color-bg));
   color-scheme: dark light;
   transition: background-color 0.35s var(--ease-out-strong);
@@ -125,6 +123,7 @@ html {
 body {
   font-family: var(--font-body);
   color: rgba(var(--color-fg), 0.78);
+  background-color: #0E0E0E;
   background-color: rgb(var(--color-bg));
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -505,7 +504,7 @@ h3 em {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   font-weight: 400;
-  color: rgba(var(--color-fg), 0.5);
+  color: rgba(var(--color-fg), 0.7);
   margin-left: 0.5rem;
   padding-left: 0.5rem;
   border-left: 1px solid var(--color-border);
@@ -1103,7 +1102,7 @@ h3 em {
 .zu-hero-tag-sub {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
-  color: rgba(var(--color-fg), 0.55);
+  color: rgba(var(--color-fg), 0.7);
 }
 
 .zu-hero-metric {
@@ -1201,7 +1200,7 @@ h3 em {
 .zu-value-num {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  color: rgba(var(--color-fg), 0.4);
+  color: rgba(var(--color-fg), 0.65);
   margin-bottom: 1.5rem;
 }
 
@@ -1599,7 +1598,7 @@ h3 em {
 .zu-project-domain {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
-  color: rgba(var(--color-fg), 0.45);
+  color: rgba(var(--color-fg), 0.7);
 }
 
 .zu-project-card h3 {
@@ -1648,7 +1647,7 @@ h3 em {
 .zu-modal-trigger {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
-  color: rgba(var(--color-fg), 0.5);
+  color: rgba(var(--color-fg), 0.7);
   cursor: pointer;
 }
 
@@ -1910,7 +1909,7 @@ h3 em {
 .zu-author-role {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
-  color: rgba(var(--color-fg), 0.5);
+  color: rgba(var(--color-fg), 0.7);
 }
 
 /* --------------------------------------------------------------------------
@@ -2035,7 +2034,7 @@ h3 em {
   font-size: 0.6875rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(var(--color-fg), 0.45);
+  color: rgba(var(--color-fg), 0.7);
 }
 
 .zu-direct-val {
@@ -2198,7 +2197,7 @@ h3 em {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(var(--color-fg), 0.45);
+  color: rgba(var(--color-fg), 0.7);
   margin-bottom: 1.25rem;
 }
 
@@ -2228,7 +2227,7 @@ h3 em {
   border-top: 1px solid var(--color-border-subtle);
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: rgba(var(--color-fg), 0.5);
+  color: rgba(var(--color-fg), 0.7);
 }
 
 .zu-time-badge {

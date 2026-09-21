@@ -56,34 +56,64 @@
   const navLinks = document.querySelectorAll(".zu-nav-link");
   const sections = document.querySelectorAll("section[id]");
 
+  let sectionPositions = [];
+
+  function updateSectionPositions() {
+    if (!sections.length) return;
+    sectionPositions = Array.from(sections).map((sec) => {
+      const top = sec.offsetTop - 140;
+      return {
+        id: sec.getAttribute("id") || "",
+        top: top,
+        bottom: top + sec.offsetHeight
+      };
+    });
+  }
+
+  let scrollScheduled = false;
+
   function handleScroll() {
+    const scrollY = window.scrollY;
+
     if (header) {
-      if (window.scrollY > 40) {
+      if (scrollY > 40) {
         header.classList.add("zu-header-scrolled");
       } else {
         header.classList.remove("zu-header-scrolled");
       }
     }
 
-    // ScrollSpy active link detection
-    let currentSectionId = "";
-    sections.forEach((sec) => {
-      const top = sec.offsetTop - 140;
-      const height = sec.offsetHeight;
-      if (window.scrollY >= top && window.scrollY < top + height) {
-        currentSectionId = sec.getAttribute("id") || "";
-      }
-    });
-
-    if (currentSectionId) {
-      navLinks.forEach((link) => {
-        const targetHref = link.getAttribute("href") || "";
-        if (targetHref === `#${currentSectionId}`) {
-          link.classList.add("zu-active");
-        } else {
-          link.classList.remove("zu-active");
+    // ScrollSpy active link detection with zero forced reflow
+    if (sectionPositions.length > 0) {
+      let currentSectionId = "";
+      for (let i = 0; i < sectionPositions.length; i++) {
+        const s = sectionPositions[i];
+        if (scrollY >= s.top && scrollY < s.bottom) {
+          currentSectionId = s.id;
+          break;
         }
+      }
+
+      if (currentSectionId) {
+        navLinks.forEach((link) => {
+          const targetHref = link.getAttribute("href") || "";
+          if (targetHref === `#${currentSectionId}`) {
+            link.classList.add("zu-active");
+          } else {
+            link.classList.remove("zu-active");
+          }
+        });
+      }
+    }
+  }
+
+  function onScroll() {
+    if (!scrollScheduled) {
+      window.requestAnimationFrame(() => {
+        handleScroll();
+        scrollScheduled = false;
       });
+      scrollScheduled = true;
     }
   }
 
@@ -557,14 +587,23 @@
       faviconLink.href = canvas.toDataURL("image/png");
     }
 
+    let cycles = 0;
+    const maxCycles = 2; // Run 2 bounce cycles (~5s) on load, then halt interval to keep main thread idle
+
     function step() {
       if (document.hidden) return;
       drawFavicon(frame);
       frame = (frame + 1) % totalFrames;
+      if (frame === 0) {
+        cycles++;
+        if (cycles >= maxCycles) {
+          stop();
+        }
+      }
     }
 
     function start() {
-      if (!timerId) {
+      if (!timerId && cycles < maxCycles) {
         timerId = setInterval(step, 100);
       }
     }
@@ -579,7 +618,7 @@
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) {
         stop();
-      } else {
+      } else if (cycles < maxCycles) {
         start();
       }
     });
@@ -602,7 +641,13 @@
     initDhakaClock();
     initFaviconAnimation();
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    updateSectionPositions();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", () => {
+      clearTimeout(window._zuResizeTimer);
+      window._zuResizeTimer = setTimeout(updateSectionPositions, 150);
+    }, { passive: true });
+    window.addEventListener("load", updateSectionPositions);
     handleScroll();
   });
 })();
