@@ -1,0 +1,7 @@
+# Robots.txt for https://zahiduddin.com
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.git/
+
+Sitemap: https://zahiduddin.com/sitemap.xml
