@@ -1,0 +1,231 @@
+%-------------------------
+% Resume in Latex
+% Original Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+% Modified by : Zahid Uddin
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - Increased vspace to add a gap between sections
+\titleformat{\section}{
+  \vspace{5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{4pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Zahid Uddin} \\ \vspace{4pt}
+    \small
+    \href{https://linkedin.com/in/zahid-uddin}{\textcolor{MidnightBlue}{\faLinkedin \ Linkedin}} $|$ 
+    \href{https://zahiduddin.com}{\textcolor{MidnightBlue}{\faGlobe \ Portfolio}} $|$ 
+    \href{mailto:zahidudd0.in@gmail.com}{\textcolor{MidnightBlue}{\faEnvelope \ zahidudd0.in@gmail.com}} $|$ 
+    \href{tel:+8801684747167}{\textcolor{MidnightBlue}{\faMobileAlt \ +880 1684 747167}} 
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+ \small{Backend-focused PHP developer with 8+ years of experience delivering custom web applications, WordPress platforms, API integrations, and performance improvements. 
+ Proven track record of successfully shipping and maintaining over 35 live production platforms for global enterprise and agency clients. 
+ Strong background in building custom plugins, scalable content architectures, WooCommerce solutions, and backend systems using PHP, MySQL, and modern deployment workflows. 
+ Highly experienced in translating Figma designs into responsive WordPress builds, developing custom React-driven Gutenberg layouts, and weaponizing server infrastructure (Cloudflare, Redis/Object Cache, OPcache, NGINX) to secure top-tier Core Web Vitals. Highly autonomous senior engineer, fully equipped for 100\% remote work and specifically structured to work synchronous US-based hours.} \vspace{4pt} 
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior Software Engineer (Lead)}{Mar 2024 -- Present} 
+      {Mediusware Ltd}{Bangladesh} 
+      \resumeItemListStart
+        \resumeItem{Lead backend-focused WordPress development for custom themes, plugins, and scalable content platforms, serving as the primary technical anchor for high-traffic environments.} 
+        \resumeItem{Secured top-tier Core Web Vitals and eliminated database bottlenecks by implementing advanced server-level caching hierarchies (Cloudflare, Redis/Object Cache, OPcache, and NGINX).} 
+        \resumeItem{Engineered dynamic, decoupled content systems using React-driven Gutenberg blocks and ACF to support large-scale, flexible publishing workflows.} 
+        \resumeItem{Managed zero-downtime CI/CD deployment pipelines and maintained absolute production stability across Git-based Linux and Docker environments.}
+        \resumeItem{Integrated AI-assisted development workflows (Copilot/Claude/Cursor) to automate boilerplate code generation, expedite debugging of complex hook interactions, and write comprehensive PHPUnit test suites, achieving a 3x velocity multiplier.} %[cite: 3]
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer (WordPress)}{Apr 2022 -- Feb 2024} 
+      {BluBird Interactive Ltd}{Bangladesh} 
+      \resumeItemListStart
+        \resumeItem{Built custom WordPress themes and plugins from scratch utilizing clean OOP PHP, MySQL, and modern JavaScript (ES6+).} 
+        \resumeItem{Architected complex backend functionality using the WordPress Hook system (Actions/Filters), custom post types, taxonomies, and optimized custom WP Queries.} 
+        \resumeItem{Engineered secure, asynchronous third-party REST API integrations to seamlessly connect WordPress ecosystems with external CRMs (Salesforce, HubSpot) and payment gateways.}
+        \resumeItem{Managed sprint tasks and collaborative code reviews in Agile environments utilizing Git, Jira, and structured staging/production environments.} %[cite: 23]
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Backend Developer (PHP / WordPress)}{Mar 2020 -- Mar 2022} 
+      {Dynamicflow IT}{Bangladesh} 
+      \resumeItemListStart
+        \resumeItem{Developed and maintained custom WordPress websites and plugins with focus on scalability, security, and performance.} 
+        \resumeItem{Improved Core Web Vitals, SEO, and user experience through backend and template-level optimizations.} 
+        \resumeItem{Diagnosed and resolved critical database bloat by writing custom SQL queries to purge legacy revision data and enforcing strict revision limits, which permanently restored visual editor functionality and reduced query overhead.} %[cite: 9]
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Backend Developer}{Feb 2018 -- Feb 2020} 
+      {Northern University}{Bangladesh} 
+      \resumeItemListStart
+        \resumeItem{Maintained and optimized multiple university web platforms for performance and uptime.} 
+        \resumeItem{Developed admission portals using Laravel and Vue.js to improve enrollment workflows.} 
+        \resumeItem{Translated high-fidelity design mockups into a responsive, pixel-perfect frontend using HTML5, CSS3, and JavaScript to deliver an intuitive, user-friendly experience.} %[cite: 32]
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      
+      \resumeProjectHeading
+          {\textbf{\href{https://gulfcoastoutfitters.com/}{Gulf Coast Outfitters}} $|$ \emph{WordPress, WooCommerce, PHP, MySQL, Meta Ads API, Microsoft Clarity}}{}
+          \resumeItemListStart
+            \resumeItem{Architected a high-scale, multi-vendor data synchronization engine for a WooCommerce platform managing over 40,000+ products.} 
+            \resumeItem{Utilized core hooks to asynchronously ingest massive external API payloads and update inventory in real-time without locking the database.}\\ 
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{\href{https://sixthandrio.com/}{Sixth \& Rio}} $|$ \emph{WordPress, OOP PHP, ACF Pro, GSAP, REST API}}{}
+          \resumeItemListStart
+            \resumeItem{Built a bespoke, decoupled-style WordPress architecture utilizing Object-Oriented PHP and Advanced Custom Fields (ACF Pro) to manage dynamic property data and pricing tiers.}
+            \resumeItem{Engineered Custom Post Types (CPTs) and complex taxonomies to cleanly organize and display residence models, galleries, and building amenities.}
+            \resumeItem{Developed customized, secure inquiry forms that capture buyer preferences and route them directly via API to the sales team's CRM (Salesforce/HubSpot) and mailing lists.}\\ 
+          \resumeItemListEnd
+        
+      \resumeProjectHeading
+          {\textbf{\href{https://thebudgrower.com/}{The Bud Grower}} $|$ \emph{WordPress, WooCommerce, PHP, JavaScript, Payment Gateway APIs}}{}
+          \resumeItemListStart
+            \resumeItem{Architected a scalable WooCommerce storefront optimized for a diverse product catalog, including tiered bundle kits, grow tents, and high-end LED lighting systems.}
+            \resumeItem{Configured dynamic product variations and bundles that allow customers to purchase complete setups in a single, user-friendly interface.}
+            \resumeItem{Integrated secure checkout functionalities featuring multiple payment gateways alongside Buy Now, Pay Later (BNPL) financing solutions to drive conversions on high-ticket equipment.}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northern University Bangladesh}{Dhaka, Bangladesh} 
+      {Bachelor of Science in Computer Science}{2016 -- 2019} 
+      \\\\
+    \resumeSubheading
+      {Ahsanullah Institute of Technical and Vocational Education and Training (AITVET)}{Dhaka, Bangladesh} 
+      {Diploma In Computer Technology, Computer Engineering}{2011 -- 2015} 
+      \\\\
+    \resumeSubheading
+      {Bangladesh German Technical Training Center (BGTTC)}{Dhaka, Bangladesh} 
+      {Secondary School Certificate (S.S.C), Science}{2009 -- 2011} 
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{WordPress Architecture}{: Custom Theme \& Plugin Development, React-Driven Gutenberg Blocks, ACF, WP Query, Hooks/Filters, REST API, WooCommerce} \\ 
+     \textbf{Backend \& Infrastructure}{: PHP 8.x, OOP, MySQL, Laravel, Bash/Shell Scripting, WP-CLI, SSH, Salesforce \& HubSpot API Integrations} \\ 
+     \textbf{Frontend \& UI Execution}{: JavaScript (ES6+), React.js, Tailwind CSS, HTML5/CSS3, Sass} \\ 
+     \textbf{Performance \& DevOps}{: Linux, Docker, Git/GitHub, CI/CD Pipelines, Core Web Vitals, Cloudflare, Redis/Object Cache, OPcache, NGINX, WordPress VIP, WP Engine, Pantheon} \\ 
+     \textbf{AI-Augmented Engineering}{: GitHub Copilot, Claude 3.5, ChatGPT (Rapid boilerplate generation, automated PHPUnit tests, complex stack-trace debugging)} 
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
