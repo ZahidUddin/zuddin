@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Preload LCP Hero Image -->
-  <link rel="preload" as="image" href="profile-dark.avif" type="image/avif" fetchpriority="high" />
+  <link rel="preload" as="image" href="profile-dark.avif" imagesrcset="profile-dark-sm.avif 448w, profile-dark.avif 896w" imagesizes="(max-width: 600px) 360px, 440px" type="image/avif" fetchpriority="high" />
 
   <!-- Asynchronous Non-Render-Blocking Web Fonts -->
   <link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&f[]=chillax@300,400,500,600&f[]=zodiak@400,401,600,601&display=swap" />
@@ -28,7 +28,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.min.css" />
 </head>
 
 <body data-zu-theme="dark">
@@ -233,10 +233,8 @@
         <div class="zu-hero-card-wrap" data-zu-reveal>
           <div class="zu-hero-visual-card">
             <figure class="zu-hero-photo">
-              <img src="profile-dark.avif" alt="Portrait of Zahid Uddin, Software Engineer" width="440" height="550"
-                loading="eager" decoding="async" fetchpriority="high" class="zu-photo-dark" />
-              <img src="profile-light.avif" alt="Portrait of Zahid Uddin, Software Engineer" width="440" height="550"
-                loading="eager" decoding="async" class="zu-photo-light" />
+              <img src="profile-dark.avif" srcset="profile-dark-sm.avif 448w, profile-dark.avif 896w" sizes="(max-width: 600px) 360px, 440px" alt="Portrait of Zahid Uddin, Software Engineer" width="440" height="550" loading="eager" decoding="async" fetchpriority="high" class="zu-photo-dark" />
+              <img src="profile-light.avif" srcset="profile-light-sm.avif 448w, profile-light.avif 896w" sizes="(max-width: 600px) 360px, 440px" alt="Portrait of Zahid Uddin, Software Engineer" width="440" height="550" loading="eager" decoding="async" class="zu-photo-light" />
             </figure>
             <div class="zu-hero-tag-badge">
               <div>
@@ -1525,7 +1523,7 @@ add_action(<span class="zu-tok-str">'rest_api_init'</span>, <span class="zu-tok-
   </div>
 
   <!-- Scripts -->
-  <script src="script.js"></script>
+  <script src="script.min.js"></script>
 
   <!-- Vercel Speed Insights -->
   <script>

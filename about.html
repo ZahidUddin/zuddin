@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" />
   </noscript>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.min.css" />
 </head>
 
 <body data-zu-theme="dark">
@@ -122,9 +122,8 @@
 
           <div class="zu-hero-visual-card" data-zu-reveal>
             <figure class="zu-hero-photo">
-              <img src="profile-dark.avif" alt="Zahid Uddin Portrait" width="440" height="550" class="zu-photo-dark" />
-              <img src="profile-light.avif" alt="Zahid Uddin Portrait" width="440" height="550"
-                class="zu-photo-light" />
+              <img src="profile-dark.avif" srcset="profile-dark-sm.avif 448w, profile-dark.avif 896w" sizes="(max-width: 600px) 360px, 440px" alt="Zahid Uddin Portrait" width="440" height="550" loading="lazy" decoding="async" class="zu-photo-dark" />
+              <img src="profile-light.avif" srcset="profile-light-sm.avif 448w, profile-light.avif 896w" sizes="(max-width: 600px) 360px, 440px" alt="Zahid Uddin Portrait" width="440" height="550" loading="lazy" decoding="async" class="zu-photo-light" />
             </figure>
             <div class="zu-hero-tag-badge">
               <div>
@@ -377,7 +376,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.min.js"></script>
 
   <!-- Vercel Speed Insights -->
   <script>
